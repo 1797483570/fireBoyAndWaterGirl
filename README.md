@@ -134,7 +134,11 @@ localStorage key 对照：`fb-forest` / `fb-light` / `fb-ice` / `fb-crystal` / `
                               ▼
                     saves/progress.json
                               │
-                    git commit && push
+              写盘成功后（仅本地启动、且有推送权限时）
+                              ▼
+                    git add + commit + push
+                              │
+                    远端仓库 · GitHub Pages
 ```
 
 ### 合并规则（仓库优先 + 兼容浏览器存档）
@@ -154,18 +158,46 @@ localStorage key 对照：`fb-forest` / `fb-light` / `fb-ice` / `fb-crystal` / `
 | 每 4 秒（页面可见时） | 同上，兜底 |
 | 点右上角存档按钮 | 手动保存，并弹提示 |
 
+### 自动推送到 git
+
+写盘成功后，`serve.py` 会**在后台线程**里自动执行一次：
+
+```bash
+git add saves/progress.json
+git commit -m "save: 自动保存进度 2026-11-04 18:48"
+git push origin HEAD
+```
+
+只有三个条件全满足才会推：
+
+1. 当前目录是 git 仓库，且配了 remote
+2. 当前分支有 upstream（`origin/main`）
+3. git 凭据可用（Windows 凭据管理器 / SSH key），且**不会弹交互窗口**
+
+任一条件不满足就只写文件、不动 git，前端提示「已保存，但推送未完成：<原因>」。
+设环境变量 `FB_NO_GIT=1` 可彻底关掉自动推送。
+
+> 推送是后台进行的，页面不会卡。存档按钮的 tooltip 会显示最近一次结果，
+> 比如「存档已写入仓库 · 已推送 save: 自动保存进度 18:48」。
+
+#### 为什么不自己手写 `git commit` 了
+
+自动推送已经覆盖日常场景，`save:` 前缀的提交会由脚本产生。
+你想手动改存档再提交也完全可以，两者不冲突。
+
 ### 存档按钮的三种状态
 
 | 指示灯 | 状态 | 含义 |
 | --- | --- | --- |
-| 🟢 绿 | synced | 已与仓库同步 |
+| 🟢 绿 | synced | 已写入 `saves/progress.json`（tooltip 会附上推送结果） |
 | 🟡 金 | dirty | 有进度未写入，正在/等待保存 |
-| 🔵 蓝 | readonly | 只读托管（GitHub Pages 等）：进度来自仓库存档，新进度不会自动写回 |
-| ⚪ 灰 | offline | 连不上任何存档（file:// 打开，或 `saves/progress.json` 也取不到），只存浏览器 |
+| ⚪ 灰 | offline | 没走 `启动游戏.bat`（在线访问 / file:// / 无 API 的静态服务），只存浏览器 |
 
-> `readonly` / `offline` 下游戏照常能玩，只是进度不会落到 `saves/progress.json`。
+> `offline` 下游戏照常能玩，只是进度不会落到 `saves/progress.json`，也不会推送到 git。
 
-### 提交存档
+### 手动提交（可选）
+
+自动推送失败时（比如当时没网），补救就是：
 
 ```bash
 git add saves/progress.json
@@ -192,25 +224,25 @@ git push
 
 地址为：`https://1797483570.github.io/fireBoyAndWaterGirl/`
 
-> ⚠️ **私有仓库需要 GitHub Pro 才能开启 Pages**（免费账号的 Pages 只支持 public 仓库）。
-> 如果不想把仓库改成 public，就继续用本地的 `启动游戏.bat`。
+> ⚠️ 私有仓库需要 GitHub Pro 才能开启 Pages（免费账号的 Pages 只支持 public 仓库）。
+> 本仓库是 public，Pages 已开启。
 
-### Pages 上的存档是「只读」的
+### 线上访问**不读**仓库里的存档
 
-Pages 只有静态文件，没有 `serve.py` 的写接口，所以：
+这是刻意设计的：GitHub Pages 上没有 `/api/ping`，大厅会直接判定为 `offline`，
+**完全不读** `saves/progress.json`，只用访问者自己浏览器里的 localStorage。
 
 | 能力 | 本地 `启动游戏.bat` | GitHub Pages |
 | --- | --- | --- |
-| 读 `saves/progress.json` 灌进浏览器 | ✅ | ✅（蓝灯 readonly） |
-| 玩完自动写回 `saves/progress.json` | ✅ | ❌ |
+| 读 `saves/progress.json` 灌进浏览器 | ✅ | ❌（刻意不读） |
+| 玩完写回 `saves/progress.json` | ✅ | ❌ |
+| 自动 commit + push | ✅（有权限时） | ❌ |
+| 用自己的浏览器存档 | ✅ | ✅ |
 
-也就是说：**进度跟着仓库走（能读），但新进度得在本地玩一次再提交**。
-在 Pages 上玩出来的进度只存在当前浏览器 localStorage 里。
+原因：仓库里的存档是**你自己的**进度，线上访问者（包括陌生人）不该看到它，
+也不该被它覆盖。所以线上就是一份干净的、从零开始的独立体验。
 
-想把它带回仓库，两个办法：
-
-1. 在本地双击 `启动游戏.bat`，打开大厅 → 它会读本地浏览器存档 → 合并后自动写入 `saves/progress.json` → 提交推送（前提是同一台机器同一浏览器）
-2. 直接在 GitHub 网页上编辑 `saves/progress.json`（不推荐，容易写坏 JSON）
+> 想把自己的进度带到线上？做不到，也不打算做 —— 线上存档按浏览器隔离。
 
 ### 体积提醒
 
@@ -233,9 +265,13 @@ Pages 只有静态文件，没有 `serve.py` 的写接口，所以：
 
 | 方法 | 路径 | 说明 |
 | --- | --- | --- |
-| GET | `/api/ping` | 探活，返回 `{"ok":true,"save":true/false}` |
+| GET | `/api/ping` | 探活，返回 `{"ok":true,"save":true,"git":true}` |
 | GET | `/api/save` | 返回存档（不存在则 404） |
-| POST | `/api/save` | 整份覆盖写入，写前自动备份为 `progress.bak.json` |
+| POST | `/api/save` | 整份覆盖写入，写前备份 `progress.bak.json`，成功后后台自动 git 提交推送 |
+| GET | `/api/git` | 最近一次自动推送状态：`idle` / `pushing` / `pushed` / `pending` / `disabled` |
+
+`/api/git` 的 `pending` 表示「文件已写入但没推上去」（没网、没权限、分支无 upstream 等），
+`message` 字段会带失败原因。
 
 也可以手动起：
 
@@ -265,10 +301,13 @@ PWA 的 `manifest.json` 与部分图标在原站就是 404，用现有图标做�
 A：file:// 下 RequireJS 加载关卡 JSON 会被安全策略拦截，必须走本地 HTTP 服务，用 `启动游戏.bat`。
 
 **Q：右上角存档灯是灰的 / 蓝的？**
-A：灰色 = 连不上任何存档；蓝色 = 只读托管（GitHub Pages），进度能读但写不回去。详见[存档同步](#存档同步随仓库走)。
+A：绿色 = 已写入 `saves/progress.json`（tooltip 会附推送结果）；金色 = 有进度待写入；灰色 = 没走 `启动游戏.bat`，只存浏览器。详见[存档同步](#存档同步随仓库走)。
 
 **Q：换端口后进度没了？**
 A：localStorage 按 origin 隔离，`127.0.0.1:8123` 和 `:8124` 是两份存档。固定用 8123 即可。
+
+**Q：自动推送失败 / 不想让它自动提交？**
+A：看 `/api/git` 返回的 `message`（没网、没权限、分支无 upstream 都可能）。设 `FB_NO_GIT=1` 再启动可彻底关闭自动推送，只写文件。
 
 **Q：玩完在另一台机器上看不到进度？**
 A：先在玩的那台上让大厅把进度写进 `saves/progress.json`（回大厅自动写），commit + push；另一台 `git pull` 后重开大厅。
@@ -277,7 +316,7 @@ A：先在玩的那台上让大厅把进度写进 `saves/progress.json`（回大
 A：随便选一边解决冲突，再启动一次大厅 —— 合并逻辑会按「逐关取较优」把两边进度合起来并回写。
 
 **Q：能在线玩吗？**
-A：可以，见[部署到 GitHub Pages](#部署到-github-pages)；但线上存档只读。
+A：可以，见[部署到 GitHub Pages](#部署到-github-pages)。线上访问不读仓库存档，用访问者自己浏览器的 localStorage，从零开始。
 
 ---
 
