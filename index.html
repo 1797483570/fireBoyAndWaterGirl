@@ -551,7 +551,10 @@
       const r = await fetch('api/git', { cache: 'no-store' });
       if (!r.ok) return null;
       const g = await r.json();
-      if (g.status === 'pushed') gitNote = '已推送 ' + (g.message || '');
+      if (g.status === 'pushed') {
+        const t = g.at ? new Date(g.at * 1000).toTimeString().slice(0, 5) : '';
+        gitNote = t ? '已推送 ' + t : '已推送';
+      }
       else if (g.status === 'pushing') gitNote = '正在推送…';
       else if (g.status === 'pending') gitNote = '推送未完成：' + (g.message || '');
       else if (g.status === 'disabled') gitNote = '不自动推送（' + (g.message || '未启用') + '）';
