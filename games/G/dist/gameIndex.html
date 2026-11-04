@@ -1,0 +1,175 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=contain"
+        />
+        <title>Fireboy &amp; Watergirl 7 Friends</title>
+
+        <meta name="description" content="" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="manifest" href="manifest.json" />
+        <link rel="icon" sizes="60x60" href="icon-60x60.png" />
+        <link rel="icon" sizes="256x256" href="icon-256x256.png" />
+        <link rel="icon" sizes="512x512" href="icon-512x512.png" />
+        <link rel="apple-touch-icon" href="icon-60x60.png" />
+
+        <meta name="apple-mobile-web-app-title" content="Fireboy &amp; Watergirl Fairy Tales" />
+
+        
+
+        
+
+        <!-- Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSVZN6LGC"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('set', 'checkProtocolTask', function(model) {
+                console.log('cancel checkProtocolTask!')
+                return true
+            });
+            gtag('config', 'G-8RSVZN6LGC', {send_page_view: false});
+            gtag('event', 'page_view', {page_title: 'start', page_path: '/'})
+        </script> -->
+        <!-- <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+            // cookies -> localStorage
+            var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+            ga('create', 'UA-208543346-1', {
+                'storage': 'none',
+                'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
+            });
+            ga(function (tracker) {
+                localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
+            });
+    
+            // allow capacitor:// as protocol
+            ga('set', 'checkProtocolTask', function () { /* nothing */ });
+            ga('send', 'pageview');
+            gtag = function(action,type,params){
+                ga('send',{
+                    hitType: 'pageview',
+                    page: params.page_path,
+                    lang: localStorage.getItem('fb-fairytales:settings') ? JSON.parse(localStorage.getItem('fb-fairytales:settings')).lang : undefined
+                })
+            }
+            window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
+                ga('send', 'exception', {
+                    'exDescription': errorMsg,
+                    'exFatal': false
+                });
+                return false;
+            }
+        </script> -->
+        <!-- End Google Analytics -->
+    </head>
+
+    <body style="margin: 0px; overflow: hidden; background: #000">
+        <script type="text/javascript">
+            window.requireNode = window.require;
+            window.require = undefined;
+        </script>
+
+        <!--TRAKING CODE PLEASE REMOVE-->
+        <script
+            async
+            src="https://analytics.sparkslab.art/script.js"
+            data-website-id="fd5006ab-46ee-4ba0-9cca-143ef870d1bd"
+            data-domains="apps.ak-ioi.com"
+        ></script>
+
+        <!--DO NOT REMOVE THIS-->
+        <script>
+            /**
+             * Tracked:
+             * nothing
+             */
+            /**
+             * The tracking function
+             */
+            window.sendAnalyticsEvent = (name) => {
+                if(window.umami) {
+                    window.umami.track(name)
+                }
+            }
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script
+            data-main="js/init.js?vvvv=15"
+            src="bower_components/requirejs/require.js"
+        ></script>
+        <!-- endbuild -->
+
+        <div id="root">
+            <div id="container"></div>
+            <div id="hammer"></div>
+            <div
+                id="debug-fps"
+                style="color: #ff0000; position: absolute; top: 0; left: 20px"
+            ></div>
+        </div>
+        
+        <!-- FullScreen Controller -->
+        <div class="fullscreen-button">
+            全屏
+        </div>
+        <style>
+            .fullscreen-button {
+                position:fixed;
+                left:0;
+                top:0;
+                padding:6px 8px;
+                font-size: 14px;
+                background-color:#00000077;
+                color: #FFFFFF77;
+                user-select:none;
+                cursor:pointer;
+            }
+        </style>
+        <script type="text/javascript">
+            (() => {
+                var is_wap = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+                if(is_wap) {
+                    document.querySelector('.fullscreen-button').onclick = function() {
+                        document.documentElement.requestFullscreen();
+                    };
+                    var check_func = () => {
+                        if(document.fullscreenElement) {
+                            document.querySelector('.fullscreen-button').style.display = 'none';
+                        } else {
+                            document.querySelector('.fullscreen-button').style.display = 'block';
+                        }
+                        requestAnimationFrame(check_func);
+                    };
+                    requestAnimationFrame(check_func);
+                } else {
+                    document.querySelector('.fullscreen-button').style.display = 'none';
+                }
+            })();
+        </script>
+    </body>
+</html>

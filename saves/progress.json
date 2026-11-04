@@ -1,0 +1,6957 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-04T08:30:18.176Z",
+  "saves": {
+    "fb-forest": {
+      "temples": [
+        {
+          "index": 0,
+          "id": "forest",
+          "label": "forest temple",
+          "color": "#5B4610",
+          "type": "tree",
+          "levels": [
+            {
+              "id": 1,
+              "_id": 1,
+              "x": 0.5,
+              "y": 0.9,
+              "filename": "tutorials/levels/forest_01.json",
+              "time": 40,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": true,
+              "opened": true,
+              "best": {
+                "diamonds": 7,
+                "time": 70,
+                "silverDiamond": 0,
+                "stars": 2
+              },
+              "played": true,
+              "locked": false,
+              "state": 3
+            },
+            {
+              "id": 2,
+              "_id": 2,
+              "x": 0.55,
+              "y": 0.8,
+              "filename": "forest/levels/forest_02.json",
+              "time": 40,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 1,
+              "isNew": true
+            },
+            {
+              "id": 3,
+              "_id": 3,
+              "x": 0.5,
+              "y": 0.7,
+              "filename": "forest/levels/forest_03.json",
+              "time": 25,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 4,
+              "_id": 4,
+              "x": 0.5,
+              "y": 0.55,
+              "filename": "forest/levels/forest_04.json",
+              "time": 35,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 5,
+              "_id": 5,
+              "x": 0.35,
+              "y": 0.7,
+              "filename": "forest/levels/forest_05.json",
+              "time": 40,
+              "mobileTime": 200,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 6,
+              "_id": 6,
+              "x": 0.25,
+              "y": 0.65,
+              "filename": "forest/levels/forest_06.json",
+              "time": 20,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 7,
+              "_id": 7,
+              "x": 0.15,
+              "y": 0.75,
+              "filename": "forest/levels/forest_07.json",
+              "time": 60,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 30,
+              "_id": 8,
+              "x": 0.65,
+              "y": 0.7,
+              "filename": "forest/levels/forest_30.json",
+              "time": 40,
+              "mobileTime": 65,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 31,
+              "_id": 9,
+              "x": 0.75,
+              "y": 0.65,
+              "filename": "forest/levels/forest_31.json",
+              "time": 60,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 32,
+              "_id": 10,
+              "x": 0.85,
+              "y": 0.75,
+              "filename": "forest/levels/forest_32.json",
+              "time": 60,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 8,
+              "_id": 11,
+              "x": 0.35,
+              "y": 0.5,
+              "filename": "forest/levels/forest_08.json",
+              "time": 40,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 9,
+              "_id": 12,
+              "x": 0.25,
+              "y": 0.5,
+              "filename": "forest/levels/forest_09.json",
+              "time": 40,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 10,
+              "_id": 13,
+              "x": 0.15,
+              "y": 0.55,
+              "filename": "forest/levels/forest_10.json",
+              "time": 45,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 11,
+              "_id": 14,
+              "x": 0.05,
+              "y": 0.6,
+              "filename": "forest/levels/forest_11.json",
+              "time": 80,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 12,
+              "_id": 15,
+              "x": 0.1667,
+              "y": 0.3767,
+              "filename": "forest/levels/forest_12.json",
+              "time": 25,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 13,
+              "_id": 16,
+              "x": 0.04222,
+              "y": 0.3144,
+              "filename": "forest/levels/forest_13.json",
+              "time": 60,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 14,
+              "_id": 18,
+              "x": 0.5,
+              "y": 0.4,
+              "filename": "forest/levels/forest_14.json",
+              "time": 30,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 15,
+              "_id": 19,
+              "x": 0.35,
+              "y": 0.35,
+              "filename": "forest/levels/forest_15.json",
+              "time": 100,
+              "mobileTime": 150,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 16,
+              "_id": 20,
+              "x": 0.25,
+              "y": 0.25,
+              "filename": "forest/levels/forest_16.json",
+              "time": 70,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 17,
+              "_id": 21,
+              "x": 0.1,
+              "y": 0.2,
+              "filename": "forest/levels/forest_17.json",
+              "time": 90,
+              "mobileTime": 180,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 18,
+              "_id": 22,
+              "x": 0.45,
+              "y": 0.25,
+              "filename": "forest/levels/forest_18.json",
+              "time": 70,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 19,
+              "_id": 23,
+              "x": 0.55,
+              "y": 0.2,
+              "filename": "forest/levels/forest_19.json",
+              "time": 65,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 20,
+              "_id": 24,
+              "x": 0.45,
+              "y": 0.1,
+              "filename": "forest/levels/forest_20.json",
+              "time": 105,
+              "mobileTime": 210,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 21,
+              "_id": 25,
+              "x": 0.6,
+              "y": 0.35,
+              "filename": "forest/levels/forest_21.json",
+              "time": 30,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 22,
+              "_id": 26,
+              "x": 0.7,
+              "y": 0.25,
+              "filename": "forest/levels/forest_22.json",
+              "time": 95,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 23,
+              "_id": 27,
+              "x": 0.85,
+              "y": 0.2,
+              "filename": "forest/levels/forest_23.json",
+              "time": 90,
+              "mobileTime": 180,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 24,
+              "_id": 28,
+              "x": 0.6,
+              "y": 0.5,
+              "filename": "forest/levels/forest_24.json",
+              "time": 75,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 25,
+              "_id": 29,
+              "x": 0.7,
+              "y": 0.55,
+              "filename": "forest/levels/forest_25.json",
+              "time": 45,
+              "mobileTime": 65,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 26,
+              "_id": 30,
+              "x": 0.8,
+              "y": 0.4,
+              "filename": "forest/levels/forest_26.json",
+              "time": 18,
+              "mobileTime": 36,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 27,
+              "_id": 31,
+              "x": 0.9,
+              "y": 0.35,
+              "filename": "forest/levels/forest_27.json",
+              "time": 45,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 28,
+              "_id": 32,
+              "x": 0.85,
+              "y": 0.55,
+              "filename": "forest/levels/forest_28.json",
+              "time": 58,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 29,
+              "_id": 33,
+              "x": 0.95,
+              "y": 0.6,
+              "filename": "forest/levels/forest_29.json",
+              "time": 70,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 51,
+              "_id": 34,
+              "x": 0.435,
+              "y": 0.775,
+              "filename": "forest/levels/forest_03_1.json",
+              "time": 40,
+              "mobileTime": 65,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 52,
+              "_id": 35,
+              "x": 0.405,
+              "y": 0.58,
+              "filename": "forest/levels/forest_04_1.json",
+              "time": 70,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 53,
+              "_id": 36,
+              "x": 0.255,
+              "y": 0.755,
+              "filename": "forest/levels/forest_06_1.json",
+              "time": 15,
+              "mobileTime": 35,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 54,
+              "_id": 37,
+              "x": 0.165,
+              "y": 0.47,
+              "filename": "forest/levels/forest_09_1.json",
+              "time": 55,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 55,
+              "_id": 38,
+              "x": 0.24,
+              "y": 0.35,
+              "filename": "forest/levels/forest_12_1.json",
+              "time": 60,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 56,
+              "_id": 39,
+              "x": 0.065,
+              "y": 0.425,
+              "filename": "forest/levels/forest_13_1.json",
+              "time": 150,
+              "mobileTime": 240,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 57,
+              "_id": 41,
+              "x": 0.435,
+              "y": 0.465,
+              "filename": "forest/levels/forest_14_1.json",
+              "time": 35,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 58,
+              "_id": 42,
+              "x": 0.165,
+              "y": 0.13,
+              "filename": "forest/levels/forest_17_1.json",
+              "time": 90,
+              "mobileTime": 180,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 59,
+              "_id": 43,
+              "x": 0.62,
+              "y": 0.22,
+              "filename": "forest/levels/forest_19_1.json",
+              "time": 70,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 61,
+              "_id": 46,
+              "x": 0.69,
+              "y": 0.44,
+              "filename": "forest/levels/forest_25_1.json",
+              "time": 120,
+              "mobileTime": 240,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 62,
+              "_id": 47,
+              "x": 0.915,
+              "y": 0.465,
+              "filename": "forest/levels/forest_27_1.json",
+              "time": 65,
+              "mobileTime": 85,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 60,
+              "_id": 48,
+              "x": 0.625,
+              "y": 0.585,
+              "filename": "forest/levels/forest_24_1.json",
+              "time": 90,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 63,
+              "_id": 49,
+              "x": 0.885,
+              "y": 0.65,
+              "filename": "forest/levels/forest_32_1.json",
+              "time": 70,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 64,
+              "_id": 51,
+              "x": 0.395,
+              "y": 0.17,
+              "filename": "forest/levels/forest_bonus_1.json",
+              "time": 165,
+              "mobileTime": 240,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 66,
+              "_id": 52,
+              "x": 0.355,
+              "y": 0.07,
+              "filename": "forest/levels/forest_bonus_3.json",
+              "time": 105,
+              "mobileTime": 135,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 65,
+              "_id": 53,
+              "x": 0.55,
+              "y": 0.085,
+              "filename": "forest/levels/forest_bonus_2.json",
+              "time": 70,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "edges": [
+            {
+              "id": "1-2",
+              "source": 1,
+              "target": 2
+            },
+            {
+              "id": "2-3",
+              "source": 2,
+              "target": 3
+            },
+            {
+              "id": "3-4",
+              "source": 3,
+              "target": 4
+            },
+            {
+              "id": "4-5",
+              "source": 4,
+              "target": 5
+            },
+            {
+              "id": "5-6",
+              "source": 5,
+              "target": 6
+            },
+            {
+              "id": "6-7",
+              "source": 6,
+              "target": 7
+            },
+            {
+              "id": "4-30",
+              "source": 4,
+              "target": 8
+            },
+            {
+              "id": "30-31",
+              "source": 8,
+              "target": 9
+            },
+            {
+              "id": "31-32",
+              "source": 9,
+              "target": 10
+            },
+            {
+              "id": "4-8",
+              "source": 4,
+              "target": 11
+            },
+            {
+              "id": "8-9",
+              "source": 11,
+              "target": 12
+            },
+            {
+              "id": "9-12",
+              "source": 12,
+              "target": 15
+            },
+            {
+              "id": "12-13",
+              "source": 15,
+              "target": 16
+            },
+            {
+              "id": "9-10",
+              "source": 12,
+              "target": 13
+            },
+            {
+              "id": "10-11",
+              "source": 13,
+              "target": 14
+            },
+            {
+              "id": "4-14",
+              "source": 4,
+              "target": 18
+            },
+            {
+              "id": "14-15",
+              "source": 18,
+              "target": 19
+            },
+            {
+              "id": "15-16",
+              "source": 19,
+              "target": 20
+            },
+            {
+              "id": "16-17",
+              "source": 20,
+              "target": 21
+            },
+            {
+              "id": "14-18",
+              "source": 18,
+              "target": 22
+            },
+            {
+              "id": "18-19",
+              "source": 22,
+              "target": 23
+            },
+            {
+              "id": "19-20",
+              "source": 23,
+              "target": 24
+            },
+            {
+              "id": "14-21",
+              "source": 18,
+              "target": 25
+            },
+            {
+              "id": "21-22",
+              "source": 25,
+              "target": 26
+            },
+            {
+              "id": "22-23",
+              "source": 26,
+              "target": 27
+            },
+            {
+              "id": "4-24",
+              "source": 4,
+              "target": 28
+            },
+            {
+              "id": "24-25",
+              "source": 28,
+              "target": 29
+            },
+            {
+              "id": "25-26",
+              "source": 29,
+              "target": 30
+            },
+            {
+              "id": "26-27",
+              "source": 30,
+              "target": 31
+            },
+            {
+              "id": "25-28",
+              "source": 29,
+              "target": 32
+            },
+            {
+              "id": "28-29",
+              "source": 32,
+              "target": 33
+            },
+            {
+              "id": "3-51",
+              "source": 3,
+              "target": 34,
+              "_id": 0,
+              "hidden": true
+            },
+            {
+              "id": "4-52",
+              "source": 4,
+              "target": 35,
+              "_id": 1,
+              "hidden": true
+            },
+            {
+              "id": "6-53",
+              "source": 6,
+              "target": 36,
+              "_id": 2,
+              "hidden": true
+            },
+            {
+              "id": "9-54",
+              "source": 12,
+              "target": 37,
+              "_id": 3,
+              "hidden": true
+            },
+            {
+              "id": "12-55",
+              "source": 15,
+              "target": 38,
+              "_id": 4,
+              "hidden": true
+            },
+            {
+              "id": "13-56",
+              "source": 16,
+              "target": 39,
+              "_id": 5,
+              "hidden": true
+            },
+            {
+              "id": "14-57",
+              "source": 18,
+              "target": 41,
+              "_id": 6,
+              "hidden": true
+            },
+            {
+              "id": "17-58",
+              "source": 21,
+              "target": 42,
+              "_id": 7,
+              "hidden": true
+            },
+            {
+              "id": "19-59",
+              "source": 23,
+              "target": 43,
+              "_id": 8,
+              "hidden": true
+            },
+            {
+              "id": "25-61",
+              "source": 29,
+              "target": 46,
+              "_id": 10,
+              "hidden": true
+            },
+            {
+              "id": "27-62",
+              "source": 31,
+              "target": 47,
+              "_id": 11,
+              "hidden": true
+            },
+            {
+              "id": "24-60",
+              "source": 28,
+              "target": 48,
+              "_id": 12,
+              "hidden": true
+            },
+            {
+              "id": "32-63",
+              "source": 10,
+              "target": 49,
+              "_id": 13,
+              "hidden": true
+            },
+            {
+              "id": "20-64",
+              "source": 24,
+              "target": 51,
+              "_id": 14,
+              "hidden": true
+            },
+            {
+              "id": "20-66",
+              "source": 24,
+              "target": 52,
+              "_id": 15,
+              "hidden": true
+            },
+            {
+              "id": "20-65",
+              "source": 24,
+              "target": 53,
+              "_id": 16,
+              "hidden": true
+            }
+          ],
+          "minRequired": 0,
+          "softLocked": false,
+          "locked": false,
+          "hasNew": true
+        }
+      ],
+      "gameComplete": false
+    },
+    "fb-light": {
+      "temples": [
+        {
+          "index": 0,
+          "id": "light",
+          "label": "light temple",
+          "color": "#AF7F36",
+          "type": "tree",
+          "levels": [
+            {
+              "id": 1,
+              "_id": 1,
+              "x": 0.5,
+              "y": 0.85,
+              "filename": "tutorials/levels/light_01.json",
+              "time": 30,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "general",
+              "initial": true,
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 2,
+              "_id": 2,
+              "x": 0.5,
+              "y": 0.75,
+              "filename": "light/levels/light_02.json",
+              "time": 40,
+              "mobileTime": 92,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 5,
+              "_id": 3,
+              "x": 0.5,
+              "y": 0.6,
+              "filename": "light/levels/light_05.json",
+              "time": 50,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 10,
+              "_id": 4,
+              "x": 0.55,
+              "y": 0.5,
+              "filename": "light/levels/light_10.json",
+              "time": 60,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 9,
+              "_id": 5,
+              "x": 0.45,
+              "y": 0.5,
+              "filename": "light/levels/light_09.json",
+              "time": 28,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 18,
+              "_id": 6,
+              "x": 0.45,
+              "y": 0.4,
+              "filename": "light/levels/light_18.json",
+              "time": 45,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 19,
+              "_id": 7,
+              "x": 0.55,
+              "y": 0.4,
+              "filename": "light/levels/light_19.json",
+              "time": 90,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 23,
+              "_id": 8,
+              "x": 0.5,
+              "y": 0.3,
+              "filename": "light/levels/light_23.json",
+              "time": 65,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 15,
+              "_id": 9,
+              "x": 0.65,
+              "y": 0.45,
+              "filename": "light/levels/light_15.json",
+              "time": 22,
+              "mobileTime": 40,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 14,
+              "_id": 10,
+              "x": 0.35,
+              "y": 0.45,
+              "filename": "light/levels/light_14.json",
+              "time": 80,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 16,
+              "_id": 14,
+              "x": 0.75,
+              "y": 0.45,
+              "filename": "light/levels/light_16.json",
+              "time": 60,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 11,
+              "_id": 15,
+              "x": 0.75,
+              "y": 0.6,
+              "filename": "light/levels/light_11.json",
+              "time": 130,
+              "mobileTime": 160,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 25,
+              "_id": 16,
+              "x": 0.75,
+              "y": 0.3,
+              "filename": "light/levels/light_25.json",
+              "time": 45,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 8,
+              "_id": 17,
+              "x": 0.25,
+              "y": 0.6,
+              "filename": "light/levels/light_08.json",
+              "time": 85,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 21,
+              "_id": 18,
+              "x": 0.25,
+              "y": 0.3,
+              "filename": "light/levels/light_21.json",
+              "time": 28,
+              "mobileTime": 32,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 13,
+              "_id": 19,
+              "x": 0.25,
+              "y": 0.45,
+              "filename": "light/levels/light_13.json",
+              "time": 30,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 4,
+              "_id": 20,
+              "x": 0.4,
+              "y": 0.7,
+              "filename": "light/levels/light_04.json",
+              "time": 30,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 6,
+              "_id": 21,
+              "x": 0.6,
+              "y": 0.7,
+              "filename": "light/levels/light_06.json",
+              "time": 50,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 28,
+              "_id": 22,
+              "x": 0.5,
+              "y": 0.18,
+              "filename": "light/levels/light_28.json",
+              "time": 100,
+              "mobileTime": 115,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 22,
+              "_id": 23,
+              "x": 0.4,
+              "y": 0.2,
+              "filename": "light/levels/light_22.json",
+              "time": 115,
+              "mobileTime": 180,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 24,
+              "_id": 24,
+              "x": 0.6,
+              "y": 0.2,
+              "filename": "light/levels/light_24.json",
+              "time": 35,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 0,
+              "_id": 25,
+              "x": 0.5,
+              "y": 0.95,
+              "filename": "tutorials/levels/forest_01.json",
+              "time": 40,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": true,
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 31,
+              "_id": 26,
+              "x": 0.4,
+              "y": 0.9,
+              "filename": "light/levels/light_31.json",
+              "time": 90,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 40,
+              "_id": 27,
+              "x": 0.6,
+              "y": 0.9,
+              "filename": "light/levels/light_40.json",
+              "time": 65,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 26,
+              "_id": 28,
+              "x": 0.85,
+              "y": 0.35,
+              "filename": "light/levels/light_26.json",
+              "time": 40,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 17,
+              "_id": 29,
+              "x": 0.85,
+              "y": 0.55,
+              "filename": "light/levels/light_17.json",
+              "time": 16,
+              "mobileTime": 35,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 38,
+              "_id": 30,
+              "x": 0.95,
+              "y": 0.45,
+              "filename": "light/levels/light_38.json",
+              "time": 45,
+              "mobileTime": 58,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 7,
+              "_id": 31,
+              "x": 0.7,
+              "y": 0.75,
+              "filename": "light/levels/light_07.json",
+              "time": 20,
+              "mobileTime": 30,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 39,
+              "_id": 32,
+              "x": 0.9,
+              "y": 0.75,
+              "filename": "light/levels/light_39.json",
+              "time": 55,
+              "mobileTime": 75,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 3,
+              "_id": 33,
+              "x": 0.3,
+              "y": 0.75,
+              "filename": "light/levels/light_03.json",
+              "time": 25,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 12,
+              "_id": 34,
+              "x": 0.15,
+              "y": 0.55,
+              "filename": "light/levels/light_12.json",
+              "time": 80,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 20,
+              "_id": 35,
+              "x": 0.15,
+              "y": 0.35,
+              "filename": "light/levels/light_20.json",
+              "time": 25,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 33,
+              "_id": 36,
+              "x": 0.05,
+              "y": 0.45,
+              "filename": "light/levels/light_33.json",
+              "time": 53,
+              "mobileTime": 63,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 32,
+              "_id": 37,
+              "x": 0.1,
+              "y": 0.75,
+              "filename": "light/levels/light_32.json",
+              "time": 45,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 27,
+              "_id": 38,
+              "x": 0.3,
+              "y": 0.15,
+              "filename": "light/levels/light_27.json",
+              "time": 40,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 29,
+              "_id": 39,
+              "x": 0.7,
+              "y": 0.15,
+              "filename": "light/levels/light_29.json",
+              "time": 80,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 30,
+              "_id": 40,
+              "x": 0.5,
+              "y": 0.08,
+              "filename": "light/levels/light_30.json",
+              "time": 60,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 34,
+              "_id": 41,
+              "x": 0.1,
+              "y": 0.2,
+              "filename": "light/levels/light_34.json",
+              "time": 80,
+              "mobileTime": 160,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 37,
+              "_id": 42,
+              "x": 0.9,
+              "y": 0.2,
+              "filename": "light/levels/light_37.json",
+              "time": 65,
+              "mobileTime": 85,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 35,
+              "_id": 43,
+              "x": 0.4,
+              "y": 0.039,
+              "filename": "light/levels/light_35.json",
+              "time": 100,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 36,
+              "_id": 44,
+              "x": 0.6,
+              "y": 0.039,
+              "filename": "light/levels/light_36.json",
+              "time": 65,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 51,
+              "_id": 45,
+              "x": 0.405,
+              "y": 0.595,
+              "filename": "light/levels/light_04_1.json",
+              "time": 35,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 52,
+              "_id": 46,
+              "x": 0.585,
+              "y": 0.59,
+              "filename": "light/levels/light_05_1.json",
+              "time": 50,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 53,
+              "_id": 47,
+              "x": 0.67,
+              "y": 0.625,
+              "filename": "light/levels/light_06_1.json",
+              "time": 70,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "dark",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 54,
+              "_id": 5008,
+              "x": 0.19,
+              "y": 0.665,
+              "filename": "light/levels/light_08_1.json",
+              "time": 60,
+              "mobileTime": 85,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "edges": [
+            {
+              "id": "39-40",
+              "source": 32,
+              "target": 27,
+              "_id": "3227"
+            },
+            {
+              "id": "38-37",
+              "source": 30,
+              "target": 42,
+              "_id": "3042"
+            },
+            {
+              "id": "36-35",
+              "source": 44,
+              "target": 43,
+              "_id": "4443"
+            },
+            {
+              "id": "34-33",
+              "source": 41,
+              "target": 36,
+              "_id": "4136"
+            },
+            {
+              "id": "32-31",
+              "source": 37,
+              "target": 26,
+              "_id": "3726"
+            },
+            {
+              "id": "32-12",
+              "source": 37,
+              "target": 34,
+              "_id": "3734"
+            },
+            {
+              "id": "12-33",
+              "source": 34,
+              "target": 36,
+              "_id": "3436"
+            },
+            {
+              "id": "34-27",
+              "source": 41,
+              "target": 38,
+              "_id": "4138"
+            },
+            {
+              "id": "27-35",
+              "source": 38,
+              "target": 43,
+              "_id": "3843"
+            },
+            {
+              "id": "36-29",
+              "source": 44,
+              "target": 39,
+              "_id": "4439"
+            },
+            {
+              "id": "29-37",
+              "source": 39,
+              "target": 42,
+              "_id": "3942"
+            },
+            {
+              "id": "38-17",
+              "source": 30,
+              "target": 29,
+              "_id": "3029"
+            },
+            {
+              "id": "17-39",
+              "source": 29,
+              "target": 32,
+              "_id": "2932"
+            },
+            {
+              "id": "31-1",
+              "source": 26,
+              "target": 1,
+              "_id": "261"
+            },
+            {
+              "id": "1-40",
+              "source": 1,
+              "target": 27,
+              "_id": "127"
+            },
+            {
+              "id": "1-2",
+              "source": 1,
+              "target": 2,
+              "_id": "12"
+            },
+            {
+              "id": "1-3",
+              "source": 1,
+              "target": 33,
+              "_id": "133"
+            },
+            {
+              "id": "1-7",
+              "source": 1,
+              "target": 31,
+              "_id": "131"
+            },
+            {
+              "id": "7-17",
+              "source": 31,
+              "target": 29,
+              "_id": "3129"
+            },
+            {
+              "id": "17-16",
+              "source": 29,
+              "target": 14,
+              "_id": "2914"
+            },
+            {
+              "id": "16-26",
+              "source": 14,
+              "target": 28,
+              "_id": "1428"
+            },
+            {
+              "id": "16-25",
+              "source": 14,
+              "target": 16,
+              "_id": "1416"
+            },
+            {
+              "id": "11-16",
+              "source": 15,
+              "target": 14,
+              "_id": "1514"
+            },
+            {
+              "id": "26-38",
+              "source": 28,
+              "target": 30,
+              "_id": "2830"
+            },
+            {
+              "id": "33-20",
+              "source": 36,
+              "target": 35,
+              "_id": "3635"
+            },
+            {
+              "id": "20-13",
+              "source": 35,
+              "target": 19,
+              "_id": "3519"
+            },
+            {
+              "id": "13-12",
+              "source": 19,
+              "target": 34,
+              "_id": "1934"
+            },
+            {
+              "id": "12-3",
+              "source": 34,
+              "target": 33,
+              "_id": "3433"
+            },
+            {
+              "id": "2-6",
+              "source": 2,
+              "target": 21,
+              "_id": "221"
+            },
+            {
+              "id": "2-4",
+              "source": 2,
+              "target": 20,
+              "_id": "220"
+            },
+            {
+              "id": "2-5",
+              "source": 2,
+              "target": 3,
+              "_id": "23"
+            },
+            {
+              "id": "9-19",
+              "source": 5,
+              "target": 7,
+              "_id": "57"
+            },
+            {
+              "id": "10-18",
+              "source": 4,
+              "target": 6,
+              "_id": "46"
+            },
+            {
+              "id": "18-14",
+              "source": 6,
+              "target": 10,
+              "_id": "610"
+            },
+            {
+              "id": "14-9",
+              "source": 10,
+              "target": 5,
+              "_id": "105"
+            },
+            {
+              "id": "9-5",
+              "source": 5,
+              "target": 3,
+              "_id": "53"
+            },
+            {
+              "id": "5-10",
+              "source": 3,
+              "target": 4,
+              "_id": "34"
+            },
+            {
+              "id": "10-15",
+              "source": 4,
+              "target": 9,
+              "_id": "49"
+            },
+            {
+              "id": "15-19",
+              "source": 9,
+              "target": 7,
+              "_id": "97"
+            },
+            {
+              "id": "19-23",
+              "source": 7,
+              "target": 8,
+              "_id": "78"
+            },
+            {
+              "id": "23-18",
+              "source": 8,
+              "target": 6,
+              "_id": "86"
+            },
+            {
+              "id": "15-16",
+              "source": 9,
+              "target": 14,
+              "_id": "914"
+            },
+            {
+              "id": "14-13",
+              "source": 10,
+              "target": 19,
+              "_id": "1019"
+            },
+            {
+              "id": "30-28",
+              "source": 40,
+              "target": 22,
+              "_id": "4022"
+            },
+            {
+              "id": "29-30",
+              "source": 39,
+              "target": 40,
+              "_id": "3940",
+              "hidden": false
+            },
+            {
+              "id": "30-27",
+              "source": 40,
+              "target": 38,
+              "_id": "4038"
+            },
+            {
+              "id": "30-36",
+              "source": 40,
+              "target": 44,
+              "_id": "4044"
+            },
+            {
+              "id": "21-13",
+              "source": 18,
+              "target": 19,
+              "_id": "1819"
+            },
+            {
+              "id": "13-8",
+              "source": 19,
+              "target": 17,
+              "_id": "1917"
+            },
+            {
+              "id": "13-4",
+              "source": 19,
+              "target": 20,
+              "_id": "1920"
+            },
+            {
+              "id": "6-16",
+              "source": 21,
+              "target": 14,
+              "_id": "2114"
+            },
+            {
+              "id": "6-11",
+              "source": 21,
+              "target": 15,
+              "_id": "2115"
+            },
+            {
+              "id": "8-4",
+              "source": 17,
+              "target": 20,
+              "_id": "1720"
+            },
+            {
+              "id": "13-22",
+              "source": 19,
+              "target": 23,
+              "_id": "1923"
+            },
+            {
+              "id": "22-21",
+              "source": 23,
+              "target": 18,
+              "_id": "2318"
+            },
+            {
+              "id": "24-25",
+              "source": 24,
+              "target": 16,
+              "_id": "2416"
+            },
+            {
+              "id": "16-24",
+              "source": 14,
+              "target": 24,
+              "_id": "1424"
+            },
+            {
+              "id": "24-28",
+              "source": 24,
+              "target": 22,
+              "_id": "2422"
+            },
+            {
+              "id": "22-28",
+              "source": 23,
+              "target": 22,
+              "_id": "2322"
+            },
+            {
+              "id": "23-28",
+              "source": 8,
+              "target": 22,
+              "_id": "822"
+            },
+            {
+              "id": "40-7",
+              "source": 27,
+              "target": 31,
+              "_id": "2731"
+            },
+            {
+              "id": "7-39",
+              "source": 31,
+              "target": 32,
+              "_id": "3132"
+            },
+            {
+              "id": "31-3",
+              "source": 26,
+              "target": 33,
+              "_id": "2633"
+            },
+            {
+              "id": "32-3",
+              "source": 37,
+              "target": 33,
+              "_id": "3733"
+            },
+            {
+              "id": "20-27",
+              "source": 35,
+              "target": 38,
+              "_id": "3538"
+            },
+            {
+              "id": "34-20",
+              "source": 41,
+              "target": 35,
+              "_id": "4135"
+            },
+            {
+              "id": "26-29",
+              "source": 28,
+              "target": 39,
+              "_id": "2839"
+            },
+            {
+              "id": "26-37",
+              "source": 28,
+              "target": 42,
+              "_id": "2842"
+            },
+            {
+              "id": "30-35",
+              "source": 40,
+              "target": 43,
+              "_id": "4043"
+            },
+            {
+              "id": "4-51",
+              "source": 20,
+              "target": 45,
+              "_id": 4444,
+              "hidden": true
+            },
+            {
+              "id": "5-52",
+              "source": 3,
+              "target": 46,
+              "_id": 4445,
+              "hidden": true
+            },
+            {
+              "id": "6-53",
+              "source": 21,
+              "target": 47,
+              "_id": 4446,
+              "hidden": true
+            },
+            {
+              "id": 1,
+              "source": 17,
+              "target": 5008,
+              "_id": 4447,
+              "hidden": true
+            }
+          ],
+          "minRequired": 0,
+          "softLocked": false,
+          "locked": false
+        }
+      ],
+      "gameComplete": false
+    },
+    "fb-ice": {
+      "temples": [
+        {
+          "index": 0,
+          "id": "ice",
+          "label": "ice temple",
+          "color": "#99A5AA",
+          "type": "tree",
+          "levels": [
+            {
+              "id": 1,
+              "_id": 1,
+              "x": 0.6,
+              "y": 0.95,
+              "filename": "tutorials/levels/light_01.json",
+              "time": 30,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "general",
+              "initial": true,
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 2,
+              "_id": 2,
+              "x": 0.5,
+              "y": 0.9,
+              "filename": "tutorials/levels/ice_02.json",
+              "time": 45,
+              "mobileTime": 65,
+              "required": 0,
+              "type": "general",
+              "initial": true,
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 3,
+              "_id": 3,
+              "x": 0.5,
+              "y": 0.8,
+              "filename": "ice/levels/ice_03.json",
+              "time": 50,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 1,
+              "isNew": true
+            },
+            {
+              "id": 4,
+              "_id": 4,
+              "x": 0.5,
+              "y": 0.65,
+              "filename": "ice/levels/ice_04.json",
+              "time": 140,
+              "mobileTime": 160,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 1,
+              "isNew": true
+            },
+            {
+              "id": 5,
+              "_id": 5,
+              "x": 0.35,
+              "y": 0.75,
+              "filename": "ice/levels/ice_05.json",
+              "time": 110,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 6,
+              "_id": 7,
+              "x": 0.35,
+              "y": 0.6,
+              "filename": "ice/levels/ice_06.json",
+              "time": 45,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 7,
+              "_id": 8,
+              "x": 0.5,
+              "y": 0.5,
+              "filename": "ice/levels/ice_07.json",
+              "time": 55,
+              "mobileTime": 95,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 9,
+              "_id": 9,
+              "x": 0.65,
+              "y": 0.75,
+              "filename": "ice/levels/ice_09.json",
+              "time": 65,
+              "mobileTime": 115,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 10,
+              "_id": 10,
+              "x": 0.15,
+              "y": 0.7,
+              "filename": "ice/levels/ice_10.json",
+              "time": 40,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 11,
+              "_id": 11,
+              "x": 0.15,
+              "y": 0.8,
+              "filename": "ice/levels/ice_11.json",
+              "time": 58,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 12,
+              "_id": 12,
+              "x": 0.05,
+              "y": 0.75,
+              "filename": "ice/levels/ice_12.json",
+              "time": 100,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 13,
+              "_id": 13,
+              "x": 0.05,
+              "y": 0.65,
+              "filename": "ice/levels/ice_13.json",
+              "time": 85,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 8,
+              "_id": 14,
+              "x": 0.65,
+              "y": 0.6,
+              "filename": "ice/levels/ice_08.json",
+              "time": 95,
+              "mobileTime": 135,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 15,
+              "_id": 15,
+              "x": 0.85,
+              "y": 0.8,
+              "filename": "ice/levels/ice_15.json",
+              "time": 240,
+              "mobileTime": 300,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 16,
+              "_id": 16,
+              "x": 0.95,
+              "y": 0.75,
+              "filename": "ice/levels/ice_16.json",
+              "time": 60,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 17,
+              "_id": 17,
+              "x": 0.95,
+              "y": 0.65,
+              "filename": "ice/levels/ice_17.json",
+              "time": 65,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 14,
+              "_id": 18,
+              "x": 0.85,
+              "y": 0.7,
+              "filename": "ice/levels/ice_14.json",
+              "time": 60,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 25,
+              "_id": 19,
+              "x": 0.65,
+              "y": 0.4,
+              "filename": "ice/levels/ice_25.json",
+              "time": 35,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 19,
+              "_id": 20,
+              "x": 0.35,
+              "y": 0.4,
+              "filename": "ice/levels/ice_19.json",
+              "time": 90,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 18,
+              "_id": 21,
+              "x": 0.25,
+              "y": 0.5,
+              "filename": "ice/levels/ice_18.json",
+              "time": 75,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 24,
+              "_id": 22,
+              "x": 0.75,
+              "y": 0.5,
+              "filename": "ice/levels/ice_24.json",
+              "time": 60,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 32,
+              "_id": 23,
+              "x": 0.65,
+              "y": 0.25,
+              "filename": "ice/levels/ice_32.json",
+              "time": 120,
+              "mobileTime": 180,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 31,
+              "_id": 24,
+              "x": 0.35,
+              "y": 0.25,
+              "filename": "ice/levels/ice_31.json",
+              "time": 105,
+              "mobileTime": 125,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 30,
+              "_id": 25,
+              "x": 0.5,
+              "y": 0.35,
+              "filename": "ice/levels/ice_30.json",
+              "time": 90,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 33,
+              "_id": 27,
+              "x": 0.5,
+              "y": 0.2,
+              "filename": "ice/levels/ice_33.json",
+              "time": 100,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 36,
+              "_id": 28,
+              "x": 0.6,
+              "y": 0.15,
+              "filename": "ice/levels/ice_36.json",
+              "time": 80,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 34,
+              "_id": 30,
+              "x": 0.4,
+              "y": 0.15,
+              "filename": "ice/levels/ice_34.json",
+              "time": 50,
+              "mobileTime": 65,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 26,
+              "_id": 33,
+              "x": 0.85,
+              "y": 0.3,
+              "filename": "ice/levels/ice_26.json",
+              "time": 105,
+              "mobileTime": 118,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 27,
+              "_id": 34,
+              "x": 0.8489,
+              "y": 0.2033,
+              "filename": "ice/levels/ice_27.json",
+              "time": 30,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 28,
+              "_id": 35,
+              "x": 0.9467,
+              "y": 0.2522,
+              "filename": "ice/levels/ice_28.json",
+              "time": 90,
+              "mobileTime": 110,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 20,
+              "_id": 37,
+              "x": 0.1478,
+              "y": 0.3011,
+              "filename": "ice/levels/ice_20.json",
+              "time": 35,
+              "mobileTime": 45,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 23,
+              "_id": 38,
+              "x": 0.1478,
+              "y": 0.2011,
+              "filename": "ice/levels/ice_23.json",
+              "time": 30,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 22,
+              "_id": 39,
+              "x": 0.04778,
+              "y": 0.2489,
+              "filename": "ice/levels/ice_22.json",
+              "time": 120,
+              "mobileTime": 135,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 21,
+              "_id": 40,
+              "x": 0.05222,
+              "y": 0.3478,
+              "filename": "ice/levels/ice_21.json",
+              "time": 105,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 0,
+              "_id": 41,
+              "x": 0.4,
+              "y": 0.95,
+              "filename": "tutorials/levels/forest_01.json",
+              "time": 40,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": true,
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 35,
+              "_id": 44,
+              "x": 0.4967,
+              "y": 0.1011,
+              "filename": "ice/levels/ice_35.json",
+              "time": 140,
+              "mobileTime": 240,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 29,
+              "_id": 45,
+              "x": 0.95,
+              "y": 0.3478,
+              "filename": "ice/levels/ice_29.json",
+              "time": 20,
+              "mobileTime": 42,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 51,
+              "_id": 46,
+              "x": 0.575,
+              "y": 0.8,
+              "filename": "ice/levels/ice_03_1.json",
+              "time": 50,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 52,
+              "_id": 47,
+              "x": 0.43,
+              "y": 0.61,
+              "filename": "ice/levels/ice_04_1.json",
+              "time": 140,
+              "mobileTime": 160,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 53,
+              "_id": 48,
+              "x": 0.575,
+              "y": 0.5,
+              "filename": "ice/levels/ice_07_1.json",
+              "time": 85,
+              "mobileTime": 135,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 54,
+              "_id": 49,
+              "x": 0.58,
+              "y": 0.635,
+              "filename": "ice/levels/ice_08_1.json",
+              "time": 105,
+              "mobileTime": 170,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 55,
+              "_id": 50,
+              "x": 0.73,
+              "y": 0.8,
+              "filename": "ice/levels/ice_09_1.json",
+              "time": 45,
+              "mobileTime": 85,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 56,
+              "_id": 51,
+              "x": 0.85,
+              "y": 0.89,
+              "filename": "ice/levels/ice_15_1.json",
+              "time": 240,
+              "mobileTime": 300,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 57,
+              "_id": 52,
+              "x": 0.95,
+              "y": 0.84,
+              "filename": "ice/levels/ice_16_1.json",
+              "time": 70,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 58,
+              "_id": 53,
+              "x": 0.17,
+              "y": 0.5,
+              "filename": "ice/levels/ice_18_1.json",
+              "time": 75,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 59,
+              "_id": 54,
+              "x": 0.23,
+              "y": 0.16,
+              "filename": "ice/levels/ice_23_1.json",
+              "time": 30,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "speed",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 60,
+              "_id": 55,
+              "x": 0.83,
+              "y": 0.5,
+              "filename": "ice/levels/ice_24_1.json",
+              "time": 70,
+              "mobileTime": 115,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 61,
+              "_id": 56,
+              "x": 0.95,
+              "y": 0.155,
+              "filename": "ice/levels/ice_28_1.json",
+              "time": 100,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 62,
+              "_id": 57,
+              "x": 0.425,
+              "y": 0.375,
+              "filename": "ice/levels/ice_30_1.json",
+              "time": 95,
+              "mobileTime": 145,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 63,
+              "_id": 58,
+              "x": 0.59,
+              "y": 0.05,
+              "filename": "ice/levels/ice_35_1.json",
+              "time": 175,
+              "mobileTime": 280,
+              "required": 0,
+              "type": "puzzle",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 64,
+              "_id": 59,
+              "x": 0.68,
+              "y": 0.15,
+              "filename": "ice/levels/ice_36_1.json",
+              "time": 85,
+              "mobileTime": 120,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "wing": 0,
+              "requirePerfects": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 65,
+              "_id": 61,
+              "x": 0.335,
+              "y": 0.05,
+              "filename": "ice/levels/ice_bonus_1.json",
+              "time": 160,
+              "mobileTime": 240,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 66,
+              "_id": 62,
+              "x": 0.74,
+              "y": 0.05,
+              "filename": "ice/levels/ice_bonus_2.json",
+              "time": 240,
+              "mobileTime": 300,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "opened": true,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "edges": [
+            {
+              "id": "2-3",
+              "source": 2,
+              "target": 3,
+              "_id": "23"
+            },
+            {
+              "id": "3-4",
+              "source": 3,
+              "target": 4,
+              "_id": "34"
+            },
+            {
+              "id": "5-4",
+              "source": 5,
+              "target": 4,
+              "_id": "54"
+            },
+            {
+              "id": "13-10",
+              "source": 13,
+              "target": 10,
+              "_id": "1310"
+            },
+            {
+              "id": "10-12",
+              "source": 10,
+              "target": 12,
+              "_id": "1012"
+            },
+            {
+              "id": "10-11",
+              "source": 10,
+              "target": 11,
+              "_id": "1011"
+            },
+            {
+              "id": "10-6",
+              "source": 10,
+              "target": 7,
+              "_id": "107"
+            },
+            {
+              "id": "6-7",
+              "source": 7,
+              "target": 8,
+              "_id": "78"
+            },
+            {
+              "id": "7-4",
+              "source": 8,
+              "target": 4,
+              "_id": "84"
+            },
+            {
+              "id": "6-5",
+              "source": 7,
+              "target": 5,
+              "_id": "75"
+            },
+            {
+              "id": "4-9",
+              "source": 4,
+              "target": 9,
+              "_id": "49"
+            },
+            {
+              "id": "9-8",
+              "source": 9,
+              "target": 14,
+              "_id": "914"
+            },
+            {
+              "id": "8-7",
+              "source": 14,
+              "target": 8,
+              "_id": "148"
+            },
+            {
+              "id": "8-14",
+              "source": 14,
+              "target": 18,
+              "_id": "1418"
+            },
+            {
+              "id": "14-16",
+              "source": 18,
+              "target": 16,
+              "_id": "1816"
+            },
+            {
+              "id": "14-15",
+              "source": 18,
+              "target": 15,
+              "_id": "1815"
+            },
+            {
+              "id": "14-17",
+              "source": 18,
+              "target": 17,
+              "_id": "1817"
+            },
+            {
+              "id": "7-19",
+              "source": 8,
+              "target": 20,
+              "_id": "820"
+            },
+            {
+              "id": "7-25",
+              "source": 8,
+              "target": 19,
+              "_id": "819"
+            },
+            {
+              "id": "25-32",
+              "source": 19,
+              "target": 23,
+              "_id": "1923"
+            },
+            {
+              "id": "19-31",
+              "source": 20,
+              "target": 24,
+              "_id": "2024"
+            },
+            {
+              "id": "19-18",
+              "source": 20,
+              "target": 21,
+              "_id": "2021"
+            },
+            {
+              "id": "18-6",
+              "source": 21,
+              "target": 7,
+              "_id": "217"
+            },
+            {
+              "id": "24-8",
+              "source": 22,
+              "target": 14,
+              "_id": "2214"
+            },
+            {
+              "id": "24-25",
+              "source": 22,
+              "target": 19,
+              "_id": "2219"
+            },
+            {
+              "id": "30-31",
+              "source": 25,
+              "target": 24,
+              "_id": "2524"
+            },
+            {
+              "id": "30-32",
+              "source": 25,
+              "target": 23,
+              "_id": "2523"
+            },
+            {
+              "id": "7-30",
+              "source": 8,
+              "target": 25,
+              "_id": "825"
+            },
+            {
+              "id": "33-36",
+              "source": 27,
+              "target": 28,
+              "_id": "2728"
+            },
+            {
+              "id": "33-34",
+              "source": 27,
+              "target": 30,
+              "_id": "2730"
+            },
+            {
+              "id": "33-30",
+              "source": 27,
+              "target": 25,
+              "_id": "2725"
+            },
+            {
+              "id": "25-26",
+              "source": 19,
+              "target": 33,
+              "_id": "1933"
+            },
+            {
+              "id": "26-28",
+              "source": 33,
+              "target": 35,
+              "_id": "3335"
+            },
+            {
+              "id": "26-27",
+              "source": 33,
+              "target": 34,
+              "_id": "3334"
+            },
+            {
+              "id": "26-29",
+              "source": 33,
+              "target": 45,
+              "_id": "3345"
+            },
+            {
+              "id": "33-35",
+              "source": 27,
+              "target": 44,
+              "_id": "2744"
+            },
+            {
+              "id": "19-20",
+              "source": 20,
+              "target": 37,
+              "_id": "2037"
+            },
+            {
+              "id": "20-23",
+              "source": 37,
+              "target": 38,
+              "_id": "3738"
+            },
+            {
+              "id": "20-22",
+              "source": 37,
+              "target": 39,
+              "_id": "3739"
+            },
+            {
+              "id": "20-21",
+              "source": 37,
+              "target": 40,
+              "_id": "3740"
+            },
+            {
+              "id": "2-0",
+              "source": 2,
+              "target": 41,
+              "_id": "241"
+            },
+            {
+              "id": "1-2",
+              "source": 1,
+              "target": 2,
+              "_id": 3741
+            },
+            {
+              "id": "3-51",
+              "source": 3,
+              "target": 46,
+              "_id": 3742,
+              "hidden": true
+            },
+            {
+              "id": "4-52",
+              "source": 4,
+              "target": 47,
+              "_id": 3743,
+              "hidden": true
+            },
+            {
+              "id": "7-53",
+              "source": 8,
+              "target": 48,
+              "_id": 3744,
+              "hidden": true
+            },
+            {
+              "id": "8-54",
+              "source": 14,
+              "target": 49,
+              "_id": 3745,
+              "hidden": true
+            },
+            {
+              "id": "9-55",
+              "source": 9,
+              "target": 50,
+              "_id": 3746,
+              "hidden": true
+            },
+            {
+              "id": "15-56",
+              "source": 15,
+              "target": 51,
+              "_id": 3747,
+              "hidden": true
+            },
+            {
+              "id": "16-57",
+              "source": 16,
+              "target": 52,
+              "_id": 3748,
+              "hidden": true
+            },
+            {
+              "id": "18-58",
+              "source": 21,
+              "target": 53,
+              "_id": 3749,
+              "hidden": true
+            },
+            {
+              "id": "23-59",
+              "source": 38,
+              "target": 54,
+              "_id": 3750,
+              "hidden": true
+            },
+            {
+              "id": "24-60",
+              "source": 22,
+              "target": 55,
+              "_id": 3751,
+              "hidden": true
+            },
+            {
+              "id": "61-28",
+              "source": 56,
+              "target": 35,
+              "_id": 3752,
+              "hidden": true
+            },
+            {
+              "id": "30-62",
+              "source": 25,
+              "target": 57,
+              "_id": 3753,
+              "hidden": true
+            },
+            {
+              "id": "36-64",
+              "source": 28,
+              "target": 59,
+              "_id": 3754,
+              "hidden": true
+            },
+            {
+              "id": "35-63",
+              "source": 44,
+              "target": 58,
+              "_id": 3755,
+              "hidden": true
+            },
+            {
+              "id": "35-65",
+              "source": 44,
+              "target": 61,
+              "_id": 3758,
+              "hidden": true
+            },
+            {
+              "id": 1,
+              "source": 28,
+              "target": 62,
+              "_id": 3759,
+              "hidden": true
+            }
+          ],
+          "minRequired": 0,
+          "softLocked": false,
+          "locked": false
+        }
+      ],
+      "gameComplete": false
+    },
+    "fb-crystal": {
+      "temples": [
+        {
+          "index": 0,
+          "id": "crystal",
+          "label": "crystal temple",
+          "color": "#2A2A2A",
+          "type": "tree",
+          "levels": [
+            {
+              "id": 1,
+              "_id": 1,
+              "x": 0.5,
+              "y": 0.95,
+              "filename": "tutorials/levels/light_01.json",
+              "time": 30,
+              "mobileTime": 50,
+              "required": 0,
+              "initial": true,
+              "type": "general",
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 2,
+              "_id": 2,
+              "x": 0.6,
+              "y": 0.95,
+              "filename": "tutorials/levels/ice_02.json",
+              "time": 45,
+              "mobileTime": 65,
+              "required": 0,
+              "initial": true,
+              "type": "general",
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 0,
+              "_id": 3,
+              "x": 0.4011,
+              "y": 0.95,
+              "filename": "tutorials/levels/forest_01.json",
+              "time": 40,
+              "mobileTime": 70,
+              "required": 0,
+              "initial": true,
+              "type": "general",
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 38,
+              "_id": 4,
+              "x": 0.5,
+              "y": 0.05,
+              "filename": "crystal/levels/crystal_38.json",
+              "type": "puzzle",
+              "time": 90,
+              "mobileTime": 105,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 34,
+              "_id": 5,
+              "x": 0.2,
+              "y": 0.05,
+              "filename": "crystal/levels/crystal_34.json",
+              "type": "puzzle",
+              "time": 180,
+              "mobileTime": 210,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 13,
+              "_id": 6,
+              "x": 0.05,
+              "y": 0.55,
+              "filename": "crystal/levels/crystal_13.json",
+              "type": "puzzle",
+              "time": 90,
+              "mobileTime": 100,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 36,
+              "_id": 7,
+              "x": 0.8,
+              "y": 0.05,
+              "filename": "crystal/levels/crystal_36.json",
+              "type": "puzzle",
+              "time": 100,
+              "mobileTime": 120,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 18,
+              "_id": 8,
+              "x": 0.95,
+              "y": 0.55,
+              "filename": "crystal/levels/crystal_18.json",
+              "type": "puzzle",
+              "time": 120,
+              "mobileTime": 130,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 3,
+              "_id": 9,
+              "x": 0.5,
+              "y": 0.85,
+              "filename": "tutorials/levels/crystal_03.json",
+              "time": 35,
+              "mobileTime": 60,
+              "required": 0,
+              "initial": true,
+              "type": "general",
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 9,
+              "_id": 10,
+              "x": 0.75,
+              "y": 0.7011,
+              "filename": "crystal/levels/crystal_09.json",
+              "type": "puzzle",
+              "time": 90,
+              "mobileTime": 180,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 7,
+              "_id": 11,
+              "x": 0.2489,
+              "y": 0.7022,
+              "filename": "crystal/levels/crystal_07.json",
+              "type": "puzzle",
+              "time": 60,
+              "mobileTime": 85,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 24,
+              "_id": 12,
+              "x": 0.12,
+              "y": 0.3,
+              "filename": "crystal/levels/crystal_24.json",
+              "type": "puzzle",
+              "time": 100,
+              "mobileTime": 100,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 27,
+              "_id": 13,
+              "x": 0.88,
+              "y": 0.3,
+              "filename": "crystal/levels/crystal_27.json",
+              "type": "puzzle",
+              "time": 90,
+              "mobileTime": 115,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 4,
+              "_id": 14,
+              "x": 0.5,
+              "y": 0.7022,
+              "filename": "crystal/levels/crystal_04.json",
+              "time": 45,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 14,
+              "_id": 15,
+              "x": 0.1967,
+              "y": 0.4978,
+              "filename": "crystal/levels/crystal_14.json",
+              "time": 70,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 19,
+              "_id": 16,
+              "x": 0.8,
+              "y": 0.5,
+              "filename": "crystal/levels/crystal_19.json",
+              "type": "speed",
+              "time": 35,
+              "mobileTime": 60,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 35,
+              "_id": 17,
+              "x": 0.75,
+              "y": 0.2,
+              "filename": "crystal/levels/crystal_35.json",
+              "type": "speed",
+              "time": 40,
+              "mobileTime": 70,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 33,
+              "_id": 18,
+              "x": 0.2478,
+              "y": 0.1956,
+              "filename": "crystal/levels/crystal_33.json",
+              "time": 85,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 37,
+              "_id": 20,
+              "x": 0.4978,
+              "y": 0.1478,
+              "filename": "crystal/levels/crystal_37.json",
+              "time": 70,
+              "mobileTime": 75,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 17,
+              "_id": 21,
+              "x": 0.4978,
+              "y": 0.3989,
+              "filename": "crystal/levels/crystal_17.json",
+              "type": "speed",
+              "time": 45,
+              "mobileTime": 70,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 29,
+              "_id": 22,
+              "x": 0.5756,
+              "y": 0.3189,
+              "filename": "crystal/levels/crystal_29.json",
+              "time": 90,
+              "mobileTime": 95,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 28,
+              "_id": 23,
+              "x": 0.43,
+              "y": 0.32,
+              "filename": "crystal/levels/crystal_28.json",
+              "time": 45,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 16,
+              "_id": 24,
+              "x": 0.3956,
+              "y": 0.4456,
+              "filename": "crystal/levels/crystal_16.json",
+              "time": 45,
+              "mobileTime": 60,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 21,
+              "_id": 25,
+              "x": 0.6011,
+              "y": 0.4444,
+              "filename": "crystal/levels/crystal_21.json",
+              "time": 40,
+              "mobileTime": 50,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 6,
+              "_id": 26,
+              "x": 0.5,
+              "y": 0.5,
+              "filename": "crystal/levels/crystal_06.json",
+              "time": 45,
+              "mobileTime": 70,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 31,
+              "_id": 27,
+              "x": 0.5011,
+              "y": 0.2489,
+              "filename": "crystal/levels/crystal_31.json",
+              "time": 100,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 32,
+              "_id": 28,
+              "x": 0.6533,
+              "y": 0.25,
+              "filename": "crystal/levels/crystal_32.json",
+              "time": 70,
+              "mobileTime": 80,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 30,
+              "_id": 29,
+              "x": 0.3478,
+              "y": 0.2444,
+              "filename": "crystal/levels/crystal_30.json",
+              "type": "speed",
+              "time": 45,
+              "mobileTime": 70,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 12,
+              "_id": 30,
+              "x": 0.6,
+              "y": 0.5478,
+              "filename": "crystal/levels/crystal_12.json",
+              "time": 60,
+              "mobileTime": 90,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 11,
+              "_id": 31,
+              "x": 0.4,
+              "y": 0.55,
+              "filename": "crystal/levels/crystal_11.json",
+              "time": 70,
+              "mobileTime": 95,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 5,
+              "_id": 32,
+              "x": 0.5,
+              "y": 0.6,
+              "filename": "crystal/levels/crystal_05.json",
+              "type": "speed",
+              "time": 20,
+              "mobileTime": 45,
+              "required": 0,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 25,
+              "_id": 35,
+              "x": 0.68,
+              "y": 0.35,
+              "filename": "crystal/levels/crystal_25.json",
+              "time": 60,
+              "mobileTime": 75,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 22,
+              "_id": 36,
+              "x": 0.32,
+              "y": 0.3522,
+              "filename": "crystal/levels/crystal_22.json",
+              "time": 90,
+              "mobileTime": 105,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 15,
+              "_id": 37,
+              "x": 0.2967,
+              "y": 0.4567,
+              "filename": "crystal/levels/crystal_15.json",
+              "time": 70,
+              "mobileTime": 75,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 20,
+              "_id": 38,
+              "x": 0.6978,
+              "y": 0.4522,
+              "filename": "crystal/levels/crystal_20.json",
+              "time": 55,
+              "mobileTime": 55,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 23,
+              "_id": 39,
+              "x": 0.2156,
+              "y": 0.3467,
+              "filename": "crystal/levels/crystal_23.json",
+              "time": 140,
+              "mobileTime": 140,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 26,
+              "_id": 40,
+              "x": 0.7756,
+              "y": 0.3544,
+              "filename": "crystal/levels/crystal_26.json",
+              "time": 80,
+              "mobileTime": 100,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 10,
+              "_id": 41,
+              "x": 0.65,
+              "y": 0.6033,
+              "filename": "crystal/levels/crystal_10.json",
+              "time": 60,
+              "mobileTime": 85,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 8,
+              "_id": 42,
+              "x": 0.3522,
+              "y": 0.6033,
+              "filename": "crystal/levels/crystal_08.json",
+              "time": 60,
+              "mobileTime": 87,
+              "required": 0,
+              "type": "general",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "edges": [
+            {
+              "id": "3-9",
+              "source": 9,
+              "target": 10,
+              "_id": "910"
+            },
+            {
+              "id": "9-18",
+              "source": 10,
+              "target": 8,
+              "_id": "108"
+            },
+            {
+              "id": "18-27",
+              "source": 8,
+              "target": 13,
+              "_id": "813"
+            },
+            {
+              "id": "27-36",
+              "source": 13,
+              "target": 7,
+              "_id": "137"
+            },
+            {
+              "id": "36-38",
+              "source": 7,
+              "target": 4,
+              "_id": "74"
+            },
+            {
+              "id": "38-34",
+              "source": 4,
+              "target": 5,
+              "_id": "45"
+            },
+            {
+              "id": "34-24",
+              "source": 5,
+              "target": 12,
+              "_id": "512"
+            },
+            {
+              "id": "24-13",
+              "source": 12,
+              "target": 6,
+              "_id": "126"
+            },
+            {
+              "id": "13-7",
+              "source": 6,
+              "target": 11,
+              "_id": "611"
+            },
+            {
+              "id": "7-3",
+              "source": 11,
+              "target": 9,
+              "_id": "119"
+            },
+            {
+              "id": "9-19",
+              "source": 10,
+              "target": 16,
+              "_id": "1016"
+            },
+            {
+              "id": "19-27",
+              "source": 16,
+              "target": 13,
+              "_id": "1613"
+            },
+            {
+              "id": "27-35",
+              "source": 13,
+              "target": 17,
+              "_id": "1317"
+            },
+            {
+              "id": "35-38",
+              "source": 17,
+              "target": 4,
+              "_id": "174"
+            },
+            {
+              "id": "38-33",
+              "source": 4,
+              "target": 18,
+              "_id": "418"
+            },
+            {
+              "id": "33-24",
+              "source": 18,
+              "target": 12,
+              "_id": "1812"
+            },
+            {
+              "id": "24-14",
+              "source": 12,
+              "target": 15,
+              "_id": "1215"
+            },
+            {
+              "id": "14-7",
+              "source": 15,
+              "target": 11,
+              "_id": "1511"
+            },
+            {
+              "id": "7-9",
+              "source": 11,
+              "target": 10,
+              "_id": "1110"
+            },
+            {
+              "id": "4-5",
+              "source": 14,
+              "target": 32,
+              "_id": "1432"
+            },
+            {
+              "id": "5-6",
+              "source": 32,
+              "target": 26,
+              "_id": "3226"
+            },
+            {
+              "id": "6-17",
+              "source": 26,
+              "target": 21,
+              "_id": "2621"
+            },
+            {
+              "id": "17-21",
+              "source": 21,
+              "target": 25,
+              "_id": "2125"
+            },
+            {
+              "id": "17-29",
+              "source": 21,
+              "target": 22,
+              "_id": "2122"
+            },
+            {
+              "id": "17-28",
+              "source": 21,
+              "target": 23,
+              "_id": "2123"
+            },
+            {
+              "id": "17-16",
+              "source": 21,
+              "target": 24,
+              "_id": "2124"
+            },
+            {
+              "id": "28-31",
+              "source": 23,
+              "target": 27,
+              "_id": "2327"
+            },
+            {
+              "id": "31-29",
+              "source": 27,
+              "target": 22,
+              "_id": "2722"
+            },
+            {
+              "id": "6-11",
+              "source": 26,
+              "target": 31,
+              "_id": "2631"
+            },
+            {
+              "id": "11-16",
+              "source": 31,
+              "target": 24,
+              "_id": "3124"
+            },
+            {
+              "id": "6-12",
+              "source": 26,
+              "target": 30,
+              "_id": "2630"
+            },
+            {
+              "id": "12-21",
+              "source": 30,
+              "target": 25,
+              "_id": "3025"
+            },
+            {
+              "id": "29-25",
+              "source": 22,
+              "target": 35,
+              "_id": "2235"
+            },
+            {
+              "id": "25-21",
+              "source": 35,
+              "target": 25,
+              "_id": "3525"
+            },
+            {
+              "id": "28-22",
+              "source": 23,
+              "target": 36,
+              "_id": "2336"
+            },
+            {
+              "id": "22-16",
+              "source": 36,
+              "target": 24,
+              "_id": "3624"
+            },
+            {
+              "id": "5-10",
+              "source": 32,
+              "target": 41,
+              "_id": "3241"
+            },
+            {
+              "id": "10-20",
+              "source": 41,
+              "target": 38,
+              "_id": "4138"
+            },
+            {
+              "id": "20-26",
+              "source": 38,
+              "target": 40,
+              "_id": "3840"
+            },
+            {
+              "id": "26-32",
+              "source": 40,
+              "target": 28,
+              "_id": "4028"
+            },
+            {
+              "id": "32-37",
+              "source": 28,
+              "target": 20,
+              "_id": "2820"
+            },
+            {
+              "id": "37-30",
+              "source": 20,
+              "target": 29,
+              "_id": "2029"
+            },
+            {
+              "id": "30-23",
+              "source": 29,
+              "target": 39,
+              "_id": "2939"
+            },
+            {
+              "id": "23-15",
+              "source": 39,
+              "target": 37,
+              "_id": "3937"
+            },
+            {
+              "id": "15-8",
+              "source": 37,
+              "target": 42,
+              "_id": "3742"
+            },
+            {
+              "id": "8-5",
+              "source": 42,
+              "target": 32,
+              "_id": "4232"
+            },
+            {
+              "id": "13-14",
+              "source": 6,
+              "target": 15,
+              "_id": "615"
+            },
+            {
+              "id": "14-15",
+              "source": 15,
+              "target": 37,
+              "_id": "1537"
+            },
+            {
+              "id": "15-16",
+              "source": 37,
+              "target": 24,
+              "_id": "3724"
+            },
+            {
+              "id": "21-20",
+              "source": 25,
+              "target": 38,
+              "_id": "2538"
+            },
+            {
+              "id": "20-19",
+              "source": 38,
+              "target": 16,
+              "_id": "3816"
+            },
+            {
+              "id": "19-18",
+              "source": 16,
+              "target": 8,
+              "_id": "168"
+            },
+            {
+              "id": "29-32",
+              "source": 22,
+              "target": 28,
+              "_id": "2228"
+            },
+            {
+              "id": "32-35",
+              "source": 28,
+              "target": 17,
+              "_id": "2817"
+            },
+            {
+              "id": "35-36",
+              "source": 17,
+              "target": 7,
+              "_id": "177"
+            },
+            {
+              "id": "34-33",
+              "source": 5,
+              "target": 18,
+              "_id": "518"
+            },
+            {
+              "id": "33-30",
+              "source": 18,
+              "target": 29,
+              "_id": "1829"
+            },
+            {
+              "id": "30-28",
+              "source": 29,
+              "target": 23,
+              "_id": "2923"
+            },
+            {
+              "id": "3-4",
+              "source": 9,
+              "target": 14,
+              "_id": "2923"
+            },
+            {
+              "id": "7-8",
+              "source": 11,
+              "target": 42,
+              "_id": "2923"
+            },
+            {
+              "id": "10-9",
+              "source": 41,
+              "target": 10,
+              "_id": "2923"
+            },
+            {
+              "id": "24-23",
+              "source": 12,
+              "target": 39,
+              "_id": "2923"
+            },
+            {
+              "id": "38-37",
+              "source": 4,
+              "target": 20,
+              "_id": "2923"
+            },
+            {
+              "id": "26-27",
+              "source": 40,
+              "target": 13,
+              "_id": "2923"
+            }
+          ],
+          "minRequired": 0,
+          "softLocked": false,
+          "locked": false
+        }
+      ],
+      "gameComplete": false
+    },
+    "fb-elements": {
+      "temples": [
+        {
+          "color": "#3C211F",
+          "edges": [],
+          "id": "fire",
+          "index": 1,
+          "label": "Fire Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "forest",
+                "fire"
+              ],
+              "filename": "tutorials/levels/tutorial_fire.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/fire/levels/4.json",
+              "id": 1,
+              "mobileTime": 80,
+              "required": 1,
+              "time": 60,
+              "unlock_key": "free",
+              "x": 0.3637,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/fire/levels/Vainilla_10.json",
+              "id": 2,
+              "mobileTime": 80,
+              "required": 2,
+              "time": 60,
+              "unlock_key": "free",
+              "x": 0.6062,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 3,
+              "elements": [
+                "wind"
+              ],
+              "filename": "elements/fire/levels/2.json",
+              "id": 3,
+              "mobileTime": 95,
+              "required": 3,
+              "time": 80,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.63,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 5,
+              "elements": [
+                "ice"
+              ],
+              "filename": "elements/fire/levels/fire-5.json",
+              "id": 5,
+              "mobileTime": 120,
+              "required": 4,
+              "time": 95,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.63,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "forest",
+            "fire"
+          ],
+          "softLocked": true,
+          "locked": false
+        },
+        {
+          "color": "#5B4610",
+          "edges": [],
+          "id": "forest",
+          "index": 0,
+          "label": "Forest Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "forest"
+              ],
+              "filename": "tutorials/levels/forest_01.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0,
+              "locked": false,
+              "state": 1,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/forest/levels/the-first.json",
+              "id": 1,
+              "mobileTime": 80,
+              "required": 1,
+              "time": 60,
+              "unlock_key": "free",
+              "x": 0.3637,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/forest/levels/1.json",
+              "id": 2,
+              "mobileTime": 80,
+              "required": 2,
+              "time": 60,
+              "unlock_key": "free",
+              "x": 0.6062,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 3,
+              "elements": [
+                "fire",
+                "water"
+              ],
+              "filename": "elements/forest/levels/Vainilla_8.json",
+              "id": 3,
+              "mobileTime": 43,
+              "required": 3,
+              "time": 25,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 4,
+              "elements": [
+                "ice"
+              ],
+              "filename": "elements/forest/levels/ez-2.json",
+              "id": 4,
+              "mobileTime": 110,
+              "required": 4,
+              "time": 80,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 5,
+              "elements": [
+                "crystal"
+              ],
+              "filename": "elements/forest/levels/2.json",
+              "id": 5,
+              "mobileTime": 90,
+              "required": 5,
+              "time": 55,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "forest"
+          ],
+          "softLocked": false,
+          "locked": false
+        },
+        {
+          "color": "#99A5AA",
+          "edges": [],
+          "id": "ice",
+          "index": -3,
+          "label": "Ice Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "wind",
+                "light",
+                "ice"
+              ],
+              "filename": "tutorials/levels/ice_02.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.3637,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/ice/levels/ice-ez.json",
+              "id": 1,
+              "mobileTime": 120,
+              "required": 1,
+              "time": 90,
+              "unlock_key": "free",
+              "x": 0.6062,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/ice/levels/1.json",
+              "id": 2,
+              "mobileTime": 125,
+              "required": 2,
+              "time": 110,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 4,
+              "filename": "elements/ice/levels/forest-to-ice.json",
+              "id": 4,
+              "mobileTime": 150,
+              "required": 3,
+              "time": 120,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 5,
+              "elements": [
+                "wind"
+              ],
+              "filename": "elements/ice/levels/ice-puzzle.json",
+              "id": 5,
+              "mobileTime": 80,
+              "required": 4,
+              "time": 50,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.1212,
+              "y": 0.63,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 8,
+              "filename": "elements/ice/levels/ice-puzzle-2.json",
+              "id": 8,
+              "mobileTime": 240,
+              "required": 5,
+              "time": 120,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.8487,
+              "y": 0.63,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "wind",
+            "light",
+            "ice"
+          ],
+          "softLocked": true,
+          "locked": false
+        },
+        {
+          "color": "#3C6363",
+          "edges": [],
+          "id": "water",
+          "index": -1,
+          "label": "Water Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "forest",
+                "water"
+              ],
+              "filename": "tutorials/levels/tutorial_water.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.1212,
+              "y": 0.35,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/water/levels/1.json",
+              "id": 1,
+              "mobileTime": 90,
+              "required": 1,
+              "time": 70,
+              "unlock_key": "free",
+              "x": 0.3637,
+              "y": 0.35,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/water/levels/water-ez.json",
+              "id": 2,
+              "mobileTime": 90,
+              "required": 2,
+              "time": 60,
+              "unlock_key": "free",
+              "x": 0.6062,
+              "y": 0.35,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 3,
+              "filename": "elements/water/levels/water-medium.json",
+              "id": 3,
+              "mobileTime": 90,
+              "required": 3,
+              "time": 75,
+              "unlock_key": "free",
+              "x": 0.8487,
+              "y": 0.35,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 4,
+              "elements": [
+                "light"
+              ],
+              "filename": "elements/water/levels/2.json",
+              "id": 4,
+              "mobileTime": 75,
+              "required": 4,
+              "time": 70,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.56,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 6,
+              "elements": [
+                "crystal"
+              ],
+              "filename": "elements/water/levels/water-portal.json",
+              "id": 6,
+              "mobileTime": 90,
+              "required": 5,
+              "time": 85,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.56,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "forest",
+            "water"
+          ],
+          "softLocked": true,
+          "locked": false
+        },
+        {
+          "color": "#2A2A2A",
+          "edges": [],
+          "id": "crystal",
+          "index": 3,
+          "label": "Crystal Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "light",
+                "crystal"
+              ],
+              "filename": "tutorials/levels/crystal_03.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/crystal/levels/ez-1.json",
+              "id": 1,
+              "mobileTime": 70,
+              "required": 1,
+              "time": 60,
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/crystal/levels/crystal-1.json",
+              "id": 2,
+              "mobileTime": 90,
+              "required": 2,
+              "time": 65,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 3,
+              "filename": "elements/crystal/levels/portal7.json",
+              "id": 3,
+              "mobileTime": 85,
+              "required": 3,
+              "time": 70,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 4,
+              "elements": [
+                "ice"
+              ],
+              "filename": "elements/crystal/levels/Portals_1.json",
+              "id": 4,
+              "mobileTime": 130,
+              "required": 4,
+              "time": 90,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 5,
+              "elements": [
+                "wind"
+              ],
+              "filename": "elements/crystal/levels/Portals_2.json",
+              "id": 5,
+              "mobileTime": 160,
+              "required": 5,
+              "time": 150,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "light",
+            "crystal"
+          ],
+          "softLocked": true,
+          "locked": false
+        },
+        {
+          "color": "#AF7F36",
+          "edges": [],
+          "id": "light",
+          "index": 2,
+          "label": "Light Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "fire",
+                "light"
+              ],
+              "filename": "tutorials/levels/light_01.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/light/levels/1.json",
+              "id": 1,
+              "mobileTime": 105,
+              "required": 1,
+              "time": 70,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/light/levels/light-ez.json",
+              "id": 2,
+              "mobileTime": 125,
+              "required": 2,
+              "time": 95,
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 3,
+              "filename": "elements/light/levels/light-long.json",
+              "id": 3,
+              "mobileTime": 110,
+              "required": 3,
+              "time": 80,
+              "unlock_key": "free",
+              "x": 0.3637,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 4,
+              "elements": [
+                "crystal",
+                "ice"
+              ],
+              "filename": "elements/light/levels/Light_2.json",
+              "id": 4,
+              "mobileTime": 110,
+              "required": 4,
+              "time": 100,
+              "unlock_key": "free",
+              "x": 0.6062,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "fire",
+            "light"
+          ],
+          "softLocked": true,
+          "locked": false
+        },
+        {
+          "color": "#707070",
+          "edges": [],
+          "id": "wind",
+          "index": -2,
+          "label": "Wind Temple",
+          "levels": [
+            {
+              "_id": 0,
+              "elements": [
+                "water",
+                "wind"
+              ],
+              "filename": "tutorials/levels/tutorial_wind.json",
+              "id": 0,
+              "mobileTime": 600,
+              "required": 0,
+              "time": 300,
+              "unlock_key": "free",
+              "x": 0.3637,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 1,
+              "filename": "elements/wind/levels/Wind_2.json",
+              "id": 1,
+              "mobileTime": 110,
+              "required": 1,
+              "time": 85,
+              "unlock_key": "free",
+              "x": 0.6062,
+              "y": 0.21,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 2,
+              "filename": "elements/wind/levels/Wind_1.json",
+              "id": 2,
+              "mobileTime": 90,
+              "required": 2,
+              "time": 75,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.2425,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 3,
+              "filename": "elements/wind/levels/wind-1.json",
+              "id": 3,
+              "mobileTime": 80,
+              "required": 3,
+              "time": 65,
+              "unlock_key": "free",
+              "x": 0.485,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "_id": 4,
+              "elements": [
+                "ice"
+              ],
+              "filename": "elements/wind/levels/1.json",
+              "id": 4,
+              "mobileTime": 135,
+              "required": 4,
+              "time": 120,
+              "type": "puzzle",
+              "unlock_key": "free",
+              "x": 0.7275,
+              "y": 0.42,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "type": "rows",
+          "completedCount": 0,
+          "elements": [
+            "water",
+            "wind"
+          ],
+          "softLocked": true,
+          "locked": false
+        }
+      ]
+    },
+    "fb-fairytales": {
+      "temples": [
+        {
+          "index": 0,
+          "id": "fairy",
+          "label": "Fairy Tales",
+          "color": "#707070",
+          "type": "tree",
+          "levels": [
+            {
+              "id": 0,
+              "filename": "tutorials/levels/forest_01.json",
+              "x": -1,
+              "y": -1,
+              "time": 999,
+              "mobileTime": 999,
+              "required": 0,
+              "type": "general",
+              "_id": "00",
+              "initial": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 1,
+              "x": 0.5,
+              "y": 0.4667,
+              "filename": "tutorials/levels/fairies_000.json",
+              "time": 999,
+              "mobileTime": 999,
+              "required": 0,
+              "type": "general",
+              "_id": "1",
+              "initial": true,
+              "requirePerfects": false,
+              "wing": 0,
+              "opened": true,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 27,
+              "x": 0.2667,
+              "y": 0.3,
+              "filename": "fairytales/levels/fairies-12-dark.json",
+              "time": 75,
+              "mobileTime": 100,
+              "required": 3,
+              "type": "dark",
+              "_id": "3",
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "3",
+              "puzzleLevel": "5",
+              "skillLevel": "1",
+              "wing": 1,
+              "requirePerfects": true,
+              "wingLocked": true,
+              "isNew": true
+            },
+            {
+              "id": 30,
+              "x": 0.8333,
+              "y": 0.2333,
+              "filename": "fairytales/levels/fairies-13.json",
+              "time": 70,
+              "mobileTime": 105,
+              "required": 6,
+              "_id": 4,
+              "type": "general",
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "3.5",
+              "puzzleLevel": "3",
+              "skillLevel": "4",
+              "wing": 2,
+              "requirePerfects": true,
+              "wingLocked": true,
+              "isNew": true
+            },
+            {
+              "id": 3,
+              "_id": 5,
+              "x": 0.6,
+              "y": 0.3,
+              "filename": "fairytales/levels/fairies-15.json",
+              "time": 90,
+              "mobileTime": 100,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "1",
+              "puzzleLevel": "2",
+              "skillLevel": "0",
+              "wing": 2,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 7,
+              "_id": 6,
+              "x": 0.46,
+              "y": 0.64,
+              "filename": "fairytales/levels/fairies-16.json",
+              "time": 80,
+              "mobileTime": 120,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "type": "general",
+              "state": 0,
+              "rating": "2",
+              "difficulty": "1",
+              "puzzleLevel": "2",
+              "skillLevel": "0",
+              "wing": 3,
+              "isNew": true
+            },
+            {
+              "id": 4,
+              "_id": 7,
+              "x": 0.4,
+              "y": 0.3,
+              "filename": "fairytales/levels/fairies-17.json",
+              "time": 60,
+              "mobileTime": 75,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "1.5",
+              "puzzleLevel": "1",
+              "skillLevel": "2",
+              "wing": 1,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 5,
+              "_id": 8,
+              "x": 0.36,
+              "y": 0.44,
+              "filename": "fairytales/levels/fairies-29.json",
+              "time": 70,
+              "mobileTime": 80,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "1",
+              "puzzleLevel": "2",
+              "skillLevel": "0",
+              "wing": 1,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 21,
+              "_id": 9,
+              "x": 0.08,
+              "y": 0.32,
+              "filename": "fairytales/levels/fairies-11.json",
+              "time": 125,
+              "mobileTime": 180,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "2.5",
+              "puzzleLevel": "5",
+              "skillLevel": "0",
+              "wing": 1,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 25,
+              "_id": 10,
+              "x": 0.04,
+              "y": 0.16,
+              "filename": "fairytales/levels/fairies-06.json",
+              "time": 85,
+              "mobileTime": 105,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "3",
+              "puzzleLevel": "5",
+              "skillLevel": "1",
+              "wing": 1,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 20,
+              "_id": 11,
+              "x": 0.16,
+              "y": 0.08,
+              "filename": "fairytales/levels/fairies-18-dark.json",
+              "time": 55,
+              "mobileTime": 60,
+              "unlock_key": "free",
+              "required": 0,
+              "type": "dark",
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "3.5",
+              "puzzleLevel": "4",
+              "skillLevel": "3",
+              "wing": 1,
+              "isNew": true
+            },
+            {
+              "id": 19,
+              "_id": 12,
+              "x": 0.84,
+              "y": 0.08,
+              "filename": "fairytales/levels/fairies-09.json",
+              "time": 105,
+              "mobileTime": 120,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "2.5",
+              "puzzleLevel": "2",
+              "skillLevel": "3",
+              "wing": 2,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 24,
+              "_id": 13,
+              "x": 0.96,
+              "y": 0.16,
+              "filename": "fairytales/levels/fairies-30.json",
+              "time": 125,
+              "mobileTime": 160,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "3.5",
+              "puzzleLevel": "4",
+              "skillLevel": "3",
+              "wing": 2,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 18,
+              "_id": 14,
+              "x": 0.92,
+              "y": 0.32,
+              "filename": "fairytales/levels/fairies-03.json",
+              "time": 85,
+              "mobileTime": 95,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "2.5",
+              "puzzleLevel": "4",
+              "skillLevel": "1",
+              "wing": 2,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 2,
+              "_id": 15,
+              "x": 0.64,
+              "y": 0.44,
+              "filename": "fairytales/levels/fairies-01.json",
+              "time": 80,
+              "mobileTime": 100,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "0.5",
+              "puzzleLevel": "1",
+              "skillLevel": "0",
+              "wing": 2,
+              "type": "general",
+              "requirePerfects": false,
+              "initial": false,
+              "opened": true,
+              "isNew": true
+            },
+            {
+              "id": 9,
+              "_id": 16,
+              "x": 0.68,
+              "y": 0.58,
+              "filename": "fairytales/levels/fairies-24-dark.json",
+              "time": 80,
+              "mobileTime": 105,
+              "unlock_key": "free",
+              "type": "dark",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "2",
+              "difficulty": "1",
+              "puzzleLevel": "2",
+              "skillLevel": "0",
+              "wing": 4,
+              "isNew": true
+            },
+            {
+              "id": 17,
+              "_id": 17,
+              "x": 0.7667,
+              "y": 0.7333,
+              "filename": "fairytales/levels/fairies-21.json",
+              "time": 80,
+              "mobileTime": 110,
+              "unlock_key": "free",
+              "type": "general",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "2.5",
+              "puzzleLevel": "3",
+              "skillLevel": "2",
+              "wing": 4,
+              "isNew": true
+            },
+            {
+              "id": 23,
+              "_id": 18,
+              "x": 0.68,
+              "y": 0.86,
+              "filename": "fairytales/levels/fairies-25.json",
+              "time": 70,
+              "mobileTime": 105,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "2.5",
+              "puzzleLevel": "1",
+              "skillLevel": "4",
+              "wing": 4,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 16,
+              "_id": 19,
+              "x": 0.58,
+              "y": 0.76,
+              "filename": "fairytales/levels/fairies-26.json",
+              "time": 85,
+              "mobileTime": 105,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "2",
+              "puzzleLevel": "3",
+              "skillLevel": "1",
+              "wing": 4,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 15,
+              "_id": 20,
+              "x": 0.42,
+              "y": 0.76,
+              "filename": "fairytales/levels/fairies-14.json",
+              "time": 60,
+              "mobileTime": 105,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "2",
+              "puzzleLevel": "1",
+              "skillLevel": "3",
+              "wing": 3,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 22,
+              "_id": 21,
+              "x": 0.32,
+              "y": 0.86,
+              "filename": "fairytales/levels/fairies-27-dark.json",
+              "time": 75,
+              "mobileTime": 90,
+              "unlock_key": "free",
+              "required": 0,
+              "type": "dark",
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "3.5",
+              "puzzleLevel": "2",
+              "skillLevel": "5",
+              "wing": 3,
+              "isNew": true
+            },
+            {
+              "id": 6,
+              "_id": 22,
+              "x": 0.32,
+              "y": 0.58,
+              "filename": "fairytales/levels/fairies-08.json",
+              "time": 105,
+              "mobileTime": 130,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "1.5",
+              "puzzleLevel": "1",
+              "skillLevel": "2",
+              "wing": 3,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 14,
+              "_id": 23,
+              "x": 0.2333,
+              "y": 0.7333,
+              "filename": "fairytales/levels/fairies-05.json",
+              "time": 105,
+              "mobileTime": 125,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "2",
+              "puzzleLevel": "4",
+              "skillLevel": "0",
+              "wing": 3,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 12,
+              "_id": 24,
+              "x": 0.3,
+              "y": 0.1667,
+              "filename": "fairytales/levels/fairies-23.json",
+              "time": 105,
+              "mobileTime": 120,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "2",
+              "difficulty": "1",
+              "puzzleLevel": "2",
+              "skillLevel": "0",
+              "wing": 1,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 11,
+              "_id": 25,
+              "x": 0.7,
+              "y": 0.1667,
+              "filename": "fairytales/levels/fairies-20.json",
+              "time": 80,
+              "mobileTime": 105,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "2",
+              "difficulty": "1.5",
+              "puzzleLevel": "2",
+              "skillLevel": "1",
+              "wing": 2,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 8,
+              "_id": 26,
+              "x": 0.54,
+              "y": 0.64,
+              "filename": "fairytales/levels/fairies-22.json",
+              "time": 95,
+              "mobileTime": 120,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "1",
+              "puzzleLevel": "2",
+              "skillLevel": "0",
+              "wing": 4,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 28,
+              "_id": 27,
+              "x": 0.34,
+              "y": 0.7,
+              "filename": "fairytales/levels/fairies-19.json",
+              "time": 75,
+              "mobileTime": 90,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "3",
+              "puzzleLevel": "3",
+              "skillLevel": "3",
+              "wing": 3,
+              "requirePerfects": true,
+              "type": "general",
+              "wingLocked": true,
+              "isNew": true
+            },
+            {
+              "id": 29,
+              "_id": 28,
+              "x": 0.66,
+              "y": 0.7,
+              "filename": "fairytales/levels/fairies-28.json",
+              "time": 85,
+              "mobileTime": 100,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "3",
+              "puzzleLevel": "2",
+              "skillLevel": "4",
+              "wing": 4,
+              "requirePerfects": true,
+              "type": "general",
+              "wingLocked": true,
+              "isNew": true
+            },
+            {
+              "id": 13,
+              "_id": 29,
+              "x": 0.22,
+              "y": 0.42,
+              "filename": "fairytales/levels/fairies-04.json",
+              "time": 105,
+              "mobileTime": 125,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "2",
+              "puzzleLevel": "2",
+              "skillLevel": "2",
+              "wing": 1,
+              "type": "general",
+              "isNew": true
+            },
+            {
+              "id": 10,
+              "_id": 30,
+              "x": 0.78,
+              "y": 0.42,
+              "filename": "fairytales/levels/fairies-10-dark.json",
+              "time": 90,
+              "mobileTime": 100,
+              "unlock_key": "free",
+              "required": 0,
+              "type": "dark",
+              "locked": false,
+              "state": 0,
+              "rating": "3",
+              "difficulty": "1.5",
+              "puzzleLevel": "2",
+              "skillLevel": "1",
+              "wing": 2,
+              "isNew": true
+            },
+            {
+              "id": 26,
+              "_id": 31,
+              "x": 0.74,
+              "y": 0.3,
+              "filename": "fairytales/levels/fairies-07.json",
+              "time": 80,
+              "mobileTime": 100,
+              "unlock_key": "free",
+              "requirePerfects": true,
+              "required": 0,
+              "type": "general",
+              "locked": false,
+              "state": 0,
+              "rating": "4",
+              "difficulty": "2.5",
+              "puzzleLevel": "3",
+              "skillLevel": "2",
+              "wing": 2,
+              "wingLocked": true,
+              "isNew": true
+            },
+            {
+              "id": 31,
+              "_id": 32,
+              "x": 0.1667,
+              "y": 0.2333,
+              "filename": "fairytales/levels/fairies-02.json",
+              "time": 120,
+              "mobileTime": 135,
+              "unlock_key": "free",
+              "required": 0,
+              "locked": false,
+              "state": 0,
+              "rating": "5",
+              "difficulty": "3",
+              "puzzleLevel": "3",
+              "skillLevel": "3",
+              "wing": 1,
+              "requirePerfects": true,
+              "type": "general",
+              "wingLocked": true,
+              "isNew": true
+            }
+          ],
+          "edges": [
+            {
+              "id": "1-3",
+              "source": "1",
+              "target": 5,
+              "_id": "15"
+            },
+            {
+              "id": "1-4",
+              "source": "1",
+              "target": 7,
+              "_id": "17"
+            },
+            {
+              "id": "4-12",
+              "source": 7,
+              "target": 24,
+              "_id": "724"
+            },
+            {
+              "id": "12-20",
+              "source": 24,
+              "target": 11,
+              "_id": "2411"
+            },
+            {
+              "id": "20-25",
+              "source": 11,
+              "target": 10,
+              "_id": "1110"
+            },
+            {
+              "id": "25-21",
+              "source": 10,
+              "target": 9,
+              "_id": "109"
+            },
+            {
+              "id": "5-1",
+              "source": 8,
+              "target": "1",
+              "_id": "81"
+            },
+            {
+              "id": "3-11",
+              "source": 5,
+              "target": 25,
+              "_id": "525"
+            },
+            {
+              "id": "11-19",
+              "source": 25,
+              "target": 12,
+              "_id": "2512"
+            },
+            {
+              "id": "19-24",
+              "source": 12,
+              "target": 13,
+              "_id": "1213"
+            },
+            {
+              "id": "24-18",
+              "source": 13,
+              "target": 14,
+              "_id": "1314"
+            },
+            {
+              "id": "2-1",
+              "source": 15,
+              "target": "1",
+              "_id": "151"
+            },
+            {
+              "id": "1-7",
+              "source": "1",
+              "target": 6,
+              "_id": "16"
+            },
+            {
+              "id": "1-8",
+              "source": "1",
+              "target": 26,
+              "_id": "126"
+            },
+            {
+              "id": "9-17",
+              "source": 16,
+              "target": 17,
+              "_id": "1617"
+            },
+            {
+              "id": "17-23",
+              "source": 17,
+              "target": 18,
+              "_id": "1718"
+            },
+            {
+              "id": "23-16",
+              "source": 18,
+              "target": 19,
+              "_id": "1819"
+            },
+            {
+              "id": "16-8",
+              "source": 19,
+              "target": 26,
+              "_id": "1926"
+            },
+            {
+              "id": "6-14",
+              "source": 22,
+              "target": 23,
+              "_id": "2223"
+            },
+            {
+              "id": "14-22",
+              "source": 23,
+              "target": 21,
+              "_id": "2321"
+            },
+            {
+              "id": "22-15",
+              "source": 21,
+              "target": 20,
+              "_id": "2120"
+            },
+            {
+              "id": "15-7",
+              "source": 20,
+              "target": 6,
+              "_id": "206"
+            },
+            {
+              "id": "6-1",
+              "source": 22,
+              "target": "1",
+              "_id": "221"
+            },
+            {
+              "id": "1-9",
+              "source": "1",
+              "target": 16,
+              "_id": "116"
+            },
+            {
+              "id": "21-13",
+              "source": 9,
+              "target": 29,
+              "_id": "929"
+            },
+            {
+              "id": "13-5",
+              "source": 29,
+              "target": 8,
+              "_id": "298"
+            },
+            {
+              "id": "2-10",
+              "source": 15,
+              "target": 30,
+              "_id": "1530"
+            },
+            {
+              "id": "10-18",
+              "source": 30,
+              "target": 14,
+              "_id": "3014"
+            }
+          ],
+          "minRequired": 0,
+          "softLocked": false,
+          "locked": false
+        }
+      ],
+      "gameComplete": false
+    },
+    "fb-friends": {
+      "temples": [
+        {
+          "index": 0,
+          "id": "friends",
+          "label": "friends temple",
+          "color": "#4B5740",
+          "type": "tree",
+          "levels": [
+            {
+              "id": 0,
+              "x": -1,
+              "y": -1,
+              "filename": "tutorials/levels/forest_01.json",
+              "time": 999,
+              "mobileTime": 999,
+              "required": 0,
+              "initial": true,
+              "skippable": true,
+              "name": "pre_tutorial",
+              "_id": 1,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 20,
+              "shownId": 16,
+              "x": 0.34,
+              "y": 0.18,
+              "filename": "friends/levels/fatjump_2.json",
+              "time": 150,
+              "mobileTime": 180,
+              "required": 0,
+              "_id": 3,
+              "diff": 3,
+              "quality": 3,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 42,
+              "shownId": 5,
+              "x": 0.22,
+              "y": 0.26,
+              "filename": "friends/levels/fat_ez_0.json",
+              "time": 90,
+              "mobileTime": 100,
+              "required": 0,
+              "initial": false,
+              "_id": 4,
+              "diff": 1.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 23,
+              "shownId": 1,
+              "x": 0.5,
+              "y": 0.94,
+              "filename": "friends/levels/tut_small.json",
+              "time": 999,
+              "mobileTime": 999,
+              "required": 0,
+              "initial": true,
+              "_id": 5,
+              "diff": 0,
+              "name": "tutorial",
+              "quality": 5,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 5,
+              "shownId": 7,
+              "x": 0.4,
+              "y": 0.7,
+              "filename": "friends/levels/small_1.json",
+              "time": 120,
+              "required": 0,
+              "_id": 6,
+              "diff": 3,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 11,
+              "shownId": 29,
+              "x": 0.5,
+              "y": 0.28,
+              "filename": "friends/levels/3friends_2_fatjumpsmall.json",
+              "time": 180,
+              "mobileTime": 205,
+              "required": 0,
+              "initial": false,
+              "_id": 7,
+              "diff": 3.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 49,
+              "shownId": 13,
+              "x": 0.3,
+              "y": 0.78,
+              "filename": "friends/levels/new_fat_small_tut.json",
+              "time": 90,
+              "mobileTime": 110,
+              "required": 0,
+              "_id": 8,
+              "diff": 2.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 46,
+              "shownId": 28,
+              "x": 0.3,
+              "y": 0.6,
+              "filename": "friends/levels/nose_fatjumpsmall.json",
+              "time": 190,
+              "mobileTime": 200,
+              "required": 0,
+              "_id": 9,
+              "diff": 2,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 44,
+              "shownId": 4,
+              "x": 0.5,
+              "y": 0.82,
+              "filename": "friends/levels/ezez_small.json",
+              "time": 80,
+              "mobileTime": 90,
+              "required": 0,
+              "_id": 10,
+              "diff": 2,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 13,
+              "shownId": 18,
+              "x": 0.88,
+              "y": 0.52,
+              "filename": "friends/levels/fatsmall_2.json",
+              "time": 100,
+              "mobileTime": 120,
+              "required": 0,
+              "initial": false,
+              "_id": 11,
+              "diff": 5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 37,
+              "shownId": 14,
+              "x": 0.7,
+              "y": 0.78,
+              "filename": "friends/levels/jump_small_last.json",
+              "time": 110,
+              "mobileTime": 115,
+              "required": 0,
+              "initial": false,
+              "_id": 12,
+              "diff": 3.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 15,
+              "shownId": 19,
+              "x": 0.16,
+              "y": 0.8,
+              "filename": "friends/levels/small_3_think.json",
+              "time": 140,
+              "mobileTime": 145,
+              "required": 0,
+              "initial": false,
+              "_id": 13,
+              "diff": 3,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 30,
+              "shownId": 21,
+              "x": 0.1,
+              "y": 0.68,
+              "filename": "friends/levels/fat_4_puzzle.json",
+              "time": 300,
+              "mobileTime": 300,
+              "required": 0,
+              "initial": false,
+              "_id": 14,
+              "diff": 3,
+              "quality": 3,
+              "type": "puzzle",
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 1,
+              "shownId": 22,
+              "x": 0.44,
+              "y": 0.06,
+              "filename": "friends/levels/fat_1.json",
+              "time": 120,
+              "mobileTime": 125,
+              "required": 0,
+              "_id": 15,
+              "diff": 4.5,
+              "quality": 5,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 45,
+              "shownId": 30,
+              "x": 0.7,
+              "y": 0.6,
+              "filename": "friends/levels/more_3_fatjumpsmall.json",
+              "time": 110,
+              "mobileTime": 140,
+              "required": 0,
+              "_id": 16,
+              "diff": 3.5,
+              "quality": 3,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 43,
+              "shownId": 6,
+              "x": 0.78,
+              "y": 0.26,
+              "filename": "friends/levels/new_ez_jump.json",
+              "time": 125,
+              "mobileTime": 130,
+              "required": 0,
+              "initial": false,
+              "_id": 17,
+              "diff": 2,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 16,
+              "shownId": 9,
+              "x": 0.26,
+              "y": 0.44,
+              "filename": "friends/levels/fat_3_skill.json",
+              "time": 110,
+              "mobileTime": 115,
+              "required": 0,
+              "initial": false,
+              "_id": 18,
+              "diff": 3,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 10,
+              "shownId": 23,
+              "x": 0.56,
+              "y": 0.06,
+              "filename": "friends/levels/jump_3.json",
+              "time": 150,
+              "mobileTime": 160,
+              "required": 0,
+              "initial": false,
+              "_id": 19,
+              "diff": 4.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 29,
+              "shownId": 12,
+              "x": 0.74,
+              "y": 0.44,
+              "filename": "friends/levels/jump_5_puzzle.json",
+              "time": 300,
+              "mobileTime": 300,
+              "required": 0,
+              "_id": 20,
+              "diff": 2.5,
+              "quality": 5,
+              "type": "puzzle",
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 48,
+              "shownId": 15,
+              "x": 0.12,
+              "y": 0.52,
+              "filename": "friends/levels/fatsmall_1_new.json",
+              "time": 90,
+              "mobileTime": 100,
+              "required": 0,
+              "_id": 21,
+              "diff": 2.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 36,
+              "shownId": 20,
+              "x": 0.84,
+              "y": 0.8,
+              "filename": "friends/levels/small_timeto.json",
+              "time": 100,
+              "mobileTime": 115,
+              "required": 0,
+              "initial": false,
+              "_id": 22,
+              "diff": 3,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 3,
+              "shownId": 24,
+              "x": 0.9,
+              "y": 0.68,
+              "filename": "friends/levels/cadmi_jump.json",
+              "time": 135,
+              "mobileTime": 160,
+              "required": 0,
+              "_id": 23,
+              "diff": 4.5,
+              "quality": 4,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 26,
+              "shownId": 17,
+              "x": 0.66,
+              "y": 0.18,
+              "filename": "friends/levels/jump_6_puzzle.json",
+              "time": 300,
+              "mobileTime": 300,
+              "required": 0,
+              "_id": 24,
+              "diff": 3,
+              "quality": 4,
+              "type": "puzzle",
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 9,
+              "shownId": 8,
+              "x": 0.6,
+              "y": 0.7,
+              "filename": "friends/levels/small_2_ez.json",
+              "time": 135,
+              "mobileTime": 160,
+              "required": 0,
+              "initial": false,
+              "_id": 25,
+              "diff": 3,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 18,
+              "shownId": 36,
+              "x": 0.44,
+              "y": 0.58,
+              "filename": "friends/levels/small_5_ball.json",
+              "time": 160,
+              "mobileTime": 190,
+              "required": 0,
+              "initial": false,
+              "_id": 28,
+              "diff": 7,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 32,
+              "shownId": 35,
+              "_id": 29,
+              "x": 0.56,
+              "y": 0.58,
+              "filename": "friends/levels/small_7_puzzle_skill.json",
+              "time": 300,
+              "mobileTime": 300,
+              "required": 0,
+              "diff": 4,
+              "quality": 5,
+              "type": "puzzle",
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 22,
+              "shownId": 31,
+              "_id": 30,
+              "x": 0.38,
+              "y": 0.48,
+              "filename": "friends/levels/fatsmall_3_long.json",
+              "time": 150,
+              "mobileTime": 155,
+              "required": 0,
+              "diff": 4.5,
+              "quality": 4,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 31,
+              "shownId": 32,
+              "type": "puzzle",
+              "_id": 31,
+              "x": 0.44,
+              "y": 0.38,
+              "filename": "friends/levels/puzzle_for_small.json",
+              "time": 300,
+              "mobileTime": 300,
+              "required": 0,
+              "diff": 6,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 4,
+              "shownId": 33,
+              "_id": 32,
+              "x": 0.56,
+              "y": 0.38,
+              "filename": "friends/levels/jump_1.json",
+              "time": 100,
+              "mobileTime": 110,
+              "required": 0,
+              "diff": 6,
+              "quality": 5,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 33,
+              "shownId": 11,
+              "_id": 33,
+              "x": 0.66,
+              "y": 0.32,
+              "filename": "friends/levels/jumpfat_new.json",
+              "time": 130,
+              "mobileTime": 130,
+              "required": 0,
+              "diff": 3.5,
+              "quality": 4,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 34,
+              "shownId": 34,
+              "_id": 34,
+              "x": 0.62,
+              "y": 0.48,
+              "filename": "friends/levels/another_puzzle_fatsmall.json",
+              "time": 300,
+              "mobileTime": 300,
+              "required": 0,
+              "diff": 5,
+              "quality": 5,
+              "type": "puzzle",
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 21,
+              "shownId": 25,
+              "_id": 35,
+              "x": 0.2,
+              "y": 0.68,
+              "filename": "friends/levels/small_6_skill.json",
+              "time": 135,
+              "mobileTime": 145,
+              "unlock_key": "free",
+              "required": 0,
+              "diff": 3,
+              "quality": 5,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 14,
+              "shownId": 27,
+              "_id": 36,
+              "x": 0.8,
+              "y": 0.68,
+              "filename": "friends/levels/small_4_repetition.json",
+              "time": 165,
+              "mobileTime": 170,
+              "unlock_key": "free",
+              "required": 0,
+              "diff": 4,
+              "quality": 4,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 12,
+              "shownId": 26,
+              "_id": 37,
+              "x": 0.5,
+              "y": 0.16,
+              "filename": "friends/levels/jump_4_ez_portal.json",
+              "time": 70,
+              "mobileTime": 85,
+              "unlock_key": "free",
+              "required": 0,
+              "diff": 4,
+              "quality": 5,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            },
+            {
+              "id": 25,
+              "shownId": 3,
+              "_id": 38,
+              "x": 0.86,
+              "y": 0.16,
+              "filename": "friends/levels/tut_jump.json",
+              "time": 999,
+              "mobileTime": 999,
+              "unlock_key": "free",
+              "initial": true,
+              "required": 0,
+              "diff": 0,
+              "quality": 5,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 24,
+              "shownId": 2,
+              "_id": 39,
+              "x": 0.14,
+              "y": 0.16,
+              "filename": "friends/levels/tut_fat.json",
+              "time": 999,
+              "mobileTime": 999,
+              "initial": true,
+              "unlock_key": "free",
+              "required": 0,
+              "diff": 0,
+              "quality": 5,
+              "locked": false,
+              "state": 1
+            },
+            {
+              "id": 27,
+              "shownId": 10,
+              "_id": 41,
+              "x": 0.34,
+              "y": 0.32,
+              "filename": "friends/levels/fat_5.json",
+              "time": 165,
+              "mobileTime": 200,
+              "unlock_key": "free",
+              "required": 0,
+              "diff": 3,
+              "quality": 5,
+              "initial": false,
+              "locked": false,
+              "state": 0,
+              "isNew": true
+            }
+          ],
+          "edges": [
+            {
+              "id": "temp",
+              "source": 4,
+              "target": 18,
+              "_id": "418"
+            },
+            {
+              "id": "temp",
+              "source": 10,
+              "target": 6,
+              "_id": "106"
+            },
+            {
+              "id": "temp",
+              "source": 17,
+              "target": 20,
+              "_id": "1720"
+            },
+            {
+              "id": "temp",
+              "source": 20,
+              "target": 11,
+              "_id": "2011"
+            },
+            {
+              "id": "temp",
+              "source": 21,
+              "target": 18,
+              "_id": "2118"
+            },
+            {
+              "id": "temp",
+              "source": 3,
+              "target": 15,
+              "_id": "315"
+            },
+            {
+              "id": "temp",
+              "source": 21,
+              "target": 14,
+              "_id": "2114"
+            },
+            {
+              "id": "temp",
+              "source": 14,
+              "target": 13,
+              "_id": "1413"
+            },
+            {
+              "id": "temp",
+              "source": 13,
+              "target": 8,
+              "_id": "138"
+            },
+            {
+              "id": "temp",
+              "source": 8,
+              "target": 6,
+              "_id": "86"
+            },
+            {
+              "id": "temp",
+              "source": 12,
+              "target": 22,
+              "_id": "1222"
+            },
+            {
+              "id": "temp",
+              "source": 22,
+              "target": 23,
+              "_id": "2223"
+            },
+            {
+              "id": "temp",
+              "source": 23,
+              "target": 11,
+              "_id": "2311"
+            },
+            {
+              "id": "temp",
+              "source": 24,
+              "target": 19,
+              "_id": "2419"
+            },
+            {
+              "id": "temp",
+              "source": 19,
+              "target": 15,
+              "_id": "1915"
+            },
+            {
+              "id": "temp",
+              "source": 3,
+              "target": 7,
+              "_id": "37"
+            },
+            {
+              "id": "temp",
+              "source": 21,
+              "target": 9,
+              "_id": "219"
+            },
+            {
+              "id": "temp",
+              "source": 9,
+              "target": 8,
+              "_id": "98"
+            },
+            {
+              "id": "temp",
+              "source": 12,
+              "target": 16,
+              "_id": "1216"
+            },
+            {
+              "id": "temp",
+              "source": 16,
+              "target": 11,
+              "_id": "1611"
+            },
+            {
+              "id": "temp",
+              "source": 24,
+              "target": 7,
+              "_id": "247"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 29,
+              "_id": "2929"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 29,
+              "_id": "2929"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 16,
+              "_id": "2916"
+            },
+            {
+              "id": "temp",
+              "source": 16,
+              "target": 29,
+              "_id": "1629"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 28,
+              "_id": "2928"
+            },
+            {
+              "id": "temp",
+              "source": 28,
+              "target": 9,
+              "_id": "289"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 29,
+              "_id": "2929"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 29,
+              "_id": "2929"
+            },
+            {
+              "id": "temp",
+              "source": 29,
+              "target": 16,
+              "_id": "2916"
+            },
+            {
+              "id": "temp",
+              "source": 9,
+              "target": 30,
+              "_id": "930"
+            },
+            {
+              "id": "temp",
+              "source": 30,
+              "target": 31,
+              "_id": "3031"
+            },
+            {
+              "id": "temp",
+              "source": 31,
+              "target": 7,
+              "_id": "317"
+            },
+            {
+              "id": "temp",
+              "source": 7,
+              "target": 32,
+              "_id": "732"
+            },
+            {
+              "id": "temp",
+              "source": 5,
+              "target": 10,
+              "_id": "510"
+            },
+            {
+              "id": "temp",
+              "source": 30,
+              "target": 28,
+              "_id": "3028"
+            },
+            {
+              "id": "temp",
+              "source": 31,
+              "target": 32,
+              "_id": "3132"
+            },
+            {
+              "id": "temp",
+              "source": 32,
+              "target": 34,
+              "_id": "3234"
+            },
+            {
+              "id": "temp",
+              "source": 34,
+              "target": 29,
+              "_id": "3429"
+            },
+            {
+              "id": "temp",
+              "source": 34,
+              "target": 16,
+              "_id": "3416"
+            },
+            {
+              "id": "temp",
+              "source": 35,
+              "target": 9,
+              "_id": "359"
+            },
+            {
+              "id": "temp",
+              "source": 16,
+              "target": 36,
+              "_id": "1636"
+            },
+            {
+              "id": "temp",
+              "source": 35,
+              "target": 14,
+              "_id": "3514"
+            },
+            {
+              "id": "temp",
+              "source": 35,
+              "target": 13,
+              "_id": "3513"
+            },
+            {
+              "id": "temp",
+              "source": 36,
+              "target": 22,
+              "_id": "3622"
+            },
+            {
+              "id": "temp",
+              "source": 36,
+              "target": 23,
+              "_id": "3623"
+            },
+            {
+              "id": "temp",
+              "source": 15,
+              "target": 37,
+              "_id": "1537"
+            },
+            {
+              "id": "temp",
+              "source": 19,
+              "target": 37,
+              "_id": "1937"
+            },
+            {
+              "id": "temp",
+              "source": 37,
+              "target": 7,
+              "_id": "377"
+            },
+            {
+              "id": "temp",
+              "source": 38,
+              "target": 17,
+              "_id": "3817"
+            },
+            {
+              "id": "temp",
+              "source": 39,
+              "target": 4,
+              "_id": "394"
+            },
+            {
+              "id": "temp",
+              "source": 6,
+              "target": 25,
+              "_id": "625"
+            },
+            {
+              "id": "temp",
+              "source": 25,
+              "target": 12,
+              "_id": "2512"
+            },
+            {
+              "id": "temp",
+              "source": 4,
+              "target": 41,
+              "_id": "441"
+            },
+            {
+              "id": "temp",
+              "source": 41,
+              "target": 3,
+              "_id": "413"
+            },
+            {
+              "id": "temp",
+              "source": 18,
+              "target": 41,
+              "_id": "1841"
+            },
+            {
+              "id": "temp",
+              "source": 33,
+              "target": 20,
+              "_id": "3320"
+            },
+            {
+              "id": "temp",
+              "source": 33,
+              "target": 24,
+              "_id": "3324"
+            },
+            {
+              "id": "temp",
+              "source": 33,
+              "target": 17,
+              "_id": "3317"
+            },
+            {
+              "id": "temp",
+              "source": 10,
+              "target": 25,
+              "_id": "1025"
+            }
+          ],
+          "completedCount": 0,
+          "elements": [
+            null
+          ],
+          "softLocked": false,
+          "locked": false
+        }
+      ],
+      "reviveTokens": 0,
+      "gameComplete": false,
+      "gameTotalComplete": false
+    }
+  }
+}

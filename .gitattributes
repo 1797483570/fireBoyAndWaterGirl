@@ -1,0 +1,9 @@
+# 镜像来的游戏文件保持原样，禁止任何行尾转换
+games/** -text
+
+# 项目自身源码
+*.bat   text eol=crlf
+*.md    text eol=lf
+*.py    text eol=lf
+index.html text eol=lf
+saves/*.json text eol=lf

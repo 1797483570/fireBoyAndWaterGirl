@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0b10'/%3E%3Cpath d='M16 5c3.6 4.2 6.2 7 6.2 10.4A6.2 6.2 0 1 1 9.8 15.4C9.8 12 12.4 9.2 16 5z' fill='%23e8853f'/%3E%3Ccircle cx='16' cy='17.4' r='2.6' fill='%23ffd98e'/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>森林冰火人 · 大厅</title>
+<style>
+  :root{
+    --gold:#e8c684;
+    --gold-hi:#ffe7b6;
+    --ink:#05060a;
+    --text:#eae6dd;
+    --text-dim:#9b958a;
+    --accent:#8bd46f;
+    --card-w:420px;
+    --card-h:236px;
+    --ease:cubic-bezier(.22,.9,.25,1);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;background:var(--ink);color:var(--text);overflow:hidden;
+    font-family:"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    user-select:none;
+    height:100vh;
+  }
+  /* 舞台：以 860px 高为基准等比缩放，宽度随视口自适应（PS5 式全屏布局） */
+  #stage{
+    position:fixed;left:0;top:0;z-index:5;
+    width:1600px;height:860px;
+    transform-origin:top left;
+    display:flex;flex-direction:column;
+  }
+
+  /* ---------- 背景层 ---------- */
+  #bg{position:fixed;inset:0;z-index:0;background:#05060a}
+  #bg .layer{
+    position:absolute;inset:0;
+    background-size:cover;background-position:74% center;
+    filter:blur(3px) brightness(.52) saturate(1.24) contrast(1.04);
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.30) 20%,rgba(0,0,0,.92) 42%,#000 58%);
+    mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.30) 20%,rgba(0,0,0,.92) 42%,#000 58%);
+    opacity:0;transition:opacity 900ms var(--ease);
+    will-change:opacity,transform;
+  }
+  #bg .layer.on{opacity:1;animation:drift 30s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.1)}}
+  #veil{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:
+      radial-gradient(120% 84% at 50% 2%,rgba(5,6,10,.42) 0%,rgba(5,6,10,.14) 42%,rgba(5,6,10,.5) 78%,rgba(5,6,10,.94) 100%),
+      radial-gradient(52% 62% at 4% 32%,var(--accent-dim,rgba(139,212,111,.13)) 0%,rgba(0,0,0,0) 70%),      linear-gradient(90deg,rgba(5,6,10,.97) 0%,rgba(5,6,10,.86) 26%,rgba(5,6,10,.06) 52%),
+      linear-gradient(180deg,rgba(5,6,10,.70) 0%,rgba(5,6,10,.08) 18%,rgba(5,6,10,.20) 52%,rgba(5,6,10,.86) 88%,rgba(5,6,10,.98) 100%);
+    transition:background 900ms var(--ease);
+  }
+  #grain{
+    position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)'/></svg>");
+  }
+
+  /* ---------- 顶栏 ---------- */
+  header{
+    position:relative;z-index:6;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 42px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px;letter-spacing:.16em;font-size:13px;color:var(--text-dim)}
+  .brand .dot{
+    width:9px;height:9px;border-radius:50%;
+    background:linear-gradient(135deg,#ff7a45,#ffd166 50%,#4fb8ff);
+    box-shadow:0 0 14px rgba(255,153,80,.55),0 0 26px rgba(79,184,255,.35);
+  }
+  .brand b{
+    background:linear-gradient(180deg,#fff 10%,var(--gold-hi) 55%,var(--gold) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    font-weight:700;letter-spacing:.22em;font-size:14px;
+  }
+  .hright{display:flex;align-items:center;gap:10px}
+  .chip{
+    display:flex;align-items:center;gap:8px;
+    padding:8px 14px;border-radius:999px;
+    border:1px solid rgba(232,198,132,.22);
+    background:rgba(255,255,255,.03);
+    font-size:12px;letter-spacing:.08em;color:var(--text-dim);
+    backdrop-filter:blur(6px);
+  }
+  .chip .star{color:var(--gold);font-size:12px;transform:translateY(-.5px)}
+  .chip b{color:var(--text);font-weight:600;letter-spacing:.02em}
+  .iconbtn{
+    width:38px;height:38px;display:grid;place-items:center;cursor:pointer;
+    border-radius:11px;border:1px solid rgba(232,198,132,.2);
+    background:rgba(255,255,255,.03);color:var(--text-dim);
+    transition:.22s var(--ease);
+  }
+  .iconbtn:hover{color:var(--gold-hi);border-color:rgba(232,198,132,.5);background:rgba(232,198,132,.08);transform:translateY(-1px)}
+  .iconbtn svg{width:17px;height:17px}
+  .iconbtn.off{opacity:.42}
+
+  /* 存档同步按钮 */
+  .iconbtn.savebtn{position:relative}
+  .iconbtn.savebtn i{
+    position:absolute;right:5px;top:5px;width:6px;height:6px;border-radius:50%;
+    background:#6b7280;transition:.25s var(--ease);
+  }
+  .iconbtn.savebtn[data-state="synced"] i{background:#8bd46f;box-shadow:0 0 7px #8bd46f}
+  .iconbtn.savebtn[data-state="dirty"] i{background:#e8c684;box-shadow:0 0 8px #e8c684}
+  .iconbtn.savebtn[data-state="dirty"]{border-color:rgba(232,198,132,.45)}
+
+  #toast{
+    position:fixed;left:50%;bottom:36px;z-index:70;
+    transform:translate(-50%,12px);
+    padding:9px 18px;border-radius:999px;
+    background:rgba(10,12,18,.94);border:1px solid rgba(232,198,132,.3);
+    color:var(--gold-hi);font-size:12.5px;letter-spacing:.02em;white-space:nowrap;
+    opacity:0;pointer-events:none;
+    transition:opacity .3s var(--ease),transform .3s var(--ease);
+    backdrop-filter:blur(10px);
+  }
+  #toast.on{opacity:1;transform:translate(-50%,0)}
+
+  /* ---------- 主区 ---------- */
+  main{position:relative;z-index:5;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center}
+
+  .hero{
+    flex:0 0 auto;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0 0 26px max(6vw,54px);
+  }
+  .hero-inner{animation:rise 620ms var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  .season-no{
+    font-size:12px;letter-spacing:.5em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:14px;opacity:.9;
+    text-shadow:0 0 22px var(--accent-dim,rgba(139,212,111,.4));
+  }
+  .season-title{
+    margin:0;font-size:clamp(30px,3.4vw,46px);font-weight:800;letter-spacing:.06em;line-height:1.1;
+    background:linear-gradient(180deg,#fff 0%,#fff 55%,rgba(255,255,255,.62) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 8px 26px rgba(0,0,0,.6));
+  }
+  .logo{
+    height:clamp(34px,3.4vw,50px);width:auto;margin:16px 0 0 -6px;
+    filter:drop-shadow(0 10px 24px rgba(0,0,0,.75));
+  }
+  .desc{margin:14px 0 0;font-size:14px;color:var(--text-dim);letter-spacing:.05em;max-width:44ch}
+
+  .stats{display:flex;align-items:center;gap:26px;margin-top:26px}
+  .ring-wrap{position:relative;width:74px;height:74px;flex:0 0 auto}
+  .ring{width:74px;height:74px;transform:rotate(-90deg)}
+  .ring circle{fill:none;stroke-width:6;stroke-linecap:round}
+  .ring .bgc{stroke:rgba(255,255,255,.09)}
+  .ring .fgc{
+    stroke:var(--accent);
+    stroke-dasharray:213.6;
+    filter:drop-shadow(0 0 8px var(--accent-dim,rgba(139,212,111,.55)));
+    transition:stroke-dashoffset 900ms var(--ease),stroke 600ms ease;
+  }
+  .ring-wrap .pct{
+    position:absolute;inset:0;display:grid;place-items:center;
+    font-size:15px;font-weight:700;letter-spacing:-.02em;color:var(--text);
+  }
+  .stat-list{display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--text-dim);letter-spacing:.04em}
+  .stat-list .row{display:flex;align-items:baseline;gap:8px}
+  .stat-list b{color:var(--text);font-size:17px;font-weight:700;letter-spacing:0}
+  .stat-list .sep{opacity:.4}
+  .stat-list .stars{color:var(--gold);letter-spacing:.12em}
+
+  .play{
+    margin-top:26px;display:inline-flex;align-items:center;gap:12px;
+    align-self:flex-start;cursor:pointer;
+    padding:14px 30px;border-radius:999px;border:1px solid transparent;
+    font-size:15px;font-weight:700;letter-spacing:.14em;color:#1a1206;
+    background:linear-gradient(180deg,var(--gold-hi),var(--gold) 62%,#c8a459);
+    box-shadow:0 12px 34px rgba(232,198,132,.28),inset 0 1px 0 rgba(255,255,255,.6);
+    transition:.24s var(--ease);
+  }
+  .play:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(232,198,132,.42),inset 0 1px 0 rgba(255,255,255,.7)}
+  .play:active{transform:translateY(0) scale(.985)}
+  .play svg{width:15px;height:15px}
+
+  /* ---------- 卡片轨 ---------- */
+  .rail{
+    position:relative;height:calc(var(--card-h) + 66px);
+    flex:0 0 auto;display:flex;align-items:center;
+    overflow:hidden;
+    margin-bottom:6px;
+    touch-action:pan-y;
+    cursor:grab;
+  }
+  .track{
+    display:flex;align-items:center;gap:34px;
+    padding:0 calc(50% - var(--card-w)/2);
+    will-change:transform;
+    transition:transform 620ms var(--ease);
+  }
+  .card{
+    position:relative;flex:0 0 auto;
+    width:var(--card-w);height:var(--card-h);
+    border-radius:16px;overflow:hidden;
+    cursor:pointer;
+    transform:scale(.76);
+    opacity:.66;
+    filter:brightness(.82) saturate(.92);
+    box-shadow:0 18px 40px rgba(0,0,0,.55);
+    transition:transform 620ms var(--ease),opacity 500ms ease,filter 500ms ease,box-shadow 500ms ease;
+    outline:1px solid rgba(255,255,255,.08);outline-offset:-1px;
+    will-change:transform;
+  }
+  .card img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);-webkit-user-drag:none;user-select:none;pointer-events:none}
+  .rail.dragging{cursor:grabbing}
+  .rail.dragging .card{transition:none}
+  .card .shade{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(5,6,10,.06) 0%,rgba(5,6,10,.16) 46%,rgba(5,6,10,.92) 100%);
+  }
+  .card .tag{
+    position:absolute;left:20px;top:16px;
+    font-size:10.5px;letter-spacing:.26em;color:rgba(255,255,255,.66);
+    text-shadow:0 2px 10px rgba(0,0,0,.85);
+    white-space:nowrap;
+    opacity:0;transition:opacity .3s ease;
+  }
+  .card.sel .tag{opacity:1}
+  .card .cname{
+    position:absolute;left:20px;right:20px;bottom:17px;
+    display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+  }
+  .card .cname b{font-size:16px;font-weight:700;letter-spacing:.06em;text-shadow:0 2px 12px rgba(0,0,0,.9)}
+  .card .cname span{font-size:11px;color:rgba(255,255,255,.62);letter-spacing:.06em;white-space:nowrap}
+  .card .cbar{
+    position:absolute;left:20px;right:20px;bottom:10px;height:2px;
+    background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;opacity:0;
+    transition:opacity .35s ease;
+  }
+  .card .cbar i{display:block;height:100%;background:var(--accent);box-shadow:0 0 10px var(--accent-dim,rgba(139,212,111,.7));border-radius:2px}
+  .card .done{
+    position:absolute;right:14px;top:12px;
+    padding:3px 9px;border-radius:999px;font-size:10px;letter-spacing:.1em;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);
+    color:rgba(255,255,255,.8);backdrop-filter:blur(4px);
+  }
+  .card:hover{opacity:.9;filter:brightness(.95);transform:scale(.79)}
+
+  .card.sel{
+    transform:scale(1) translateY(-4px);opacity:1;filter:none;
+    outline:1.5px solid rgba(255,231,182,.92);
+    box-shadow:
+      0 0 0 1px rgba(255,231,182,.28),
+      0 26px 66px rgba(0,0,0,.72),
+      0 0 76px -18px var(--accent-dim,rgba(139,212,111,.5));
+    z-index:2;
+  }
+  .card.sel .cbar{opacity:1}
+  .card.sel .cname b{font-size:18px;color:#fff}
+  .card.sel .shade{background:linear-gradient(180deg,rgba(5,6,10,0) 0%,rgba(5,6,10,.1) 44%,rgba(5,6,10,.9) 100%)}
+
+  /* ---------- 底栏 ---------- */
+  footer{
+    position:relative;z-index:6;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:6px 42px 22px;font-size:11.5px;color:rgba(155,149,138,.85);letter-spacing:.07em;
+  }
+  .hints{display:flex;align-items:center;gap:18px}
+  .hints .h{display:flex;align-items:center;gap:7px}
+  kbd{
+    display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;
+    border-radius:6px;border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.05);
+    font-family:inherit;font-size:11px;color:rgba(234,230,221,.9);
+    box-shadow:0 2px 0 rgba(0,0,0,.4);
+  }
+  .dots{display:flex;align-items:center;gap:7px}
+  .dots i{
+    width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.18);
+    transition:.3s var(--ease);
+  }
+  .dots i.on{background:var(--gold);box-shadow:0 0 10px rgba(232,198,132,.8);width:16px;border-radius:3px}
+  .offline{opacity:.55}
+
+  body.narrow{--card-w:340px;--card-h:191px}
+  body.narrow .track{gap:24px}
+  body.narrow .hero{padding-left:44px}
+  body.narrow footer{padding:6px 26px 18px}
+  body.narrow header{padding:20px 26px 0}
+  body.short .desc{display:none}
+  body.short .logo{height:38px}
+  body.short .hero{padding-bottom:10px}
+  body.short .stats{margin-top:16px}
+  body.short .play{margin-top:16px;padding:11px 26px}
+  body.short .ring-wrap,body.short .ring{width:62px;height:62px}
+  body.short{--card-w:360px;--card-h:202px}
+  body.tiny{--card-w:290px;--card-h:163px}
+  body.tiny .season-title{font-size:30px}
+  body.tiny .ring-wrap,body.tiny .ring{width:56px;height:56px}
+  body.tiny .hints .h.opt{display:none}
+  body.tiny .chip.hide-sm{display:none}
+
+  /* ---- 手机横屏（唯一支持的移动形态） ---- */
+  body.mobile{--card-w:356px;--card-h:200px}
+  body.mobile header{padding:12px 16px 0}
+  body.mobile .brand b{font-size:14px}
+  body.mobile .brand span{font-size:10px}
+  body.mobile .hright{gap:8px}
+  body.mobile .chip{display:none}
+  body.mobile .iconbtn{width:30px;height:30px}
+  body.mobile main{flex-direction:row;align-items:center;padding:0 10px 0 18px;gap:6px}
+  body.mobile .hero{flex:0 0 44%;min-height:0;padding:0;justify-content:center}
+  body.mobile .hero-inner{gap:9px}
+  body.mobile .season-no{font-size:9px;letter-spacing:.3em}
+  body.mobile .season-title{font-size:26px;letter-spacing:.04em}
+  body.mobile .logo{height:30px;margin-top:-2px}
+  body.mobile .desc{display:none}
+  body.mobile .stats{margin-top:2px;gap:12px}
+  body.mobile .ring-wrap,body.mobile .ring{width:50px;height:50px}
+  body.mobile .pct{font-size:12px}
+  body.mobile .stat-list .row{font-size:11.5px}
+  body.mobile .play{margin-top:4px;padding:9px 20px;font-size:13px;border-radius:999px}
+  body.mobile .play svg{width:15px;height:15px}
+  body.mobile .rail{flex:1;height:calc(var(--card-h) + 26px);margin:0}
+  body.mobile .track{gap:16px}
+  body.mobile .card{border-radius:13px}
+  body.mobile .card .tag{font-size:9px;left:14px;top:11px}
+  body.mobile .card .cname{left:14px;right:14px;bottom:12px}
+  body.mobile .card .cname b{font-size:15px}
+  body.mobile .card .cname span{font-size:10px}
+  body.mobile .card .cbar{left:14px;right:14px;bottom:7px}
+  body.mobile footer{padding:4px 16px 8px}
+  body.mobile .hints,body.mobile .offline{display:none}
+  body.mobile .dots{margin:0 auto}
+
+  /* ---- 竖屏提示（移动端只支持横屏） ---- */
+  #rotate{display:none}
+  @media (orientation:portrait) and (max-width:900px){
+    #rotate{
+      position:fixed;inset:0;z-index:60;display:grid;place-items:center;
+      background:radial-gradient(60% 60% at 50% 40%,#10131c,#05060a 70%);
+      color:var(--gold);text-align:center;padding:28px;
+    }
+    #rotate svg{animation:rot 2.6s ease-in-out infinite alternate}
+    @keyframes rot{0%,30%{transform:rotate(0)}70%,100%{transform:rotate(-90deg)}}
+    #rotate h2{margin:16px 0 8px;font-size:19px;letter-spacing:.06em;color:#f6e7c8}
+    #rotate p{margin:0;font-size:13px;line-height:1.7;color:rgba(255,255,255,.5)}
+    #stage{visibility:hidden}
+  }
+</style>
+</head>
+<body>
+
+<div id="bg"><div class="layer" data-k="0"></div><div class="layer" data-k="1"></div></div>
+<div id="veil"></div>
+<div id="grain"></div>
+
+<div id="rotate">
+  <div>
+    <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3"/>
+    </svg>
+    <h2>请横屏打开</h2>
+    <p>大厅与游戏均为横屏体验，请旋转手机后继续。</p>
+  </div>
+</div>
+
+<div id="stage">
+<header>
+  <div class="brand"><span class="dot"></span><b>森林冰火人</b><span>H5 大厅</span></div>
+  <div class="hright">
+    <div class="chip hide-sm"><span class="star">★</span><b id="totalStars">0</b><span>/</span><b id="totalMaxStars">0</b></div>
+    <div class="chip hide-sm"><span>已通关</span><b id="totalDone">0</b><span>/</span><b id="totalLevels">0</b></div>
+    <div class="iconbtn savebtn" id="btnSave" data-state="offline" title="存档同步">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5.2 16.4A4.2 4.2 0 0 1 7 8.3a6 6 0 0 1 11.4.9 3.9 3.9 0 0 1 .4 7.2"/>
+        <path d="M12 20.5V12"/><path d="M8.9 15.1 12 12l3.1 3.1"/>
+      </svg>
+      <i></i>
+    </div>
+    <div class="iconbtn" id="btnSound" title="界面音效">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5 6 9H3v6h3l5 4z"/><path class="wave1" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="wave2" d="M18.5 5.5a9 9 0 0 1 0 13"/>
+      </svg>
+    </div>
+    <div class="iconbtn" id="btnFull" title="全屏 (F)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner" id="heroInner">
+      <div class="season-no" id="seasonNo">SEASON 01</div>
+      <h1 class="season-title" id="seasonTitle">森林圣殿</h1>
+      <img class="logo" id="seasonLogo" alt="" />
+      <p class="desc" id="seasonDesc"></p>
+      <div class="stats">
+        <div class="ring-wrap">
+          <svg class="ring" viewBox="0 0 74 74">
+            <circle class="bgc" cx="37" cy="37" r="34"></circle>
+            <circle class="fgc" id="ringFg" cx="37" cy="37" r="34"></circle>
+          </svg>
+          <div class="pct" id="ringPct">0%</div>
+        </div>
+        <div class="stat-list">
+          <div class="row"><b id="stDone">0</b><span class="sep">/</span><span id="stTotal">0</span><span>关已通关</span></div>
+          <div class="row"><span class="stars" id="stStars">★★★</span><span id="stStarText">0 / 0 星</span></div>
+        </div>
+      </div>
+      <button class="play" id="btnPlay">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+        开始游戏
+      </button>
+    </div>
+  </section>
+
+  <div class="rail" id="rail">
+    <div class="track" id="track"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="hints">
+    <div class="h"><kbd>←</kbd><kbd>→</kbd><span>切换</span></div>
+    <div class="h"><kbd>Enter</kbd><span>启动</span></div>
+    <div class="h opt"><kbd>F</kbd><span>全屏</span></div>
+    <div class="h opt"><span>滚轮 / 拖拽 也可切换</span></div>
+  </div>
+  <div class="dots" id="dots"></div>
+  <div class="offline">7 季 · 293 关 · 本地离线镜像</div>
+</footer>
+</div><!-- /#stage -->
+
+<div id="toast"></div>
+
+<script>
+(async () => {
+  "use strict";
+
+  const SEASONS = [
+    { key:'A', ns:'fb-forest',     no:'01', title:'森林圣殿', en:'The Forest Temple',
+      cover:'assets/images/TempleHallForest.jpg',  logo:'assets/images/GameNameForest.png',
+      total:48, accent:'#8bd46f', play:'gameIndex.html',
+      desc:'树荫下的初遇——火与水的第一次配合，一切从这里开始。' },
+    { key:'B', ns:'fb-light',      no:'02', title:'光明圣殿', en:'The Light Temple',
+      cover:'assets/images/TempleHallLight.jpg',   logo:'assets/images/GameNameLight.png',
+      total:45, accent:'#ffd98e', play:'gameIndex.html',
+      desc:'光与影交错的神殿，镜子、光束与机关开始变得不客气。' },
+    { key:'C', ns:'fb-ice',        no:'03', title:'寒冰圣殿', en:'The Ice Temple',
+      cover:'assets/images/TempleHallIce.jpg',     logo:'assets/images/GameNameIce.png',
+      total:53, accent:'#7fd8ff', play:'gameIndex.html',
+      desc:'寒冰与火焰的拉扯，冻住的水面、融化的道路，节奏更紧。' },
+    { key:'D', ns:'fb-crystal',    no:'04', title:'水晶殿',   en:'The Crystal Temple',
+      cover:'assets/images/TempleHallCrystal.jpg', logo:'assets/images/GameNameCrystal.png',
+      total:39, accent:'#b79cff', play:'gameIndex.html',
+      desc:'水晶迷宫里光影折射，路径会骗人，答案往往在另一侧。' },
+    { key:'E', ns:'fb-elements',   no:'05', title:'元素',     en:'Elements',
+      cover:'assets/images/TempleHallFire.jpg',    logo:'assets/images/GameNameElements.png',
+      total:39, accent:'#ff8a4c', play:'gameIndex.html',
+      desc:'七座元素神殿——火焰、森林、寒冰、流水、水晶、光明与风。' },
+    { key:'F', ns:'fb-fairytales', no:'06', title:'童话',     en:'Fairy Tales',
+      cover:'assets/images/TempleHallFairy.jpg',   logo:'assets/images/GameNameFairy.png',
+      total:32, accent:'#ff9ec4', play:'index.htm',
+      desc:'走进童话书页，熟悉的桥段换成了新的机关与陷阱。' },
+    { key:'G', ns:'fb-friends',    no:'07', title:'朋友',     en:'Friends',
+      cover:'assets/images/TempleHallFriends.jpg', logo:'assets/images/GameNameFriends.png',
+      total:37, accent:'#8fe3a8', play:'gameIndex.html',
+      desc:'新伙伴登场，胖的、小的、会跳的，配合方式彻底变了。' },
+  ];
+
+  const $ = (id) => document.getElementById(id);
+  const rail = $('rail'), track = $('track');
+  const RING_C = 2 * Math.PI * 34;
+
+  let idx = 0;
+  let bgSlot = 0;
+  let soundOn = true;
+  let audioCtx = null;
+
+  /* ---------------- 存档同步（仓库优先 + 逐关合并） ---------------- */
+  const SAVE_API = 'api/save';
+  let saveState = 'offline';          // offline | synced | dirty
+  let lastSyncedRaw = '';
+  let saving = false;
+
+  const saveKey = (s) => s.ns + ':progress';
+
+  function readLocal(s) {
+    try {
+      const raw = localStorage.getItem(saveKey(s));
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function stable(v) {
+    if (Array.isArray(v)) return '[' + v.map(stable).join(',') + ']';
+    if (v && typeof v === 'object') {
+      return '{' + Object.keys(v).sort().map((k) => JSON.stringify(k) + ':' + stable(v[k])).join(',') + '}';
+    }
+    return JSON.stringify(v);
+  }
+
+  function snapshotSaves() {
+    const saves = {};
+    for (const s of SEASONS) {
+      const v = readLocal(s);
+      if (v) saves[s.ns] = v;
+    }
+    return saves;
+  }
+
+  function snapshotRaw() {
+    return SEASONS.map((s) => {
+      try { return localStorage.getItem(saveKey(s)) || ''; } catch (e) { return ''; }
+    }).join('\u0001');
+  }
+
+  /* 逐关合并：同一关取 best.stars 更高的那份，只有一边存在的保留 */
+  function mergeSeason(local, repo) {
+    if (!local) return repo || null;
+    if (!repo || !Array.isArray(repo.temples)) return local;
+    const out = JSON.parse(JSON.stringify(local));
+    const index = new Map();
+    for (const t of out.temples || []) {
+      for (const lv of t.levels || []) index.set(lv._id || lv.id, lv);
+    }
+    for (const rt of repo.temples || []) {
+      for (const rlv of rt.levels || []) {
+        const lv = index.get(rlv._id || rlv.id);
+        if (!lv) continue;
+        const ls = (lv.best && lv.best.stars) || 0;
+        const rs = (rlv.best && rlv.best.stars) || 0;
+        if (rs > ls) {
+          lv.best = rlv.best;
+          if (rlv.played) lv.played = true;
+          if (rlv.state != null) lv.state = rlv.state;
+          if (rlv.isNew != null) lv.isNew = rlv.isNew;
+        }
+      }
+    }
+    if (repo.gameComplete) out.gameComplete = true;
+    return out;
+  }
+
+  async function loadRepo() {
+    try {
+      // 先探活：只有 tools/serve.py 会返回 {ok:true}，纯静态服务一律 404
+      const ping = await fetch('api/ping', { cache: 'no-store' });
+      if (!ping.ok) return { ok: false, data: null };
+      const pj = await ping.json().catch(() => null);
+      if (!pj || pj.ok !== true) return { ok: false, data: null };
+
+      const r = await fetch(SAVE_API, { cache: 'no-store' });
+      if (r.status === 404) return { ok: true, data: null };   // 后端在，但还没有存档
+      if (!r.ok) return { ok: false, data: null };
+      return { ok: true, data: await r.json() };
+    } catch (e) {
+      return { ok: false, data: null };
+    }
+  }
+
+  function paintSave() {
+    const btn = $('btnSave');
+    if (!btn) return;
+    btn.dataset.state = saveState;
+    btn.title = saveState === 'offline'
+      ? '未连接本地服务（双击「启动游戏.bat」后可同步到仓库）'
+      : saveState === 'dirty' ? '有进度未写入仓库，点此保存'
+      : '存档已与仓库同步';
+  }
+
+  async function saveNow(auto = false) {
+    if (saving) return false;
+    if (saveState === 'offline') {
+      if (!auto) toast('未连接本地服务：请用 启动游戏.bat 启动');
+      return false;
+    }
+    const saves = snapshotSaves();
+    if (!Object.keys(saves).length) {
+      if (!auto) toast('还没有可保存的进度');
+      return false;
+    }
+    saving = true;
+    try {
+      const r = await fetch(SAVE_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ version: 1, updatedAt: new Date().toISOString(), saves }),
+      });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      lastSyncedRaw = snapshotRaw();
+      saveState = 'synced';
+      paintSave();
+      if (!auto) toast('已写入 saves/progress.json');
+      return true;
+    } catch (e) {
+      saveState = 'dirty';
+      paintSave();
+      if (!auto) toast('保存失败：' + (e.message || e));
+      return false;
+    } finally {
+      saving = false;
+    }
+  }
+
+  function checkDirty() {
+    if (saveState === 'offline' || saving) return;
+    if (snapshotRaw() === lastSyncedRaw) return;
+    saveState = 'dirty';
+    paintSave();
+    saveNow(true);
+  }
+
+  async function bootSync() {
+    const { ok, data } = await loadRepo();
+    if (!ok) { saveState = 'offline'; paintSave(); return; }
+
+    if (data && data.saves) {
+      for (const s of SEASONS) {
+        const repo = data.saves[s.ns];
+        if (!repo) continue;
+        const local = readLocal(s);
+        const merged = mergeSeason(local, repo);
+        if (!merged) continue;
+        try {
+          if (JSON.stringify(merged) !== JSON.stringify(local)) {
+            localStorage.setItem(saveKey(s), JSON.stringify(merged));
+          }
+        } catch (e) { /* 忽略写入失败（如隐私模式） */ }
+      }
+    }
+
+    lastSyncedRaw = snapshotRaw();
+    const repo = (data && data.saves) || {};
+    let diff = false;
+    for (const s of SEASONS) {
+      const local = readLocal(s);
+      const r = repo[s.ns] || null;
+      if (!local && !r) continue;
+      if (stable(local) !== stable(r)) { diff = true; break; }
+    }
+    saveState = diff ? 'dirty' : 'synced';
+    paintSave();
+    if (diff) saveNow(true);   // 浏览器里更优的进度自动回写仓库
+  }
+
+  /* ---------------- 进度读取 ---------------- */
+  function readProgress(s) {
+    const fallback = { done: 0, total: s.total, stars: 0, maxStars: s.total * 3 };
+    let raw = null;
+    try { raw = localStorage.getItem(s.ns + ':progress'); } catch (e) { return fallback; }
+    if (!raw) return fallback;
+    try {
+      const data = JSON.parse(raw);
+      let done = 0, stars = 0, total = 0;
+      for (const t of data.temples || []) {
+        for (const lv of t.levels || []) {
+          total++;
+          if (lv.best) { done++; stars += (lv.best.stars || 0); }
+        }
+      }
+      if (!total) return fallback;
+      return { done, total, stars, maxStars: total * 3 };
+    } catch (e) { return fallback; }
+  }
+
+  await bootSync();
+
+  const progress = SEASONS.map(readProgress);
+
+  /* ---------------- 构建卡片 ---------------- */
+  SEASONS.forEach((s, i) => {
+    const p = progress[i];
+    const pct = p.total ? Math.round(p.done / p.total * 100) : 0;
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.dataset.i = i;
+    card.style.setProperty('--accent', s.accent);
+    card.style.setProperty('--accent-dim', hexAlpha(s.accent, .45));
+    card.innerHTML = `
+      <img src="games/${s.key}/dist/${s.cover}" alt="${s.title}" draggable="false" />
+      <div class="shade"></div>
+      <div class="tag">SEASON ${s.no}</div>
+      ${p.done > 0 ? `<div class="done">${pct}%</div>` : ''}
+      <div class="cname"><b>${s.title}</b><span>${p.done}/${p.total} 关</span></div>
+      <div class="cbar"><i style="width:${pct}%"></i></div>`;
+    card.addEventListener('click', () => {
+      if (i === idx) launch();
+      else select(i);
+    });
+    track.appendChild(card);
+  });
+  const cards = Array.from(track.children);
+
+  /* 指示点 */
+  const dots = $('dots');
+  SEASONS.forEach(() => dots.appendChild(document.createElement('i')));
+  const dotEls = Array.from(dots.children);
+
+  /* ---------------- 选中逻辑 ---------------- */
+  function hexAlpha(hex, a) {
+    const n = parseInt(hex.slice(1), 16);
+    return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+  }
+
+  let baseX = 0;
+  function centerCard(i, animate = true, drag = 0) {
+    const card = cards[i];
+    if (!card) return;
+    const x = rail.clientWidth / 2 - (card.offsetLeft + card.offsetWidth / 2);
+    baseX = x;
+    if (!animate) track.style.transition = 'none';
+    track.style.transform = `translate3d(${x + drag}px,0,0)`;
+    if (!animate) {
+      void track.offsetWidth;
+      track.style.transition = '';
+    }
+  }
+
+  function setBackground(i) {
+    const layers = document.querySelectorAll('#bg .layer');
+    const next = layers[bgSlot];
+    const prev = layers[1 - bgSlot];
+    next.style.backgroundImage = `url("games/${SEASONS[i].key}/dist/${SEASONS[i].cover}")`;
+    next.classList.add('on');
+    prev.classList.remove('on');
+    bgSlot = 1 - bgSlot;
+  }
+
+  function renderHero(i) {
+    const s = SEASONS[i], p = progress[i];
+    const pct = p.total ? p.done / p.total : 0;
+
+    document.documentElement.style.setProperty('--accent', s.accent);
+    document.documentElement.style.setProperty('--accent-dim', hexAlpha(s.accent, .22));
+
+    $('seasonNo').textContent = 'SEASON ' + s.no;
+    $('seasonTitle').textContent = s.title;
+    $('seasonLogo').src = `games/${s.key}/dist/${s.logo}`;
+    $('seasonLogo').alt = s.en;
+    $('seasonDesc').textContent = s.desc;
+
+    $('ringFg').style.strokeDashoffset = String(RING_C * (1 - pct));
+    $('ringFg').style.stroke = s.accent;
+    $('ringPct').textContent = Math.round(pct * 100) + '%';
+    $('stDone').textContent = p.done;
+    $('stTotal').textContent = p.total;
+    $('stStars').textContent = '★'.repeat(3);
+    $('stStarText').textContent = `${p.stars} / ${p.maxStars} 星`;
+
+    const inner = $('heroInner');
+    inner.style.animation = 'none';
+    void inner.offsetWidth;
+    inner.style.animation = '';
+
+    dotEls.forEach((d, k) => d.classList.toggle('on', k === i));
+  }
+
+  function renderTotals() {
+    let done = 0, total = 0, stars = 0, maxStars = 0;
+    progress.forEach((p) => { done += p.done; total += p.total; stars += p.stars; maxStars += p.maxStars; });
+    $('totalDone').textContent = done;
+    $('totalLevels').textContent = total;
+    $('totalStars').textContent = stars;
+    $('totalMaxStars').textContent = maxStars;
+  }
+
+  function select(i, opts = {}) {
+    idx = (i + SEASONS.length) % SEASONS.length;
+    cards.forEach((c, k) => c.classList.toggle('sel', k === idx));
+    centerCard(idx, opts.animate !== false);
+    setBackground(idx);
+    renderHero(idx);
+    if (!opts.silent) blip(520, .045, .05);
+    history.replaceState(null, '', '#' + SEASONS[idx].key);
+  }
+
+  /* ---------------- 启动游戏 ---------------- */
+  function launch() {
+    const s = SEASONS[idx];
+    blip(760, .09, .07);
+    setTimeout(() => blip(1040, .1, .05), 70);
+    const url = `games/${s.key}/dist/${s.play}`;
+    // 用 <a target=_blank> 打开：不会被弹窗拦截，也不会带走大厅页
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => a.remove(), 0);
+  }
+
+  /* ---------------- 音效 ---------------- */
+  function blip(freq = 520, dur = 0.06, gain = 0.05) {
+    if (!soundOn) return;
+    try {
+      audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+      const t = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, t);
+      osc.frequency.exponentialRampToValueAtTime(freq * 1.25, t + dur);
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(gain, t + 0.008);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      osc.connect(g).connect(audioCtx.destination);
+      osc.start(t); osc.stop(t + dur + 0.02);
+    } catch (e) { /* 忽略音频异常 */ }
+  }
+
+  /* ---------------- 交互 ---------------- */
+  window.addEventListener('keydown', (e) => {
+    const k = e.key;
+    if (k === 'ArrowRight' || k === 'ArrowDown') { e.preventDefault(); select(idx + 1); }
+    else if (k === 'ArrowLeft' || k === 'ArrowUp') { e.preventDefault(); select(idx - 1); }
+    else if (k === 'Home') { e.preventDefault(); select(0); }
+    else if (k === 'End') { e.preventDefault(); select(SEASONS.length - 1); }
+    else if (k === 'Enter' || k === ' ') { e.preventDefault(); launch(); }
+    else if (k === 'f' || k === 'F') { toggleFull(); }
+  });
+
+  let wheelLock = 0;
+  rail.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const now = Date.now();
+    if (now < wheelLock) return;
+    const d = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    if (Math.abs(d) < 8) return;
+    wheelLock = now + 240;
+    select(idx + (d > 0 ? 1 : -1));
+  }, { passive: false });
+
+  /* 跟手拖拽：按住时轨道跟随指针位移，松手吸附到上一张 / 下一张（一次手势最多切一张） */
+  let dragStartX = null, dragging = false, dragDx = 0, dragMoved = false, suppressClick = false;
+
+  rail.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    dragStartX = e.clientX;
+    dragDx = 0;
+    dragMoved = false;
+    dragging = true;
+    track.style.transition = 'none';
+    rail.classList.add('dragging');
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    dragDx = e.clientX - dragStartX;
+    if (Math.abs(dragDx) > 8) dragMoved = true;
+    track.style.transform = `translate3d(${baseX + dragDx * 0.55}px,0,0)`;
+  });
+
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    rail.classList.remove('dragging');
+    track.style.transition = '';
+
+    const cardW = cards[idx] ? cards[idx].offsetWidth : 420;
+    const threshold = Math.max(64, cardW * 0.24);
+    let step = 0;
+    if (Math.abs(dragDx) > threshold) step = dragDx < 0 ? 1 : -1;
+    const target = (idx + step + SEASONS.length) % SEASONS.length;
+
+    if (step !== 0 && target !== idx) select(target);
+    else centerCard(idx, true);
+
+    suppressClick = dragMoved;
+    dragStartX = null;
+    dragDx = 0;
+    setTimeout(() => { suppressClick = false; }, 160);
+  }
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
+  rail.addEventListener('click', (e) => {
+    if (suppressClick) { e.stopPropagation(); e.preventDefault(); }
+  }, true);
+
+  $('btnSave').addEventListener('click', () => {
+    if (saveState === 'offline') { toast('未连接本地服务：请用 启动游戏.bat 启动'); return; }
+    if (snapshotRaw() === lastSyncedRaw) { toast('存档已与仓库同步'); return; }
+    saveState = 'dirty';
+    paintSave();
+    saveNow(false);
+  });
+
+  window.addEventListener('focus', checkDirty);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) checkDirty(); });
+  setInterval(() => { if (!document.hidden) checkDirty(); }, 4000);
+
+  let toastTimer = 0;
+  function toast(msg) {
+    const el = $('toast');
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add('on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('on'), 2400);
+  }
+
+  $('btnPlay').addEventListener('click', launch);
+  $('btnFull').addEventListener('click', toggleFull);
+  $('btnSound').addEventListener('click', () => {
+    soundOn = !soundOn;
+    $('btnSound').classList.toggle('off', !soundOn);
+    document.querySelectorAll('#btnSound .wave1, #btnSound .wave2').forEach((el) => {
+      el.style.opacity = soundOn ? '' : '0';
+    });
+    if (soundOn) blip(660, .05, .05);
+  });
+  if (!soundOn) $('btnSound').classList.add('off');
+
+  function toggleFull() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+    else document.exitFullscreen?.();
+  }
+
+  window.addEventListener('hashchange', () => {
+    const k = (location.hash || '').replace('#', '').toUpperCase();
+    const i = SEASONS.findIndex((s) => s.key === k);
+    if (i >= 0 && i !== idx) select(i, { silent: true });
+  });
+
+  /* ---- 舞台等比缩放：高度基准 860px，宽度自适应 ---- */
+  function fit() {
+    const stage = document.getElementById('stage');
+    const vw = document.documentElement.clientWidth;
+    const vh = document.documentElement.clientHeight;
+    // 手机横屏：用更小的设计高度基准，元素才不会缩得太小
+    const isPhone = Math.min(vw, vh) <= 540;
+    const baseH = isPhone ? 470 : 860;
+    const s = vh / baseH;
+    const sw = Math.ceil(vw / s);
+    stage.style.width = sw + 'px';
+    stage.style.height = baseH + 'px';
+    stage.style.transform = `scale(${s})`;
+    document.body.classList.toggle('mobile', isPhone);
+    document.body.classList.toggle('narrow', !isPhone && sw < 1240);
+    document.body.classList.toggle('tiny', !isPhone && sw < 900);
+    document.body.classList.toggle('short', !isPhone && vh < 820);
+  }
+  fit();
+
+  window.addEventListener('resize', () => { fit(); centerCard(idx, false); });
+
+  /* ---------------- 初始化 ---------------- */
+  const hashKey = (location.hash || '').replace('#', '').toUpperCase();
+  const startIdx = Math.max(0, SEASONS.findIndex((s) => s.key === hashKey));
+
+  renderTotals();
+  // 预加载首张背景避免闪烁
+  document.querySelector('#bg .layer').style.backgroundImage =
+    `url("games/${SEASONS[startIdx].key}/dist/${SEASONS[startIdx].cover}")`;
+
+  requestAnimationFrame(() => {
+    select(startIdx, { silent: true, animate: false });
+    centerCard(startIdx, false);
+  });
+
+  // 首次点击/按键解锁音频上下文
+  const unlock = () => { if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume(); };
+  window.addEventListener('pointerdown', unlock, { once: true });
+  window.addEventListener('keydown', unlock, { once: true });
+})();
+</script>
+</body>
+</html>

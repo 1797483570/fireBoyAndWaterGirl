@@ -1,0 +1,59 @@
+﻿{"frames": [
+
+{
+	"filename": "CursorFat0000",
+	"frame": {"x":200,"y":94,"w":195,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":195,"h":89},
+	"sourceSize": {"w":195,"h":89}
+}
+,{
+	"filename": "CursorFb0000",
+	"frame": {"x":5,"y":5,"w":195,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":195,"h":89},
+	"sourceSize": {"w":195,"h":89}
+}
+,{
+	"filename": "CursorJump0000",
+	"frame": {"x":5,"y":94,"w":195,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":195,"h":89},
+	"sourceSize": {"w":195,"h":89}
+}
+,{
+	"filename": "CursorSmall0000",
+	"frame": {"x":5,"y":183,"w":195,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":195,"h":89},
+	"sourceSize": {"w":195,"h":89}
+}
+,{
+	"filename": "CursorWg0000",
+	"frame": {"x":200,"y":5,"w":195,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":195,"h":89},
+	"sourceSize": {"w":195,"h":89}
+}
+,{
+	"filename": "_default0000",
+	"frame": {"x":200,"y":183,"w":152,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":68},
+	"sourceSize": {"w":152,"h":68}
+}],
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "13.1.0.226",
+	"image": "CursorAssets.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1"
+}
+}

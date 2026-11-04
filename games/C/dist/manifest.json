@@ -1,0 +1,9 @@
+{
+  "name": "Fireboy & Watergirl 3 - The Ice Temple",
+  "short_name": "FB&WG C",
+  "start_url": "./",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": []
+}

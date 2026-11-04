@@ -1,0 +1,7 @@
+# 存档备份与临时文件（saves/progress.json 本体需要提交）
+saves/*.bak.json
+saves/*.tmp
+
+# Python
+__pycache__/
+*.pyc

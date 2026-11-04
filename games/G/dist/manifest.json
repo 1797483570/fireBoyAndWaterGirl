@@ -1,0 +1,9 @@
+{
+  "name": "Fireboy & Watergirl 7 - Friends",
+  "short_name": "FB&WG G",
+  "start_url": "./",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": []
+}
