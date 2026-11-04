@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T10:44:27.812Z",
+  "updatedAt": "2026-11-04T10:46:50.523Z",
   "saves": {
     "fb-forest": {
       "temples": [
@@ -46,14 +46,14 @@
               "initial": false,
               "locked": false,
               "state": 3,
-              "played": true,
-              "totalDiamonds": 16,
+              "isNew": true,
               "best": {
                 "diamonds": 16,
                 "time": 175,
                 "silverDiamond": 0,
                 "stars": 2
-              }
+              },
+              "played": true
             },
             {
               "id": 3,
@@ -67,7 +67,7 @@
               "type": "speed",
               "initial": false,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
