@@ -1,7 +1,35 @@
 # 森林冰火人 H5 · 本地离线版
 
-把官方在线的 Fireboy & Watergirl H5 全 7 季（A–G）完整镜像到本地，并配了一个 PS5 风格的统一大厅入口页。
-**全程离线可玩**，不依赖任何线上接口；**存档会随代码一起进仓库**。
+[![License: MIT](https://img.shields.io/badge/License-MIT-e8c684.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB.svg)](https://www.python.org/)
+[![No Build](https://img.shields.io/badge/build-none-8bd46f.svg)](#快速开始)
+[![Offline](https://img.shields.io/badge/offline-ready-7fd8ff.svg)](#快速开始)
+[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-222.svg)](#部署到-github-pages)
+
+把官方在线的 **Fireboy & Watergirl H5 全 7 季（A–G，293 关）** 完整镜像到本地，
+并配了一个 **PS5 风格**的统一大厅入口页。
+
+- 🎮 **全程离线可玩** —— 不依赖任何线上接口，双击就能进
+- 🖼️ **影院级大厅** —— 横向卡片轮播、环形进度、键盘 / 滚轮 / 拖拽三种操作
+- 💾 **存档随仓库走** —— 进度落在 `saves/progress.json`，换机器 clone 下来接着玩
+- 📱 **多端适配** —— 桌面等比缩放、手机横屏专用布局、竖屏引导页
+- 🧩 **零构建** —— 单文件 HTML + 原生 JS，无 npm、无打包、无依赖
+
+---
+
+## 目录
+
+- [快速开始](#快速开始)
+- [目录结构](#目录结构)
+- [大厅怎么用](#大厅怎么用)
+- [存档同步（随仓库走）](#存档同步随仓库走)
+- [部署到 GitHub Pages](#部署到-github-pages)
+- [适配](#适配)
+- [本地服务接口](#本地服务接口)
+- [重新镜像 / 增量补齐](#重新镜像--增量补齐)
+- [常见问题](#常见问题)
+- [贡献](#贡献)
+- [许可](#许可)
 
 ---
 
@@ -19,8 +47,6 @@
 > **换了端口，游戏存档就看不到之前的进度了**。想延续存档请固定用 8123。
 
 需要 Python 3（Windows 一般自带或可从 python.org 安装，安装时勾选 *Add Python to PATH*）。
-
----
 
 ## 目录结构
 
@@ -229,3 +255,41 @@ python tools/mirror.py
 原站首页（游戏列表、云同步、关卡预览）依赖 `../api/`，没有镜像；
 本项目的游戏本体已确认**不依赖**这些接口，纯离线可玩。
 PWA 的 `manifest.json` 与部分图标在原站就是 404，用现有图标做了占位，不影响运行。
+
+---
+
+## 常见问题
+
+**Q：双击 `index.html` 一片空白？**
+A：file:// 下 RequireJS 加载关卡 JSON 会被安全策略拦截，必须走本地 HTTP 服务，用 `启动游戏.bat`。
+
+**Q：右上角存档灯是灰的 / 蓝的？**
+A：灰色 = 连不上任何存档；蓝色 = 只读托管（GitHub Pages），进度能读但写不回去。详见[存档同步](#存档同步随仓库走)。
+
+**Q：换端口后进度没了？**
+A：localStorage 按 origin 隔离，`127.0.0.1:8123` 和 `:8124` 是两份存档。固定用 8123 即可。
+
+**Q：玩完在另一台机器上看不到进度？**
+A：先在玩的那台上让大厅把进度写进 `saves/progress.json`（回大厅自动写），commit + push；另一台 `git pull` 后重开大厅。
+
+**Q：`git pull` 时 `saves/progress.json` 冲突了？**
+A：随便选一边解决冲突，再启动一次大厅 —— 合并逻辑会按「逐关取较优」把两边进度合起来并回写。
+
+**Q：能在线玩吗？**
+A：可以，见[部署到 GitHub Pages](#部署到-github-pages)；但线上存档只读。
+
+---
+
+## 贡献
+
+欢迎提 Issue / PR，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+---
+
+## 许可
+
+本项目**自写部分**（大厅 `index.html`、`tools/` 下的脚本、文档）采用 [MIT License](LICENSE)。
+
+⚠️ `games/` 下的游戏本体（*Fireboy and Watergirl* 系列的程序、美术、音频、关卡数据）
+版权归其各自权利人所有，**不在 MIT 授权范围内**，仅作为个人离线备份与学习用途收录于此。
+如需商用或再分发，请自行取得授权。

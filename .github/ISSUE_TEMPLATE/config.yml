@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 先看常见问题
+    url: https://github.com/1797483570/fireBoyAndWaterGirl/blob/main/README.md#常见问题
+    about: 白屏、存档灯、换端口丢进度、跨机器同步等问题都有说明
+  - name: 贡献指南
+    url: https://github.com/1797483570/fireBoyAndWaterGirl/blob/main/CONTRIBUTING.md
+    about: 项目约束、本地开发、提交前自检清单

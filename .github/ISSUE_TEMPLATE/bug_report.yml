@@ -1,0 +1,74 @@
+name: Bug 反馈
+description: 大厅显示异常、游戏打不开、存档不同步等问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提 Issue 前先看一眼 [常见问题](../README.md#常见问题)，很多问题那里已有答案。
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 现象是什么？和你预期的不一样在哪？
+      placeholder: 打开大厅后卡片区一片黑，只有背景图……
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 双击 启动游戏.bat
+        2. 用 ← 切到 C 季
+        3. 点击「开始游戏」
+        4. 白屏
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 运行环境
+      description: 操作系统 / 浏览器及版本 / 是否开了代理
+      placeholder: Windows 11 · Chrome 132 · 无代理
+    validations:
+      required: true
+
+  - type: dropdown
+    id: save-state
+    attributes:
+      label: 右上角存档灯是什么颜色
+      options:
+        - 🟢 绿色（已同步）
+        - 🟡 金色（有未保存进度）
+        - 🔵 蓝色（只读，如 GitHub Pages）
+        - ⚪ 灰色（未连接本地服务）
+        - 没看到存档灯 / 页面没起来
+    validations:
+      required: true
+
+  - type: dropdown
+    id: launch
+    attributes:
+      label: 你是怎么启动的
+      options:
+        - 双击 启动游戏.bat
+        - 手动 python tools/serve.py
+        - python -m http.server（无 API）
+        - 直接双击 index.html（file://）
+        - GitHub Pages 线上地址
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 控制台报错 / 截图
+      description: F12 → Console 里的报错，或直接拖截图进来
+      render: shell
+    validations:
+      required: false

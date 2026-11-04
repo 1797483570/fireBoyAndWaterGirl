@@ -1,0 +1,48 @@
+name: 功能建议
+description: 大厅交互、视觉、存档策略等改进想法
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提之前请确认它符合项目的[技术约束](../CONTRIBUTING.md#项目约束请先读)：
+        单文件大厅、零依赖、零构建、不改动 `games/` 镜像。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决的问题
+      description: 现在的体验哪里别扭？
+      placeholder: 用滚轮切赛季时，一次滚动偶尔会跳过两季……
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你的想法
+      placeholder: 给滚轮加 240ms 节流锁，蓄力超过阈值才切下一张
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 考虑过的其它方案
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options:
+        - 大厅视觉 / 动效
+        - 大厅交互（键盘 / 滚轮 / 拖拽）
+        - 存档同步
+        - 移动端适配
+        - 镜像脚本 / 部署
+        - 文档
+    validations:
+      required: true
