@@ -18,7 +18,7 @@ trim_trailing_whitespace = false
 # 批处理必须是 GBK + CRLF，编辑器不要自动转 UTF-8
 [*.bat]
 end_of_line = crlf
-charset = latin1
+charset = unset
 insert_final_newline = true
 
 # 从原站镜像来的文件一律不改动
