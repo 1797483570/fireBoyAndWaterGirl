@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T10:47:11.596Z",
+  "updatedAt": "2026-11-04T10:48:38.539Z",
   "saves": {
     "fb-forest": {
       "temples": [
@@ -4404,11 +4404,8 @@
               "x": 0.485,
               "y": 0.21,
               "locked": false,
-              "state": 0,
-              "isNew": true,
-              "best": {
-                "stars": 3
-              }
+              "state": 1,
+              "isNew": true
             },
             {
               "_id": 1,
@@ -4619,7 +4616,7 @@
               "x": 0.3637,
               "y": 0.21,
               "locked": false,
-              "state": 0,
+              "state": 1,
               "isNew": true
             },
             {
@@ -4730,7 +4727,7 @@
               "x": 0.1212,
               "y": 0.35,
               "locked": false,
-              "state": 0,
+              "state": 1,
               "isNew": true
             },
             {
@@ -4841,7 +4838,7 @@
               "x": 0.2425,
               "y": 0.21,
               "locked": false,
-              "state": 0,
+              "state": 1,
               "isNew": true
             },
             {
@@ -4953,7 +4950,7 @@
               "x": 0.2425,
               "y": 0.21,
               "locked": false,
-              "state": 0,
+              "state": 1,
               "isNew": true
             },
             {
@@ -5049,7 +5046,7 @@
               "x": 0.3637,
               "y": 0.21,
               "locked": false,
-              "state": 0,
+              "state": 1,
               "isNew": true
             },
             {
