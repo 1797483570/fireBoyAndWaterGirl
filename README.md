@@ -133,9 +133,10 @@ localStorage key 对照：`fb-forest` / `fb-light` / `fb-ice` / `fb-crystal` / `
 | --- | --- | --- |
 | 🟢 绿 | synced | 已与仓库同步 |
 | 🟡 金 | dirty | 有进度未写入，正在/等待保存 |
-| ⚪ 灰 | offline | 没有本地服务（用了 `python -m http.server` 或 file://），只能存浏览器 |
+| 🔵 蓝 | readonly | 只读托管（GitHub Pages 等）：进度来自仓库存档，新进度不会自动写回 |
+| ⚪ 灰 | offline | 连不上任何存档（file:// 打开，或 `saves/progress.json` 也取不到），只存浏览器 |
 
-> `offline` 下游戏照常能玩，只是进度不会落到 `saves/progress.json`。
+> `readonly` / `offline` 下游戏照常能玩，只是进度不会落到 `saves/progress.json`。
 
 ### 提交存档
 
@@ -147,6 +148,47 @@ git push
 
 > 换机器拉到代码后直接双击 `启动游戏.bat`，大厅会把 `saves/progress.json` 灌进新浏览器的 localStorage，进度无缝接着玩。
 > 多台机器同时推进度时，`git pull` 若在 `saves/progress.json` 报冲突，**随便选一边、下再启动一次大厅即可**——大厅会把两边的进度按「取较优」重新合并回写。
+
+---
+
+## 部署到 GitHub Pages
+
+可以直接部署，本项目已针对静态托管做过适配：
+
+- 全部资源都是**相对路径**（已扫描 1740 处引用，0 处绝对路径、0 处大小写不一致）
+- 已加 `.nojekyll`，跳过 Jekyll 构建，直接发布原始文件
+- 单文件最大 2.5 MB，远低于 Pages 的 100 MB 限制
+
+### 开启方式
+
+仓库 → **Settings → Pages** → Source 选 `Deploy from a branch` → Branch 选 `main` / `(root)` → Save。
+
+地址为：`https://1797483570.github.io/fireBoyAndWaterGirl/`
+
+> ⚠️ **私有仓库需要 GitHub Pro 才能开启 Pages**（免费账号的 Pages 只支持 public 仓库）。
+> 如果不想把仓库改成 public，就继续用本地的 `启动游戏.bat`。
+
+### Pages 上的存档是「只读」的
+
+Pages 只有静态文件，没有 `serve.py` 的写接口，所以：
+
+| 能力 | 本地 `启动游戏.bat` | GitHub Pages |
+| --- | --- | --- |
+| 读 `saves/progress.json` 灌进浏览器 | ✅ | ✅（蓝灯 readonly） |
+| 玩完自动写回 `saves/progress.json` | ✅ | ❌ |
+
+也就是说：**进度跟着仓库走（能读），但新进度得在本地玩一次再提交**。
+在 Pages 上玩出来的进度只存在当前浏览器 localStorage 里。
+
+想把它带回仓库，两个办法：
+
+1. 在本地双击 `启动游戏.bat`，打开大厅 → 它会读本地浏览器存档 → 合并后自动写入 `saves/progress.json` → 提交推送（前提是同一台机器同一浏览器）
+2. 直接在 GitHub 网页上编辑 `saves/progress.json`（不推荐，容易写坏 JSON）
+
+### 体积提醒
+
+仓库 82 MB，Pages 站点上限 1 GB / 单文件 100 MB，都在范围内。
+但玩家进入某一季要下载 9–13 MB，首次加载会比本地慢一些；大厅首屏只加载封面图（约 500 KB）。
 
 ---
 

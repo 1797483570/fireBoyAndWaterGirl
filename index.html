@@ -107,6 +107,7 @@
   .iconbtn.savebtn[data-state="synced"] i{background:#8bd46f;box-shadow:0 0 7px #8bd46f}
   .iconbtn.savebtn[data-state="dirty"] i{background:#e8c684;box-shadow:0 0 8px #e8c684}
   .iconbtn.savebtn[data-state="dirty"]{border-color:rgba(232,198,132,.45)}
+  .iconbtn.savebtn[data-state="readonly"] i{background:#6ec2ff;box-shadow:0 0 7px #6ec2ff}
 
   #toast{
     position:fixed;left:50%;bottom:36px;z-index:70;
@@ -547,16 +548,25 @@
 
   async function loadRepo() {
     try {
-      // 先探活：只有 tools/serve.py 会返回 {ok:true}，纯静态服务一律 404
-      const ping = await fetch('api/ping', { cache: 'no-store' });
-      if (!ping.ok) return { ok: false, data: null };
-      const pj = await ping.json().catch(() => null);
-      if (!pj || pj.ok !== true) return { ok: false, data: null };
+      // 先探活：只有 tools/serve.py 会返回 {ok:true}，纯静态托管一律 404
+      const ping = await fetch('api/ping', { cache: 'no-store' }).catch(() => null);
+      let writable = false;
+      if (ping && ping.ok) {
+        const pj = await ping.json().catch(() => null);
+        writable = !!(pj && pj.ok === true);
+      }
 
-      const r = await fetch(SAVE_API, { cache: 'no-store' });
-      if (r.status === 404) return { ok: true, data: null };   // 后端在，但还没有存档
+      if (writable) {
+        const r = await fetch(SAVE_API, { cache: 'no-store' });
+        if (r.status === 404) return { ok: true, data: null, writable: true };  // 后端在，还没存档
+        if (!r.ok) return { ok: false, data: null };
+        return { ok: true, data: await r.json(), writable: true };
+      }
+
+      // 纯静态托管（如 GitHub Pages）：直接读仓库里的存档文件，只读
+      const r = await fetch('saves/progress.json', { cache: 'no-store' });
       if (!r.ok) return { ok: false, data: null };
-      return { ok: true, data: await r.json() };
+      return { ok: true, data: await r.json(), writable: false };
     } catch (e) {
       return { ok: false, data: null };
     }
@@ -568,6 +578,8 @@
     btn.dataset.state = saveState;
     btn.title = saveState === 'offline'
       ? '未连接本地服务（双击「启动游戏.bat」后可同步到仓库）'
+      : saveState === 'readonly'
+      ? '只读模式：进度已从仓库存档加载，本地新进度不会自动写回'
       : saveState === 'dirty' ? '有进度未写入仓库，点此保存'
       : '存档已与仓库同步';
   }
@@ -576,6 +588,10 @@
     if (saving) return false;
     if (saveState === 'offline') {
       if (!auto) toast('未连接本地服务：请用 启动游戏.bat 启动');
+      return false;
+    }
+    if (saveState === 'readonly') {
+      if (!auto) toast('只读模式：新进度请用 启动游戏.bat 在本地保存');
       return false;
     }
     const saves = snapshotSaves();
@@ -607,7 +623,7 @@
   }
 
   function checkDirty() {
-    if (saveState === 'offline' || saving) return;
+    if (saveState === 'offline' || saveState === 'readonly' || saving) return;
     if (snapshotRaw() === lastSyncedRaw) return;
     saveState = 'dirty';
     paintSave();
@@ -615,7 +631,7 @@
   }
 
   async function bootSync() {
-    const { ok, data } = await loadRepo();
+    const { ok, data, writable } = await loadRepo();
     if (!ok) { saveState = 'offline'; paintSave(); return; }
 
     if (data && data.saves) {
@@ -634,6 +650,10 @@
     }
 
     lastSyncedRaw = snapshotRaw();
+
+    // 只读托管（GitHub Pages 等）：进度能读，但没法写回文件
+    if (!writable) { saveState = 'readonly'; paintSave(); return; }
+
     const repo = (data && data.saves) || {};
     let diff = false;
     for (const s of SEASONS) {
@@ -884,6 +904,7 @@
 
   $('btnSave').addEventListener('click', () => {
     if (saveState === 'offline') { toast('未连接本地服务：请用 启动游戏.bat 启动'); return; }
+    if (saveState === 'readonly') { toast('只读模式：新进度请用 启动游戏.bat 在本地保存后提交'); return; }
     if (snapshotRaw() === lastSyncedRaw) { toast('存档已与仓库同步'); return; }
     saveState = 'dirty';
     paintSave();
