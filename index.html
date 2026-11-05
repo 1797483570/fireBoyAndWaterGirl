@@ -761,7 +761,7 @@
 
   await bootSync();
 
-  const progress = SEASONS.map(readProgress);
+  let progress = SEASONS.map(readProgress);
 
   /* ---------------- 构建卡片 ---------------- */
   SEASONS.forEach((s, i) => {
@@ -822,7 +822,7 @@
     bgSlot = 1 - bgSlot;
   }
 
-  function renderHero(i) {
+  function renderHero(i, replay = true) {
     const s = SEASONS[i], p = progress[i];
     const pct = p.total ? p.done / p.total : 0;
 
@@ -843,12 +843,54 @@
     $('stStars').textContent = '★'.repeat(3);
     $('stStarText').textContent = `${p.stars} / ${p.maxStars} 星`;
 
-    const inner = $('heroInner');
-    inner.style.animation = 'none';
-    void inner.offsetWidth;
-    inner.style.animation = '';
+    if (replay) {
+      const inner = $('heroInner');
+      inner.style.animation = 'none';
+      void inner.offsetWidth;
+      inner.style.animation = '';
+    }
 
     dotEls.forEach((d, k) => d.classList.toggle('on', k === i));
+  }
+
+  /* 玩完游戏回到大厅：localStorage 已被游戏改写，这里重读并刷新 UI */
+  function refreshProgress() {
+    const next = SEASONS.map(readProgress);
+    let changed = false;
+    for (let i = 0; i < next.length; i++) {
+      const a = progress[i], b = next[i];
+      if (!a || a.done !== b.done || a.stars !== b.stars || a.total !== b.total) { changed = true; break; }
+    }
+    if (!changed) return false;
+    progress = next;
+
+    SEASONS.forEach((s, i) => {
+      const p = next[i];
+      const card = cards[i];
+      if (!card) return;
+      const pct = p.total ? Math.round(p.done / p.total * 100) : 0;
+
+      let badge = card.querySelector('.done');
+      if (p.done > 0) {
+        if (!badge) {
+          badge = document.createElement('div');
+          badge.className = 'done';
+          card.insertBefore(badge, card.querySelector('.cbar'));
+        }
+        badge.textContent = pct + '%';
+      } else if (badge) {
+        badge.remove();
+      }
+
+      const cnt = card.querySelector('.cname span');
+      if (cnt) cnt.textContent = `${p.done}/${p.total} 关`;
+      const bar = card.querySelector('.cbar i');
+      if (bar) bar.style.width = pct + '%';
+    });
+
+    renderHero(idx, false);
+    renderTotals();
+    return true;
   }
 
   function renderTotals() {
@@ -986,9 +1028,13 @@
     saveNow(false);
   });
 
-  window.addEventListener('focus', checkDirty);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) checkDirty(); });
-  setInterval(() => { if (!document.hidden) checkDirty(); }, 4000);
+  function wake() {
+    refreshProgress();   // 游戏在新标签页里写 localStorage，切回来要立刻看到新进度
+    checkDirty();
+  }
+  window.addEventListener('focus', wake);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) wake(); });
+  setInterval(() => { if (!document.hidden) wake(); }, 4000);
 
   let toastTimer = 0;
   function toast(msg, ms) {
