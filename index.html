@@ -7,6 +7,11 @@
 <title>森林冰火人 · 大厅</title>
 <style>
   :root{
+    /* 安全区（iPhone 横屏的灵动岛 / 圆角 / home indicator） */
+    --sat:env(safe-area-inset-top, 0px);
+    --sar:env(safe-area-inset-right, 0px);
+    --sab:env(safe-area-inset-bottom, 0px);
+    --sal:env(safe-area-inset-left, 0px);
     --gold:#e8c684;
     --gold-hi:#ffe7b6;
     --ink:#05060a;
@@ -307,7 +312,7 @@
   body.mobile .hright{gap:8px}
   body.mobile .chip{display:none}
   body.mobile .iconbtn{width:30px;height:30px}
-  body.mobile main{flex-direction:row;align-items:center;padding:0 10px 0 18px;gap:6px}
+  body.mobile main{flex-direction:row;align-items:center;padding:0 14px 0 22px;gap:6px}
   body.mobile .hero{flex:0 0 44%;min-height:0;padding:0;justify-content:center}
   body.mobile .hero-inner{gap:9px}
   body.mobile .season-no{font-size:9px;letter-spacing:.3em}
@@ -338,7 +343,9 @@
     #rotate{
       position:fixed;inset:0;z-index:60;display:grid;place-items:center;
       background:radial-gradient(60% 60% at 50% 40%,#10131c,#05060a 70%);
-      color:var(--gold);text-align:center;padding:28px;
+      color:var(--gold);text-align:center;
+      padding:calc(28px + env(safe-area-inset-top, 0px)) calc(28px + env(safe-area-inset-right, 0px))
+              calc(28px + env(safe-area-inset-bottom, 0px)) calc(28px + env(safe-area-inset-left, 0px));
     }
     #rotate svg{animation:rot 2.6s ease-in-out infinite alternate}
     @keyframes rot{0%,30%{transform:rotate(0)}70%,100%{transform:rotate(-90deg)}}
@@ -986,16 +993,30 @@
   /* ---- 舞台等比缩放：高度基准 860px，宽度自适应 ---- */
   function fit() {
     const stage = document.getElementById('stage');
+
+    // 读安全区（iPhone 横屏时左侧灵动岛/摄像头、右侧圆角、底部 home indicator）
+    const cs = getComputedStyle(document.documentElement);
+    const area = (k) => parseFloat(cs.getPropertyValue(k)) || 0;
+    const insL = area('--sal'), insR = area('--sar');
+    const insT = area('--sat'), insB = area('--sab');
+
     const vw = document.documentElement.clientWidth;
     const vh = document.documentElement.clientHeight;
+    const availW = Math.max(280, vw - insL - insR);
+    const availH = Math.max(200, vh - insT - insB);
+
     // 手机横屏：用更小的设计高度基准，元素才不会缩得太小
-    const isPhone = Math.min(vw, vh) <= 540;
+    const isPhone = Math.min(availW, availH) <= 540;
     const baseH = isPhone ? 470 : 860;
-    const s = vh / baseH;
-    const sw = Math.ceil(vw / s);
+    const s = availH / baseH;
+    const sw = Math.ceil(availW / s);
+
+    stage.style.left = insL + 'px';
+    stage.style.top = insT + 'px';
     stage.style.width = sw + 'px';
     stage.style.height = baseH + 'px';
     stage.style.transform = `scale(${s})`;
+
     document.body.classList.toggle('mobile', isPhone);
     document.body.classList.toggle('narrow', !isPhone && sw < 1240);
     document.body.classList.toggle('tiny', !isPhone && sw < 900);
@@ -1004,6 +1025,9 @@
   fit();
 
   window.addEventListener('resize', () => { fit(); centerCard(idx, false); });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', () => { fit(); centerCard(idx, false); });
+  }
 
   /* ---------------- 初始化 ---------------- */
   const hashKey = (location.hash || '').replace('#', '').toUpperCase();
