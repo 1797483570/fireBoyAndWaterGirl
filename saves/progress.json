@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T02:10:09.685Z",
+  "updatedAt": "2026-11-05T02:10:10.393Z",
   "saves": {
     "fb-forest": {
       "temples": [
@@ -23,15 +23,15 @@
               "type": "general",
               "initial": true,
               "opened": true,
+              "played": true,
+              "locked": false,
+              "state": 3,
               "best": {
                 "diamonds": 7,
                 "time": 70,
                 "silverDiamond": 0,
                 "stars": 2
-              },
-              "played": true,
-              "locked": false,
-              "state": 3
+              }
             },
             {
               "id": 2,
@@ -1045,8 +1045,7 @@
           ],
           "minRequired": 0,
           "softLocked": false,
-          "locked": false,
-          "hasNew": true
+          "locked": false
         }
       ],
       "gameComplete": false
@@ -4404,7 +4403,7 @@
               "x": 0.485,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4616,7 +4615,7 @@
               "x": 0.3637,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4727,7 +4726,7 @@
               "x": 0.1212,
               "y": 0.35,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4838,7 +4837,7 @@
               "x": 0.2425,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4950,7 +4949,7 @@
               "x": 0.2425,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -5046,7 +5045,7 @@
               "x": 0.3637,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
