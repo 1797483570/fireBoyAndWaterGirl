@@ -18,9 +18,10 @@
     --ease:cubic-bezier(.22,.9,.25,1);
   }
   *{box-sizing:border-box}
-  html,body{height:100%}
+  html,body{height:100%;overscroll-behavior:none}
   body{
     margin:0;background:var(--ink);color:var(--text);overflow:hidden;
+    overscroll-behavior:none;-webkit-overflow-scrolling:auto;
     font-family:"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
     user-select:none;
