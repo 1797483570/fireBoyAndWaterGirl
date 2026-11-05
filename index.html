@@ -306,7 +306,12 @@
   body.mobile .brand b{font-size:14px}
   body.mobile .brand span{font-size:10px}
   body.mobile .hright{gap:8px}
-  body.mobile .chip{display:none}
+  body.mobile .chip{padding:5px 10px;gap:4px;font-size:11px;letter-spacing:.02em;
+    border-color:rgba(232,198,132,.28);background:rgba(12,14,20,.55)}
+  body.mobile .chip b{font-size:12px}
+  body.mobile .chip .star{font-size:10px}
+  body.mobile .chip .lbl{display:none}
+  body.mobile .chip.levels::before{content:"✓";font-size:10px;color:var(--gold);opacity:.85;margin-right:1px}
   body.mobile .iconbtn{width:30px;height:30px}
   body.mobile main{flex-direction:row;align-items:center;padding:0 14px 0 22px;gap:6px}
   body.mobile .hero{flex:0 0 44%;min-height:0;padding:0;justify-content:center}
@@ -371,8 +376,8 @@
 <header>
   <div class="brand"><span class="dot"></span><b>森林冰火人</b><span>H5 大厅</span></div>
   <div class="hright">
-    <div class="chip hide-sm"><span class="star">★</span><b id="totalStars">0</b><span>/</span><b id="totalMaxStars">0</b></div>
-    <div class="chip hide-sm"><span>已通关</span><b id="totalDone">0</b><span>/</span><b id="totalLevels">0</b></div>
+    <div class="chip hide-sm stars"><span class="star">★</span><b id="totalStars">0</b><span>/</span><b id="totalMaxStars">0</b></div>
+    <div class="chip hide-sm levels"><span class="lbl">已通关</span><b id="totalDone">0</b><span>/</span><b id="totalLevels">0</b></div>
     <div class="iconbtn savebtn" id="btnSave" data-state="offline" title="存档同步">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5.2 16.4A4.2 4.2 0 0 1 7 8.3a6 6 0 0 1 11.4.9 3.9 3.9 0 0 1 .4 7.2"/>
