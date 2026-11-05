@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T02:41:16.571Z",
+  "updatedAt": "2026-11-05T02:41:43.762Z",
   "saves": {
     "fb-forest": {
       "temples": [
@@ -67,11 +67,8 @@
               "type": "speed",
               "initial": false,
               "locked": false,
-              "state": 2,
-              "isNew": true,
-              "best": {
-                "stars": 3
-              }
+              "state": 1,
+              "isNew": true
             },
             {
               "id": 4,
