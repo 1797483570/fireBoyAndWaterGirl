@@ -259,6 +259,7 @@ git push
 - **安全区（刘海 / 灵动岛 / 圆角）**：读取 `env(safe-area-inset-*)`，整个舞台按安全区内缩，
   内容不会被 iPhone 横屏时的前置摄像头、圆角或底部 home indicator 遮挡；
   `visualViewport` 变化（iOS 地址栏收起 / 展开）时也会重排。
+  想在桌面上预演，控制台执行 `window.__FB_SAFE = {left:59,right:59,top:0,bottom:21}` 再触发一次 resize 即可。
 
 ---
 

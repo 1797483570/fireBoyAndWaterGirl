@@ -7,11 +7,6 @@
 <title>森林冰火人 · 大厅</title>
 <style>
   :root{
-    /* 安全区（iPhone 横屏的灵动岛 / 圆角 / home indicator） */
-    --sat:env(safe-area-inset-top, 0px);
-    --sar:env(safe-area-inset-right, 0px);
-    --sab:env(safe-area-inset-bottom, 0px);
-    --sal:env(safe-area-inset-left, 0px);
     --gold:#e8c684;
     --gold-hi:#ffe7b6;
     --ink:#05060a;
@@ -991,14 +986,37 @@
   });
 
   /* ---- 舞台等比缩放：高度基准 860px，宽度自适应 ---- */
+  /* iPhone 横屏时，前置摄像头 / 灵动岛在左侧，圆角在右侧，底部是 home indicator。
+     用一次 padding 探测拿到真实像素值（比读自定义属性可靠，Safari 各版本行为不一）。 */
+  let _safeCache = null;
+  function safeArea() {
+    if (_safeCache) return _safeCache;
+    if (window.__FB_SAFE) return (window.__FB_SAFE);   // 调试用：控制台注入可模拟刘海
+    const d = document.createElement('div');
+    d.style.cssText = 'position:fixed;top:0;left:0;width:0;height:0;visibility:hidden;pointer-events:none';
+    // 逐个方向单独设置，避免简写里 env() 被某版本 Safari 丢掉
+    d.style.paddingTop = 'env(safe-area-inset-top, 0px)';
+    d.style.paddingRight = 'env(safe-area-inset-right, 0px)';
+    d.style.paddingBottom = 'env(safe-area-inset-bottom, 0px)';
+    d.style.paddingLeft = 'env(safe-area-inset-left, 0px)';
+    document.body.appendChild(d);
+    const cs = getComputedStyle(d);
+    _safeCache = {
+      top: parseFloat(cs.paddingTop) || 0,
+      right: parseFloat(cs.paddingRight) || 0,
+      bottom: parseFloat(cs.paddingBottom) || 0,
+      left: parseFloat(cs.paddingLeft) || 0,
+    };
+    d.remove();
+    return _safeCache;
+  }
+
   function fit() {
     const stage = document.getElementById('stage');
 
-    // 读安全区（iPhone 横屏时左侧灵动岛/摄像头、右侧圆角、底部 home indicator）
-    const cs = getComputedStyle(document.documentElement);
-    const area = (k) => parseFloat(cs.getPropertyValue(k)) || 0;
-    const insL = area('--sal'), insR = area('--sar');
-    const insT = area('--sat'), insB = area('--sab');
+    const sa = safeArea();
+    const insL = sa.left, insR = sa.right;
+    const insT = sa.top, insB = sa.bottom;
 
     const vw = document.documentElement.clientWidth;
     const vh = document.documentElement.clientHeight;
@@ -1024,7 +1042,13 @@
   }
   fit();
 
-  window.addEventListener('resize', () => { fit(); centerCard(idx, false); });
+  function relayout() {
+    _safeCache = null;   // 旋转屏幕后安全区会变，重新探测
+    fit();
+    centerCard(idx, false);
+  }
+  window.addEventListener('resize', relayout);
+  window.addEventListener('orientationchange', () => setTimeout(relayout, 260));
   if (window.visualViewport) {
     window.visualViewport.addEventListener('resize', () => { fit(); centerCard(idx, false); });
   }
