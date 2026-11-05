@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T01:57:12.814Z",
+  "updatedAt": "2026-11-05T01:58:15.030Z",
   "saves": {
     "fb-forest": {
       "temples": [
@@ -23,15 +23,15 @@
               "type": "general",
               "initial": true,
               "opened": true,
+              "played": true,
+              "locked": false,
+              "state": 3,
               "best": {
                 "diamonds": 7,
                 "time": 70,
                 "silverDiamond": 0,
                 "stars": 2
-              },
-              "played": true,
-              "locked": false,
-              "state": 3
+              }
             },
             {
               "id": 2,
@@ -46,14 +46,14 @@
               "initial": false,
               "locked": false,
               "state": 3,
-              "played": true,
-              "totalDiamonds": 16,
+              "isNew": true,
               "best": {
                 "diamonds": 16,
                 "time": 175,
                 "silverDiamond": 0,
                 "stars": 2
-              }
+              },
+              "played": true
             },
             {
               "id": 3,
@@ -67,7 +67,7 @@
               "type": "speed",
               "initial": false,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -1045,8 +1045,7 @@
           ],
           "minRequired": 0,
           "softLocked": false,
-          "locked": false,
-          "hasNew": true
+          "locked": false
         }
       ],
       "gameComplete": false
