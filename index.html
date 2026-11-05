@@ -989,9 +989,7 @@
   /* iPhone 横屏时，前置摄像头 / 灵动岛在左侧，圆角在右侧，底部是 home indicator。
      用一次 padding 探测拿到真实像素值（比读自定义属性可靠，Safari 各版本行为不一）。 */
   let _safeCache = null;
-  function safeArea() {
-    if (_safeCache) return _safeCache;
-    if (window.__FB_SAFE) return (window.__FB_SAFE);   // 调试用：控制台注入可模拟刘海
+  function probeSafe() {
     const d = document.createElement('div');
     d.style.cssText = 'position:fixed;top:0;left:0;width:0;height:0;visibility:hidden;pointer-events:none';
     // 逐个方向单独设置，避免简写里 env() 被某版本 Safari 丢掉
@@ -1001,14 +999,54 @@
     d.style.paddingLeft = 'env(safe-area-inset-left, 0px)';
     document.body.appendChild(d);
     const cs = getComputedStyle(d);
-    _safeCache = {
+    const v = {
       top: parseFloat(cs.paddingTop) || 0,
       right: parseFloat(cs.paddingRight) || 0,
       bottom: parseFloat(cs.paddingBottom) || 0,
       left: parseFloat(cs.paddingLeft) || 0,
     };
     d.remove();
+    return v;
+  }
+
+  function safeArea() {
+    if (_safeCache) return _safeCache;
+    if (window.__FB_SAFE) return (_safeCache = window.__FB_SAFE);   // 调试用：控制台注入可模拟刘海
+
+    const sa = probeSafe();
+
+    // 兜底：iOS Safari 在部分版本 / 部分横屏姿态下会把 env() 报成 0，
+    // 但屏幕上该位置照样压着灵动岛和摄像头，于是这里按机型补一次。
+    if (sa.left === 0 && sa.right === 0) {
+      const ua = navigator.userAgent || '';
+      const isIPhone = /iPhone|iPod/.test(ua);
+      const isIPad = /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const land = innerWidth > innerHeight;
+      const longSide = Math.max(screen.width || 0, screen.height || 0);
+      // iPhone X 及其后的刘海/灵动岛机型，屏幕长边 ≥ 812pt
+      if (isIPhone && !isIPad && land && longSide >= 812) {
+        const w = longSide >= 852 ? 59 : 44;   // 14 Pro 起灵动岛是 59，之前刘海是 44~47
+        sa.left = w;
+        sa.right = w;
+        sa.bottom = Math.max(sa.bottom, 21);
+      }
+    }
+
+    _safeCache = sa;
     return _safeCache;
+  }
+
+  /* ?debug 打开后，左上角会显示实测安全区，方便真机核对 */
+  function paintDebug() {
+    if (location.search.indexOf('debug') < 0) return;
+    const sa = safeArea();
+    const el = document.createElement('div');
+    el.id = 'dbg';
+    el.style.cssText = 'position:fixed;left:0;top:0;z-index:9999;font:11px/1.3 ui-monospace,monospace;' +
+      'color:#7dff9b;background:#000d;padding:3px 6px;border-radius:0 0 6px 0;pointer-events:none';
+    el.textContent = 'v1.3.2 SAFE L' + sa.left + ' R' + sa.right + ' T' + sa.top + ' B' + sa.bottom +
+      ' · win ' + innerWidth + '×' + innerHeight + ' · screen ' + screen.width + '×' + screen.height;
+    document.body.appendChild(el);
   }
 
   function fit() {
@@ -1049,6 +1087,7 @@
   }
   window.addEventListener('resize', relayout);
   window.addEventListener('orientationchange', () => setTimeout(relayout, 260));
+  paintDebug();
   if (window.visualViewport) {
     window.visualViewport.addEventListener('resize', () => { fit(); centerCard(idx, false); });
   }

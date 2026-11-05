@@ -260,6 +260,8 @@ git push
   内容不会被 iPhone 横屏时的前置摄像头、圆角或底部 home indicator 遮挡；
   `visualViewport` 变化（iOS 地址栏收起 / 展开）时也会重排。
   想在桌面上预演，控制台执行 `window.__FB_SAFE = {left:59,right:59,top:0,bottom:21}` 再触发一次 resize 即可。
+  真机自查：地址后加 `?debug=1`，左上角会显示 `v1.3.2 SAFE L/R/T/B · win · screen`。
+  若 `env()` 被浏览器报成 0，代码会按机型兜底（iPhone 横屏、屏幕长边 ≥ 812pt → 左右 59 / 44pt）。
 
 ---
 
