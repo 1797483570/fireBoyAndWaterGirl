@@ -348,22 +348,50 @@
   body.mobile .hints,body.mobile .offline{display:none}
   body.mobile .dots{margin:0 auto}
 
-  /* ---- 竖屏提示（移动端只支持横屏） ---- */
-  #rotate{display:none}
-  @media (orientation:portrait) and (max-width:900px){
-    #rotate{
-      position:fixed;inset:0;z-index:60;display:grid;place-items:center;
-      background:radial-gradient(60% 60% at 50% 40%,#10131c,#05060a 70%);
-      color:var(--gold);text-align:center;
-      padding:calc(28px + env(safe-area-inset-top, 0px)) calc(28px + env(safe-area-inset-right, 0px))
-              calc(28px + env(safe-area-inset-bottom, 0px)) calc(28px + env(safe-area-inset-left, 0px));
-    }
-    #rotate svg{animation:rot 2.6s ease-in-out infinite alternate}
-    @keyframes rot{0%,30%{transform:rotate(0)}70%,100%{transform:rotate(-90deg)}}
-    #rotate h2{margin:16px 0 8px;font-size:19px;letter-spacing:.06em;color:#f6e7c8}
-    #rotate p{margin:0;font-size:13px;line-height:1.7;color:rgba(255,255,255,.5)}
-    #stage{visibility:hidden}
-  }
+  /* ---- 手机竖屏：纵向布局（hero 在上、卡片在下） ---- */
+  body.portrait{--card-w:330px;--card-h:186px}
+  body.portrait.pw{--card-w:430px;--card-h:250px}
+  body.portrait header{padding:10px 16px 0}
+  body.portrait .brand{gap:6px}
+  body.portrait .brand b{font-size:13px;letter-spacing:.04em}
+  body.portrait .brand span{display:none}
+  body.portrait .hright{gap:6px}
+  body.portrait .chip{padding:4px 8px;gap:3px;font-size:10px;letter-spacing:.02em;
+    border-color:rgba(232,198,132,.28);background:rgba(12,14,20,.55)}
+  body.portrait .chip b{font-size:11px}
+  body.portrait .chip .star{font-size:9px}
+  body.portrait .chip .lbl{display:none}
+  body.portrait .chip.levels::before{content:"✓";font-size:9px;color:var(--gold);opacity:.85;margin-right:1px}
+  body.portrait .iconbtn{width:29px;height:29px}
+  body.portrait .iconbtn svg{width:14px;height:14px}
+  body.portrait main{flex-direction:column;justify-content:space-evenly;align-items:stretch;gap:0;padding:8px 0}
+  body.portrait .hero{flex:0 0 auto;padding:0 22px;justify-content:flex-start}
+  body.portrait .hero-inner{gap:0}
+  body.portrait .season-no{font-size:10px;letter-spacing:.42em;margin-bottom:8px}
+  body.portrait .season-title{font-size:clamp(28px,7.6vw,40px);letter-spacing:.04em}
+  body.portrait .logo{height:29px;margin:8px 0 0 -4px}
+  body.portrait .desc{display:none}
+  body.portrait .stats{margin-top:14px;gap:16px}
+  body.portrait .ring-wrap,body.portrait .ring{width:56px;height:56px}
+  body.portrait .pct{font-size:13px}
+  body.portrait .stat-list{font-size:11.5px;gap:4px}
+  body.portrait .stat-list b{font-size:15px}
+  body.portrait .stat-list .row{gap:6px}
+  body.portrait .play{margin-top:16px;padding:11px 24px;font-size:14px;letter-spacing:.1em;gap:9px}
+  body.portrait .play svg{width:14px;height:14px}
+  body.portrait .rail{flex:0 0 auto;width:100%;height:calc(var(--card-h) + 54px);margin:0;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 29px,#000 calc(100% - 29px),transparent 100%);
+    mask-image:linear-gradient(180deg,transparent 0,#000 29px,#000 calc(100% - 29px),transparent 100%)}
+  body.portrait .track{gap:18px}
+  body.portrait .card{border-radius:15px}
+  body.portrait .card .tag{font-size:9.5px;left:16px;top:13px}
+  body.portrait .card .cname{left:16px;right:16px;bottom:14px}
+  body.portrait .card .cname b{font-size:15px}
+  body.portrait .card .cname span{font-size:10px}
+  body.portrait .card .cbar{left:16px;right:16px;bottom:8px}
+  body.portrait footer{padding:0 20px 14px}
+  body.portrait .hints,body.portrait .offline{display:none}
+  body.portrait .dots{margin:0 auto}
 </style>
 </head>
 <body>
@@ -371,16 +399,6 @@
 <div id="bg"><div class="layer" data-k="0"></div><div class="layer" data-k="1"></div></div>
 <div id="veil"></div>
 <div id="grain"></div>
-
-<div id="rotate">
-  <div>
-    <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3"/>
-    </svg>
-    <h2>请横屏打开</h2>
-    <p>大厅与游戏均为横屏体验，请旋转手机后继续。</p>
-  </div>
-</div>
 
 <div id="stage">
 <header>
@@ -855,6 +873,10 @@
   /* ---------------- 启动游戏 ---------------- */
   function launch() {
     const s = SEASONS[idx];
+    // 游戏本体是横屏的：竖屏下先把手机转过来，体验才正常
+    if (window.innerHeight > window.innerWidth && Math.min(window.innerWidth, window.innerHeight) <= 900) {
+      toast('进入游戏后请横屏游玩', 2400);
+    }
     blip(760, .09, .07);
     setTimeout(() => blip(1040, .1, .05), 70);
     const url = `games/${s.key}/dist/${s.play}`;
@@ -969,13 +991,13 @@
   setInterval(() => { if (!document.hidden) checkDirty(); }, 4000);
 
   let toastTimer = 0;
-  function toast(msg) {
+  function toast(msg, ms) {
     const el = $('toast');
     if (!el) return;
     el.textContent = msg;
     el.classList.add('on');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => el.classList.remove('on'), 2400);
+    toastTimer = setTimeout(() => el.classList.remove('on'), ms || 2400);
   }
 
   $('btnPlay').addEventListener('click', launch);
@@ -1040,11 +1062,17 @@
       const land = innerWidth > innerHeight;
       const longSide = Math.max(screen.width || 0, screen.height || 0);
       // iPhone X 及其后的刘海/灵动岛机型，屏幕长边 ≥ 812pt
-      if (isIPhone && !isIPad && land && longSide >= 812) {
-        const w = longSide >= 852 ? 59 : 44;   // 14 Pro 起灵动岛是 59，之前刘海是 44~47
-        sa.left = w;
-        sa.right = w;
-        sa.bottom = Math.max(sa.bottom, 21);
+      if (isIPhone && !isIPad && longSide >= 812) {
+        const wide = longSide >= 852;          // 14 Pro 起是灵动岛（59），之前是刘海（44~47）
+        if (land) {
+          const w = wide ? 59 : 44;
+          sa.left = w;
+          sa.right = w;
+          sa.bottom = Math.max(sa.bottom, 21);
+        } else {
+          sa.top = Math.max(sa.top, wide ? 59 : 47);
+          sa.bottom = Math.max(sa.bottom, 34);
+        }
       }
     }
 
@@ -1077,9 +1105,11 @@
     const availW = Math.max(280, vw - insL - insR);
     const availH = Math.max(200, vh - insT - insB);
 
+    // 竖屏：纵向布局，沿用 860 基准（逻辑宽刚好比屏幕宽一点，卡片两侧能露出来）
+    const isPortrait = availH > availW && availW <= 900;
     // 手机横屏：用更小的设计高度基准，元素才不会缩得太小
-    const isPhone = Math.min(availW, availH) <= 540;
-    const baseH = isPhone ? 470 : 860;
+    const isPhone = !isPortrait && Math.min(availW, availH) <= 540;
+    const baseH = isPortrait ? 760 : (isPhone ? 470 : 860);
     const s = availH / baseH;
     const sw = Math.ceil(availW / s);
 
@@ -1089,10 +1119,12 @@
     stage.style.height = baseH + 'px';
     stage.style.transform = `scale(${s})`;
 
+    document.body.classList.toggle('portrait', isPortrait);
+    document.body.classList.toggle('pw', isPortrait && sw > 540);   // 平板竖屏：卡片放大一档
     document.body.classList.toggle('mobile', isPhone);
-    document.body.classList.toggle('narrow', !isPhone && sw < 1240);
-    document.body.classList.toggle('tiny', !isPhone && sw < 900);
-    document.body.classList.toggle('short', !isPhone && vh < 820);
+    document.body.classList.toggle('narrow', !isPhone && !isPortrait && sw < 1240);
+    document.body.classList.toggle('tiny', !isPhone && !isPortrait && sw < 900);
+    document.body.classList.toggle('short', !isPhone && !isPortrait && vh < 820);
   }
   fit();
 
