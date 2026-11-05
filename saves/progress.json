@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T10:48:38.539Z",
+  "updatedAt": "2026-11-05T01:57:12.814Z",
   "saves": {
     "fb-forest": {
       "temples": [
@@ -46,14 +46,14 @@
               "initial": false,
               "locked": false,
               "state": 3,
-              "isNew": true,
+              "played": true,
+              "totalDiamonds": 16,
               "best": {
                 "diamonds": 16,
                 "time": 175,
                 "silverDiamond": 0,
                 "stars": 2
-              },
-              "played": true
+              }
             },
             {
               "id": 3,
@@ -67,7 +67,7 @@
               "type": "speed",
               "initial": false,
               "locked": false,
-              "state": 0,
+              "state": 1,
               "isNew": true
             },
             {
@@ -4404,7 +4404,7 @@
               "x": 0.485,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4616,7 +4616,7 @@
               "x": 0.3637,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4727,7 +4727,7 @@
               "x": 0.1212,
               "y": 0.35,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4838,7 +4838,7 @@
               "x": 0.2425,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -4950,7 +4950,7 @@
               "x": 0.2425,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
@@ -5046,7 +5046,7 @@
               "x": 0.3637,
               "y": 0.21,
               "locked": false,
-              "state": 1,
+              "state": 0,
               "isNew": true
             },
             {
